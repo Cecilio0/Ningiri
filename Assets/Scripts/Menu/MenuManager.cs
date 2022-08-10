@@ -5,21 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    public string escena;
-
-    // Cuando presionen el boton de menu
-    public void StartButton() {
-        SceneManager.LoadScene(escena);
-    }
-
-    // Cuando se presione el boton de opciones
-    public void OptionsButton() {
-
-    }
-
-    // Cuando se presione el boton Quit
-    public void QuitButton() {
-        Debug.Log("funciona");
+    //Cuando se presiona el boton Quit
+    public void  QuitButton() {
+        Debug.Log("sale del juego");
         Application.Quit();
     }
 }
