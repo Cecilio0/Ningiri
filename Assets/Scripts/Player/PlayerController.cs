@@ -5,29 +5,61 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
+    private PlayerControls playerControls;//para tener los inputs genericos que creamos
+    public float playerSpeed;
+    public float jumpHeight;
+    private Transform tr;
     private Rigidbody2D rb;
-    public Transform ground;
-    public float playerSpeed = 1.0f;
-    public float jumpStrength = 1.0f;
-    public float gravity = -10.0f;
+    private bool isGrounded;
 
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
+        playerControls = new PlayerControls();
+
+        playerSpeed = 1.0f;
+        jumpHeight = 1.0f;
+
+        tr = GetComponent<Transform>();
         rb = GetComponent<Rigidbody2D>();
-        Debug.Log("se crea");
+        isGrounded = false;
+    }
+
+    private void OnEnable()
+    {
+        playerControls.Enable();
+    }
+
+    private void OnDisable()
+    {
+        playerControls.Disable();
     }
 
     // Update is called once per frame
-    void Update()
+    void Start()
     {
-        Vector2 direction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-        Move(direction);
+        
     }
 
-    private void Move(Vector2 direction)
+    private void Update()
     {
-        rb.velocity = new Vector2(direction.x * playerSpeed, rb.velocity.y);
+        Vector2 move = playerControls.Land.Horizontal.ReadValue<Vector2>();
+        bool jump = playerControls.Land.Jump.IsPressed();
+
+        if (move.x != 0)
+        {
+           rb.velocity = new Vector2(playerSpeed*move.normalized.x, rb.velocity.y);
+        }
+
+        if (jump)
+        {
+            Debug.Log("salta");
+        }
     }
+
+    private void Jump()
+    {
+
+    }
+
 }

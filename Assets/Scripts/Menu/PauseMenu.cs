@@ -6,11 +6,28 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
     private bool on;
+    private PlayerControls playerControls;
+
+    private void Awake()
+    {
+        playerControls = new PlayerControls();
+    }
+
+        private void OnEnable()
+    {
+        playerControls.Enable();
+    }
+
+    private void OnDisable()
+    {
+        playerControls.Disable();
+    }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Pause"))//cuando se presione una tecla vinculada a la accion pause 
+        bool buttonDown = playerControls.Land.Pause.IsPressed();
+        if (buttonDown)//cuando se presione una tecla vinculada a la accion pause 
         {
             on = !on;
         }
