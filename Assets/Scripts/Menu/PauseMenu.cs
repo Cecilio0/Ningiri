@@ -26,7 +26,7 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        bool buttonDown = playerControls.Land.Pause.IsPressed();
+        bool buttonDown = playerControls.Land.Pause.WasPressedThisFrame();
         if (buttonDown)//cuando se presione una tecla vinculada a la accion pause 
         {
             on = !on;

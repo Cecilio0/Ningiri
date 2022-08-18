@@ -44,11 +44,12 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         Vector2 move = playerControls.Land.Horizontal.ReadValue<Vector2>();
-        bool jump = playerControls.Land.Jump.IsPressed();
+        bool jump = playerControls.Land.Jump.WasPressedThisFrame();
 
         if (move.x != 0)
         {
-           rb.velocity = new Vector2(playerSpeed*move.normalized.x, rb.velocity.y);
+            tr.right = new Vector2(move.x, 0);
+            rb.velocity = new Vector2(playerSpeed*move.normalized.x, rb.velocity.y);
         }
 
         if (jump)
