@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
 
     private PlayerControls playerControls;//para tener los inputs genericos que creamos
     public float playerSpeed;
-    public float jumpHeight;
+    public float jumpStrength;
     private Transform tr;
     private Rigidbody2D rb;
     private bool isGrounded;
@@ -16,10 +16,6 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         playerControls = new PlayerControls();
-
-        playerSpeed = 1.0f;
-        jumpHeight = 1.0f;
-
         tr = GetComponent<Transform>();
         rb = GetComponent<Rigidbody2D>();
         isGrounded = false;
@@ -49,18 +45,14 @@ public class PlayerController : MonoBehaviour
         if (move.x != 0)
         {
             tr.right = new Vector2(move.x, 0);
-            rb.velocity = new Vector2(playerSpeed*move.normalized.x, rb.velocity.y);
+            tr.position = new Vector2(tr.position.x + playerSpeed*Time.deltaTime*move.x, tr.position.y);
+            //rb.velocity = new Vector2(playerSpeed*move.normalized.x, rb.velocity.y);
         }
 
         if (jump)
         {
-            Debug.Log("salta");
+            rb.velocity = new Vector2(rb.velocity.x, jumpStrength);
         }
-    }
-
-    private void Jump()
-    {
-
     }
 
 }
