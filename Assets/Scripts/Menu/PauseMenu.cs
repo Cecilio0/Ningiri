@@ -5,12 +5,19 @@ using UnityEngine;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
+    GameObject [] panels;
     private bool on;
     private PlayerControls playerControls;
 
     private void Awake()
     {
         playerControls = new PlayerControls();
+        panels = new GameObject [transform.childCount];
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            panels[i] = transform.GetChild(i).gameObject;
+            Debug.Log("se ingresa un hijo" + panels[i].gameObject.name);
+        }
     }
 
         private void OnEnable()
@@ -35,6 +42,7 @@ public class PauseMenu : MonoBehaviour
         if (on)
         {
             pauseMenu.SetActive(true);//abre el menu
+            panels[0].transform.gameObject.SetActive(true);
             Cursor.lockState = CursorLockMode.None;//reactiva el cursor
             Cursor.visible = true;
             Time.timeScale = 0;//escencialmente detiene el tiempo
@@ -58,6 +66,10 @@ public class PauseMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;//desactiva el cursor
         Cursor.visible = false;
         Time.timeScale = 1;//reanuda el tiempo
+        foreach (GameObject panel in panels)
+        {
+            panel.SetActive(false);
+        }
     }
 
 }
