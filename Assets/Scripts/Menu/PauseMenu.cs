@@ -12,11 +12,10 @@ public class PauseMenu : MonoBehaviour
     private void Awake()
     {
         playerControls = new PlayerControls();
-        panels = new GameObject [transform.childCount];
-        for (int i = 0; i < transform.childCount; i++)
+        panels = new GameObject [pauseMenu.transform.childCount];
+        for (int i = 0; i < pauseMenu.transform.childCount; i++)
         {
-            panels[i] = transform.GetChild(i).gameObject;
-            Debug.Log("se ingresa un hijo" + panels[i].gameObject.name);
+            panels[i] = pauseMenu.transform.GetChild(i).gameObject;
         }
     }
 
