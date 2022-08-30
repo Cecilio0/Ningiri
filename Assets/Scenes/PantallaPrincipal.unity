@@ -131,6 +131,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 782634977}
     m_Modifications:
     - target: {fileID: 1973688521373841375, guid: 8809d7b2b815ae14ca87a2ef9114f380, type: 3}
+      propertyPath: m_Name
+      value: BotonLoad
+      objectReference: {fileID: 0}
+    - target: {fileID: 1973688521373841375, guid: 8809d7b2b815ae14ca87a2ef9114f380, type: 3}
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
@@ -330,7 +334,7 @@ GameObject:
   - component: {fileID: 9831897}
   - component: {fileID: 9831896}
   m_Layer: 0
-  m_Name: FullScreen
+  m_Name: ComboBoxFS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3063,6 +3067,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 963837632}
     m_Modifications:
     - target: {fileID: 1973688521373841375, guid: 8809d7b2b815ae14ca87a2ef9114f380, type: 3}
+      propertyPath: m_Name
+      value: BotonSF3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1973688521373841375, guid: 8809d7b2b815ae14ca87a2ef9114f380, type: 3}
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
@@ -3176,7 +3184,7 @@ GameObject:
   - component: {fileID: 878434382}
   - component: {fileID: 878434381}
   m_Layer: 0
-  m_Name: TextBrightness
+  m_Name: SliderBrillo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3306,6 +3314,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 963837632}
     m_Modifications:
+    - target: {fileID: 1973688521373841375, guid: 8809d7b2b815ae14ca87a2ef9114f380, type: 3}
+      propertyPath: m_Name
+      value: BotonBackLoad
+      objectReference: {fileID: 0}
     - target: {fileID: 1973688521373841375, guid: 8809d7b2b815ae14ca87a2ef9114f380, type: 3}
       propertyPath: m_Layer
       value: 0
@@ -3503,6 +3515,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1753234852}
     m_Modifications:
+    - target: {fileID: 1973688521373841375, guid: 8809d7b2b815ae14ca87a2ef9114f380, type: 3}
+      propertyPath: m_Name
+      value: BackVideo
+      objectReference: {fileID: 0}
     - target: {fileID: 1973688521373841375, guid: 8809d7b2b815ae14ca87a2ef9114f380, type: 3}
       propertyPath: m_Layer
       value: 0
@@ -4266,7 +4282,7 @@ GameObject:
   - component: {fileID: 1010433674}
   - component: {fileID: 1010433673}
   m_Layer: 0
-  m_Name: TextMusic
+  m_Name: MusicSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4718,6 +4734,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 782634977}
     m_Modifications:
     - target: {fileID: 1973688521373841375, guid: 8809d7b2b815ae14ca87a2ef9114f380, type: 3}
+      propertyPath: m_Name
+      value: BotonBack
+      objectReference: {fileID: 0}
+    - target: {fileID: 1973688521373841375, guid: 8809d7b2b815ae14ca87a2ef9114f380, type: 3}
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
@@ -4922,7 +4942,7 @@ GameObject:
   - component: {fileID: 1190116578}
   - component: {fileID: 1190116577}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: ListaRS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5188,6 +5208,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 908678173}
     m_Modifications:
     - target: {fileID: 1973688521373841375, guid: 8809d7b2b815ae14ca87a2ef9114f380, type: 3}
+      propertyPath: m_Name
+      value: BotonOptions
+      objectReference: {fileID: 0}
+    - target: {fileID: 1973688521373841375, guid: 8809d7b2b815ae14ca87a2ef9114f380, type: 3}
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
@@ -5330,6 +5354,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 963837632}
     m_Modifications:
+    - target: {fileID: 1973688521373841375, guid: 8809d7b2b815ae14ca87a2ef9114f380, type: 3}
+      propertyPath: m_Name
+      value: BotonSF2
+      objectReference: {fileID: 0}
     - target: {fileID: 1973688521373841375, guid: 8809d7b2b815ae14ca87a2ef9114f380, type: 3}
       propertyPath: m_Layer
       value: 0
@@ -5477,6 +5505,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 908678173}
     m_Modifications:
     - target: {fileID: 1973688521373841375, guid: 8809d7b2b815ae14ca87a2ef9114f380, type: 3}
+      propertyPath: m_Name
+      value: BotonStart
+      objectReference: {fileID: 0}
+    - target: {fileID: 1973688521373841375, guid: 8809d7b2b815ae14ca87a2ef9114f380, type: 3}
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
@@ -5610,6 +5642,62 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8809d7b2b815ae14ca87a2ef9114f380, type: 3}
+--- !u!1 &1291408304 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1973688521373841375, guid: 8809d7b2b815ae14ca87a2ef9114f380, type: 3}
+  m_PrefabInstance: {fileID: 1291408303}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1291408305 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4459751601873164827, guid: 8809d7b2b815ae14ca87a2ef9114f380, type: 3}
+  m_PrefabInstance: {fileID: 1291408303}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1291408304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1291408306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1291408304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1291408305}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &1291615341
 GameObject:
   m_ObjectHideFlags: 0
@@ -5701,6 +5789,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 804878487}
     m_Modifications:
+    - target: {fileID: 1973688521373841375, guid: 8809d7b2b815ae14ca87a2ef9114f380, type: 3}
+      propertyPath: m_Name
+      value: BackAudio
+      objectReference: {fileID: 0}
     - target: {fileID: 1973688521373841375, guid: 8809d7b2b815ae14ca87a2ef9114f380, type: 3}
       propertyPath: m_Layer
       value: 0
@@ -6400,7 +6492,7 @@ GameObject:
   - component: {fileID: 1393326639}
   - component: {fileID: 1393326638}
   m_Layer: 0
-  m_Name: TextQuality Image
+  m_Name: ListaIQ
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6661,6 +6753,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 963837632}
     m_Modifications:
+    - target: {fileID: 1973688521373841375, guid: 8809d7b2b815ae14ca87a2ef9114f380, type: 3}
+      propertyPath: m_Name
+      value: BotonSF1
+      objectReference: {fileID: 0}
     - target: {fileID: 1973688521373841375, guid: 8809d7b2b815ae14ca87a2ef9114f380, type: 3}
       propertyPath: m_Layer
       value: 0
@@ -7207,6 +7303,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 782634977}
     m_Modifications:
+    - target: {fileID: 1973688521373841375, guid: 8809d7b2b815ae14ca87a2ef9114f380, type: 3}
+      propertyPath: m_Name
+      value: BotonNewGame
+      objectReference: {fileID: 0}
     - target: {fileID: 1973688521373841375, guid: 8809d7b2b815ae14ca87a2ef9114f380, type: 3}
       propertyPath: m_Layer
       value: 0
@@ -8911,6 +9011,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 908678173}
     m_Modifications:
     - target: {fileID: 1973688521373841375, guid: 8809d7b2b815ae14ca87a2ef9114f380, type: 3}
+      propertyPath: m_Name
+      value: BotonQuit
+      objectReference: {fileID: 0}
+    - target: {fileID: 1973688521373841375, guid: 8809d7b2b815ae14ca87a2ef9114f380, type: 3}
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
@@ -9315,6 +9419,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1754863379}
     m_Modifications:
+    - target: {fileID: 1973688521373841375, guid: 8809d7b2b815ae14ca87a2ef9114f380, type: 3}
+      propertyPath: m_Name
+      value: BotonBackOpciones
+      objectReference: {fileID: 0}
     - target: {fileID: 1973688521373841375, guid: 8809d7b2b815ae14ca87a2ef9114f380, type: 3}
       propertyPath: m_Layer
       value: 0

@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Idiomas Ningiri Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Idiomas Ningiri
+  m_TableCollectionNameGuidString: 4da1dd9129f438a4e9bd5a2c24990e48
+  m_Entries:
+  - m_Id: 171600236544
+    m_Key: BotonStart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 404715458560
+    m_Key: BotonOptions
+    m_Metadata:
+      m_Items: []
+  - m_Id: 585502543872
+    m_Key: 'BotonQuit '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 645606920192
+    m_Key: BotonNewGame
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1734712479744
+    m_Key: BotonLoad
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1924026585088
+    m_Key: BotonBack
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2123809673216
+    m_Key: BotonBackOpciones
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2222526812160
+    m_Key: BotonSF1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2319868219392
+    m_Key: BotonSF2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2592493785088
+    m_Key: BotonSF3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3140643180544
+    m_Key: BotonBackLoad
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3299523416064
+    m_Key: SliderBrillo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3686506680320
+    m_Key: ComboBoxFS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3770061410304
+    m_Key: ListaIQ
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4078258868224
+    m_Key: ListaRS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4233821409280
+    m_Key: BackVideo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4376289333248
+    m_Key: MusicSlider
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4500105187328
+    m_Key: BackAudio
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 3968669224707031040
+  references:
+    version: 2
+    RefIds:
+    - rid: 3968669224707031040
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1661880428373
