@@ -46,6 +46,10 @@ public class Move : MonoBehaviour
     void Update()
     {
         direction.x = inputs.Land.Horizontal.ReadValue<Vector2>().x;
+        if (direction.x < 0)
+            transform.localScale = new Vector2( Mathf.Abs(transform.localScale.x), transform.localScale.y);
+        else if (direction.x > 0)
+            transform.localScale = new Vector2( -Mathf.Abs(transform.localScale.x), transform.localScale.y);
         desiredVelocity = new Vector2(direction.x, 0f) * Mathf.Max(maxSpeed - ground.Friction, 0f);
     }
 

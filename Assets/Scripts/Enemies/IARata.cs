@@ -11,6 +11,7 @@ public class IARata : MonoBehaviour
     public Collider2D EnemyCollider;
     public Rigidbody2D rb;
     public LayerMask groundLayer;
+    public LayerMask obstaculo;
 
     private bool mustPatrol;
     private bool mustFlip;
@@ -24,10 +25,7 @@ public class IARata : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(mustPatrol)
-        {
-            Patrol();
-        }
+
     }
 
     void FixedUpdate()
@@ -35,17 +33,18 @@ public class IARata : MonoBehaviour
         if (mustPatrol)
         {
             mustFlip = !Physics2D.OverlapCircle(platformCheck.position, 0.1f, groundLayer);
+            Patrol();
         }
 
     }
 
     void Patrol()
     {
-        if (mustFlip || EnemyCollider.IsTouchingLayers(groundLayer))
+        if (mustFlip || EnemyCollider.IsTouchingLayers(groundLayer) || EnemyCollider.IsTouchingLayers())
         {
             Flip();
         }
-        rb.velocity = new Vector2(patrolSpeed*Time.fixedDeltaTime, rb.velocity.y);  
+        rb.velocity = new Vector2(patrolSpeed, rb.velocity.y);  
     }
 
     void Flip()

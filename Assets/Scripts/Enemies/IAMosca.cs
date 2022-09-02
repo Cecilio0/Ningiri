@@ -31,22 +31,19 @@ public class IAMosca : MonoBehaviour
     {
         Vector2 distance = new Vector2(transform.position.x - target.transform.position.x, transform.position.y - target.transform.position.y);
         //si se esta dentro de cierto rango el enemigo debera buscar a el target.
-        if (distance.magnitude < patrolRange)
+        if (distance.SqrMagnitude() < patrolRange*patrolRange)
         {
-            GoTo(target.transform.position);
+            float vX = -distance.normalized.x*enemyAttackSpeed;
+            float vY = -distance.normalized.y*enemyAttackSpeed;
+            rb.velocity = new Vector2(vX, vY);
         } 
         else //si no vuelve al spawn
         {
-            GoTo(posInicial);
+            Vector2 origen = new Vector2(transform.position.x - posInicial.x, transform.position.y - posInicial.y);
+            float vX = -origen.normalized.x*enemyReturnSpeed;
+            float vY = -origen.normalized.y*enemyReturnSpeed;
+            rb.velocity = new Vector2(vX, vY);
         }
     }
-
-    private void GoTo(Vector2 destination)
-    {
-        Vector2 origen = new Vector2(transform.position.x - destination.x, transform.position.y - destination.y);
-        float vX = -origen.normalized.x*enemyReturnSpeed;
-        float vY = -origen.normalized.y*enemyReturnSpeed;
-        rb.velocity = new Vector2(vX, vY);
-    }    
     
 }
