@@ -40,7 +40,7 @@ public class IARata : MonoBehaviour
 
     void Patrol()
     {
-        if (mustFlip || EnemyCollider.IsTouchingLayers(groundLayer) || EnemyCollider.IsTouchingLayers())
+        if (mustFlip || EnemyCollider.IsTouchingLayers(groundLayer))
         {
             Flip();
         }

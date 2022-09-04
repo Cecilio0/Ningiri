@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 3631936270733839558}
   - component: {fileID: 3631936270733839557}
   - component: {fileID: -2295142080999744577}
+  - component: {fileID: 1800449833828150686}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -316,6 +317,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCollider: {fileID: 3631936270733839615}
+  respawn: {fileID: 0}
   layerEnemy:
     serializedVersion: 2
     m_Bits: 128
+--- !u!114 &1800449833828150686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3631936270733839613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 150d91372da54d94baf38353be2388d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentMaxHealth: 30
+  healthBars: {fileID: 0}

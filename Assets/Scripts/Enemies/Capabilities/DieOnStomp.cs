@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DieNoRespawn : MonoBehaviour
+public class DieOnStomp : MonoBehaviour
 {
     public Collider2D objectCollider;
     public EdgeCollider2D deathCollider;

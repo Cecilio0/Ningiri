@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IAMosca : MonoBehaviour
+public class IAPaloma : MonoBehaviour
 {
 
     public float enemyAttackSpeed;
@@ -44,6 +44,7 @@ public class IAMosca : MonoBehaviour
             float vY = -origen.normalized.y*enemyReturnSpeed;
             rb.velocity = new Vector2(vX, vY);
         }
+        //if ()
     }
     
 }

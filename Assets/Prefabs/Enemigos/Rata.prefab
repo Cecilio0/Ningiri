@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6563493514109035321}
   - component: {fileID: 6563493514109035322}
   - component: {fileID: 6563493514109035323}
-  - component: {fileID: 1841380115275316179}
+  - component: {fileID: 7333927138302687120}
   m_Layer: 7
   m_Name: Rata
   m_TagString: Untagged
@@ -145,7 +145,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.05, y: 0}
@@ -183,7 +183,7 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
---- !u!114 &1841380115275316179
+--- !u!114 &7333927138302687120
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -192,11 +192,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6563493514109035324}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56844e96d45901e4b9f88dbb7863c355, type: 3}
+  m_Script: {fileID: 11500000, guid: d60dd93aa81eae34a80ef5c0fcfb234a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectCollider: {fileID: 6563493514109035322}
-  deathCollider: {fileID: 0}
+  damage: 10
 --- !u!1 &6563493514523654017
 GameObject:
   m_ObjectHideFlags: 0

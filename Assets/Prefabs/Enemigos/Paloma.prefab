@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 6114134215515125491}
   - component: {fileID: 6114134215515125490}
   - component: {fileID: 6114134215515125452}
+  - component: {fileID: 716290726072795175}
   m_Layer: 7
-  m_Name: Mosca
+  m_Name: Paloma
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -115,7 +116,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 6200000, guid: aa2b2a2ca832b1140a396cde149b027d, type: 2}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -152,3 +153,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &716290726072795175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6114134215515125495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d60dd93aa81eae34a80ef5c0fcfb234a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
