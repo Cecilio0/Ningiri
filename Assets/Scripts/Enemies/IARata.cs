@@ -11,7 +11,7 @@ public class IARata : MonoBehaviour
     public Collider2D EnemyCollider;
     public Rigidbody2D rb;
     public LayerMask groundLayer;
-    public LayerMask obstaculo;
+    public LayerMask enemyLayer;
 
     private bool mustPatrol;
     private bool mustFlip;
@@ -40,7 +40,7 @@ public class IARata : MonoBehaviour
 
     void Patrol()
     {
-        if (mustFlip || EnemyCollider.IsTouchingLayers(groundLayer))
+        if (mustFlip || EnemyCollider.IsTouchingLayers(groundLayer) || EnemyCollider.IsTouchingLayers(enemyLayer))
         {
             Flip();
         }

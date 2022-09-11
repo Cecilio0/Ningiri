@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -41,9 +42,7 @@ public class Health : MonoBehaviour
         {
             //Dead
             //respawn
-            transform.position = respawn.transform.position;
-            currentHealth = currentMaxHealth;
-            currentHealthBar.fillAmount = maxHealthBar.fillAmount;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 
