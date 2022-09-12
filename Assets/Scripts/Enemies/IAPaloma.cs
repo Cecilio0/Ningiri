@@ -33,8 +33,10 @@ public class IAPaloma : MonoBehaviour
         //si se esta dentro de cierto rango el enemigo debera buscar a el target.
         if (distance.SqrMagnitude() < patrolRange*patrolRange)
         {
+
             float vX = -distance.normalized.x*enemyAttackSpeed;
             float vY = -distance.normalized.y*enemyAttackSpeed;
+            Flip(distance);
             rb.velocity = new Vector2(vX, vY);
         } 
         else //si no vuelve al spawn
@@ -42,9 +44,22 @@ public class IAPaloma : MonoBehaviour
             Vector2 origen = new Vector2(transform.position.x - posInicial.x, transform.position.y - posInicial.y);
             float vX = -origen.normalized.x*enemyReturnSpeed;
             float vY = -origen.normalized.y*enemyReturnSpeed;
+            Flip(origen);
             rb.velocity = new Vector2(vX, vY);
         }
         //if ()
+    }
+
+    private void Flip(Vector2 direccion)
+    {
+        if (direccion.x < 0)
+        {
+            transform.localScale = new Vector2(-Mathf.Abs(transform.localScale.x), transform.localScale.y);
+        } 
+        else if (direccion.x > 0)
+        {
+            transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x), transform.localScale.y);
+        } 
     }
     
 }
