@@ -11,7 +11,7 @@ public class HealthRestore : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            collision.GetComponent<Health>().TakeDamage(-healthRestored);
+            collision.GetComponent<Health>().RestoreHealth(healthRestored);
             gameObject.SetActive(false);
         }
     }

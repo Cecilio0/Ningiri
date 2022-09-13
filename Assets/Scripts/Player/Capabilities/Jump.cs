@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Jump : MonoBehaviour
 {
-    PlayerControls inputs;
+    private PlayerInput inputs;
 
     [SerializeField]private float jumpHeight = 10f;
     [SerializeField]private int maxAirJumps = 1;
@@ -23,30 +24,17 @@ public class Jump : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        inputs = new PlayerControls();
-
+        inputs = GetComponent<PlayerInput>();
         body = GetComponent<Rigidbody2D>();
         ground = GetComponent<Ground>();
 
         defaultGravityScale = 1f;
     }
-
-    //para el funcionamiento de los controles
-    private void OnEnable()
-    {
-        inputs.Enable();
-    }
-
-    private void OnDisable()
-    {
-        inputs.Disable();
-    }
-
     // Update is called once per frame
     void Update()
     {
         //se usa |= ya que update y fixedUpdate() ocurren en intervalos distintos entonces que sea verdadero hasta que entre a fixedUpdate
-        desiredJump |= inputs.Land.Jump.WasPressedThisFrame();
+        desiredJump |= inputs.actions["Jump"].WasPressedThisFrame();
     }
 
     private void FixedUpdate()
