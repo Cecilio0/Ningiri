@@ -66,6 +66,34 @@ MonoBehaviour:
     m_Localized: Image Quality
     m_Metadata:
       m_Items: []
+  - m_Id: 6059010543616
+    m_Localized: Resolution
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6223376928768
+    m_Localized: Music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6294038368256
+    m_Localized: Very Low
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7097713152000
+    m_Localized: Low
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7228390887424
+    m_Localized: Medium
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7306488827904
+    m_Localized: High
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7385224302592
+    m_Localized: Very High
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

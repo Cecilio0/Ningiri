@@ -63,6 +63,34 @@ MonoBehaviour:
     m_Key: IMAGEQUALITY
     m_Metadata:
       m_Items: []
+  - m_Id: 6059010543616
+    m_Key: RESOLUTION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6223376928768
+    m_Key: MUSIC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6294038368256
+    m_Key: OPVERYLOW
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7097713152000
+    m_Key: OPLOW
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7228390887424
+    m_Key: OPMEDIUM
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7306488827904
+    m_Key: OPHIGH
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7385224302592
+    m_Key: OPVERYHIGH
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

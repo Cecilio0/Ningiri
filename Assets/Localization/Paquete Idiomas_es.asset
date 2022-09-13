@@ -66,6 +66,34 @@ MonoBehaviour:
     m_Localized: Calidad de Imagen
     m_Metadata:
       m_Items: []
+  - m_Id: 6059010543616
+    m_Localized: "Resoluci\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6223376928768
+    m_Localized: "M\xFAsica"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6294038368256
+    m_Localized: Muy Baja
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7097713152000
+    m_Localized: Baja
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7228390887424
+    m_Localized: Media
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7306488827904
+    m_Localized: Alta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7385224302592
+    m_Localized: Muy Alta
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
