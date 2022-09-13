@@ -14,7 +14,55 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_TableCollectionName: Paquete Idiomas
   m_TableCollectionNameGuidString: f66a971030da7e24996bcebdb3bc748e
-  m_Entries: []
+  m_Entries:
+  - m_Id: 78151143424
+    m_Key: BOTONSTART
+    m_Metadata:
+      m_Items: []
+  - m_Id: 175559659520
+    m_Key: BOTONOPCIONES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 233642381312
+    m_Key: BOTONQUIT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 313535483904
+    m_Key: BOTONNEWGAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 381793587200
+    m_Key: BOTONLOAD
+    m_Metadata:
+      m_Items: []
+  - m_Id: 660995821568
+    m_Key: BOTONBACK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 873533788160
+    m_Key: BOTONSAVEF1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 963321253888
+    m_Key: BOTONSAVEF2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1055126179840
+    m_Key: BOTONSAVEF3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1221723934720
+    m_Key: BRIGHTNESS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1319375720448
+    m_Key: FULLSCREEN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1412921282560
+    m_Key: IMAGEQUALITY
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

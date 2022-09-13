@@ -17,7 +17,55 @@ MonoBehaviour:
   m_SharedData: {fileID: 11400000, guid: f66a971030da7e24996bcebdb3bc748e, type: 2}
   m_Metadata:
     m_Items: []
-  m_TableData: []
+  m_TableData:
+  - m_Id: 78151143424
+    m_Localized: Jugar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 175559659520
+    m_Localized: Opciones
+    m_Metadata:
+      m_Items: []
+  - m_Id: 233642381312
+    m_Localized: Salir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 313535483904
+    m_Localized: Nueva Partida
+    m_Metadata:
+      m_Items: []
+  - m_Id: 381793587200
+    m_Localized: Cargar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 660995821568
+    m_Localized: Volver
+    m_Metadata:
+      m_Items: []
+  - m_Id: 873533788160
+    m_Localized: Guardado 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 963321253888
+    m_Localized: Guardado 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1055126179840
+    m_Localized: Guardado 3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1221723934720
+    m_Localized: Brillo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1319375720448
+    m_Localized: Pantalla Completa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1412921282560
+    m_Localized: Calidad de Imagen
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
