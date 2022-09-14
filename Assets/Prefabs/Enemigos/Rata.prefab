@@ -197,6 +197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 15
+  flashTime: 0.15
 --- !u!114 &7333927138302687120
 MonoBehaviour:
   m_ObjectHideFlags: 0

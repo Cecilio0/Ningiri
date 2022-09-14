@@ -7,10 +7,14 @@ public class EnemyHealth : MonoBehaviour
 
     [SerializeField] private float maxHealth;
     private float currentHealth;
+
+    [SerializeField] private float flashTime;
+    private SpriteRenderer sprite;
     // Start is called before the first frame update
     void Awake()
     {
         currentHealth = maxHealth;
+        sprite = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -25,6 +29,9 @@ public class EnemyHealth : MonoBehaviour
         if (currentHealth > 0)
         {
             //knockback
+
+            //parte grafica
+            StartCoroutine(Flash());
         }
         else
         {
@@ -33,5 +40,13 @@ public class EnemyHealth : MonoBehaviour
             //matar al enemigo
             Destroy(this.gameObject);
         }
+    }
+
+    private IEnumerator Flash()
+    {
+        sprite.color = Color.red;
+        yield return new WaitForSeconds(flashTime);
+        sprite.color = Color.white;
+
     }
 }
