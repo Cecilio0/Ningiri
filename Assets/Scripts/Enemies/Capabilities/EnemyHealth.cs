@@ -31,7 +31,7 @@ public class EnemyHealth : MonoBehaviour
             //dropear cosas
 
             //matar al enemigo
-            gameObject.SetActive(false);
+            Destroy(this.gameObject);
         }
     }
 }

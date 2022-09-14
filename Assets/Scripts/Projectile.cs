@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
+    [SerializeField] private float damage;
     [SerializeField] private float speed;
     [SerializeField] private float lifeTime;
     private float currentLifeTime;
@@ -40,6 +41,10 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.tag == "Enemy")
+        {
+            collision.GetComponent<EnemyHealth>().TakeDamage(damage);
+        }
         coll.enabled = false;
         gameObject.SetActive(false);
         Debug.Log("A comer Mierda");

@@ -40,6 +40,12 @@ public class Health : MonoBehaviour
     {
         currentHealth = Mathf.Clamp(currentHealth + healthRestored, 0, currentMaxHealth);
         currentHealthBar.fillAmount = currentHealth/currentMaxHealth * maxHealthBar.fillAmount;
+        if (currentHealth == 0)
+        {
+            //Hurt
+            //iframes
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 
     public void TakeDamage(float damage)

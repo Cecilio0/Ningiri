@@ -36,6 +36,8 @@ public class Shoot : MonoBehaviour
 
     private void Attack()
     {
+
+        //Ataca
         int projectile = FindProjectile();
         cooldownTimer = 0;
         projectiles[projectile].transform.position = firePoint.position;
@@ -49,6 +51,9 @@ public class Shoot : MonoBehaviour
         {
             projectiles[projectile].GetComponent<Projectile>().Cast(-Mathf.Sign(transform.localScale.x));
         }
+
+        //quita vida
+        GetComponent<Health>().RestoreHealth(-1);
     }
 
     private int FindProjectile()
