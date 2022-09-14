@@ -182,6 +182,17 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""0836f873-dc2a-4e8d-ae9a-19cacbfb4d71"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""9b036f4c-acd7-4606-a873-1ec6b51c265b"",
                     ""path"": ""<Gamepad>/buttonWest"",
                     ""interactions"": """",
