@@ -10,6 +10,7 @@ public class Shoot : MonoBehaviour
 
     [SerializeField] private float attackCooldown;
     [SerializeField] private Transform firePoint;
+    [SerializeField] private Transform oppositeFirePoint;
     [SerializeField] private GameObject[] projectiles;
     private float cooldownTimer;
     // Start is called before the first frame update
@@ -40,15 +41,25 @@ public class Shoot : MonoBehaviour
         //Ataca
         int projectile = FindProjectile();
         cooldownTimer = 0;
-        projectiles[projectile].transform.position = firePoint.position;
+        
         Vector2 direction = inputs.actions["Aim"].ReadValue<Vector2>();
         if (direction != null && direction.sqrMagnitude != 0)
         {
-            Debug.Log("curioso");
-            projectiles[projectile].GetComponent<Projectile>().Cast(Mathf.Sign(direction.x));
+            if (Mathf.Sign(direction.x) == Mathf.Sign(transform.localScale.x))
+            {
+                projectiles[projectile].transform.position = oppositeFirePoint.position;
+                projectiles[projectile].GetComponent<Projectile>().Cast(Mathf.Sign(direction.x));
+            } 
+            else 
+            {
+                projectiles[projectile].transform.position = firePoint.position;
+                projectiles[projectile].GetComponent<Projectile>().Cast(Mathf.Sign(direction.x));
+            }
+            
         }
         else 
         {
+            projectiles[projectile].transform.position = firePoint.position;
             projectiles[projectile].GetComponent<Projectile>().Cast(-Mathf.Sign(transform.localScale.x));
         }
 

@@ -7,10 +7,10 @@ public class Jump : MonoBehaviour
 {
     private PlayerInput inputs;
 
-    [SerializeField]private float jumpHeight = 10f;
-    [SerializeField]private int maxAirJumps = 1;
-    [SerializeField]private float downwardMovementMultiplier = 0.4f;
-    [SerializeField]private float upwardMovementMultiplier = 0.6f;
+    [SerializeField]private float jumpHeight;
+    [SerializeField]private int maxAirJumps;
+    [SerializeField]private float downwardMovementMultiplier;
+    [SerializeField]private float upwardMovementMultiplier;
 
     private Rigidbody2D body;
     private Ground ground;
