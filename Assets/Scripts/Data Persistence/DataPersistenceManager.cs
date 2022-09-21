@@ -13,13 +13,31 @@ public class DataPersistenceManager : MonoBehaviour{
         instance = this;
     }
 
-    public void NewGame(){
+    public void Begin(){
+        LoadGame();
+    }
 
+    public void NewGame(){
+        this.gameData = new GameData();
     }
     public void LoadGame(){
+        //TODO: Load any save data from a file using the data handler
+        // if no data can be loadad, initialize a new game
+        if (this.gameData == null){
+            Debug.Log("No data was found. Initializing data to defaults");
+            NewGame();
+        }
+
+        //TODO: push the loaded data to all the scripts that need it
 
     }
     public void SaveGame(){
+        //TODO: pass the data to other scripts so they can update it
 
+        //TODO: save the data to a file using the data handler
+    }
+
+    private void OnApplicationQuit() {
+        SaveGame();
     }
 }
