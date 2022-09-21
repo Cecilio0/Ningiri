@@ -12,6 +12,9 @@ public class Melee : MonoBehaviour
     [SerializeField] private float attackCooldown;
     [SerializeField] private LayerMask enemyLayer;
     private float cooldownTimer;
+
+    [SerializeField] private Transform provisional;//elemento provisional
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -43,6 +46,8 @@ public class Melee : MonoBehaviour
             enemy.gameObject.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
         }
         Debug.Log("Ataca");
+
+        StartCoroutine(graficoAtaque());
     }
 
     private void OnDrawGizmosSelected()
@@ -50,5 +55,20 @@ public class Melee : MonoBehaviour
         if (attackPoint == null)
             return;
             Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+    }
+
+    //completamente provisional
+    private IEnumerator graficoAtaque()
+    {
+        float direccion = transform.localScale.x;
+        Quaternion origen = provisional.rotation;
+        float iteraciones = 10f;
+        float fraccion = 0.01f/iteraciones;
+        for (int i = 0; i < iteraciones; i++)
+        {
+            provisional.eulerAngles = new Vector3(0, 0, 90/iteraciones*i*direccion);
+            yield return new WaitForSeconds(fraccion);
+        }
+        provisional.rotation = origen;
     }
 }
