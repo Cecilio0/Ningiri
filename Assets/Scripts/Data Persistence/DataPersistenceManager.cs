@@ -12,7 +12,7 @@ public class DataPersistenceManager : MonoBehaviour{
         }
         instance = this;
     }
-
+    /////////////////////////////////////////////////////////////////////
     public void Begin(){
         LoadGame();
     }
@@ -36,7 +36,7 @@ public class DataPersistenceManager : MonoBehaviour{
 
         //TODO: save the data to a file using the data handler
     }
-
+    /////////////////////////////////////////////////////////////////////
     private void OnApplicationQuit() {
         SaveGame();
     }
