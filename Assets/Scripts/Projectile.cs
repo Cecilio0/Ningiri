@@ -47,7 +47,6 @@ public class Projectile : MonoBehaviour
         }
         coll.enabled = false;
         gameObject.SetActive(false);
-        Debug.Log("A comer Mierda");
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -56,7 +55,6 @@ public class Projectile : MonoBehaviour
         {
             coll.enabled = false;
             gameObject.SetActive(false);
-            Debug.Log("A comer Mierda");
         }
 
     }
