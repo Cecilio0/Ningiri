@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Health : MonoBehaviour
+public class Health : MonoBehaviour, IDataPersistence
 {
 
     [Header("Valores de vida y representacion grafica")]
@@ -18,6 +18,19 @@ public class Health : MonoBehaviour
     [SerializeField] private int flashNumber;
     private SpriteRenderer sprite;
 
+    public void LoadData(GameData data)
+    {
+        this.maxHealth = data.maxHealth;
+        this.currentMaxHealth = data.currentMaxHealth;
+        this.currentHealth = data.currentHealth;
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        data.maxHealth = this.maxHealth;
+        data.currentMaxHealth = this.currentMaxHealth;
+        data.currentHealth = this.currentHealth;
+    }
 
     private float currentHealth;
 
