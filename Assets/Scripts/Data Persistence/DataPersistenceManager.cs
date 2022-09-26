@@ -30,10 +30,7 @@ public class DataPersistenceManager : MonoBehaviour{
         this.gameData = new GameData();
     }
     public void LoadGame(){
-        //Load any save data from a file using the data handler
-        this.gameData  = dataHandler.Load();
-
-
+        //TODO: Load any save data from a file using the data handler
 
         // if no data can be loadad, initialize a new game
         if (this.gameData == null){
@@ -41,26 +38,24 @@ public class DataPersistenceManager : MonoBehaviour{
             NewGame();
         }
 
-        //push the loaded data to all the scripts that need it
+        //TODO: push the loaded data to all the scripts that need it
         foreach(IDataPersistence dataPersistenceObject in this.dataPersistenceObjects){
             dataPersistenceObject.LoadData(gameData);
         }
-        //Debug.Log("Loaded health: " + gameData.maxHealth);
-        //Debug.Log("Loaded current max health" + gameData.currentMaxHealth);
-        //Debug.Log("Loaded current health: " + gameData.currentHealth);
+        Debug.Log("Loaded health: " + gameData.maxHealth);
+        Debug.Log("Loaded current max health" + gameData.currentMaxHealth);
+        Debug.Log("Loaded current health: " + gameData.currentHealth);
     }
     public void SaveGame(){
-        //pass the data to other scripts so they can update it
+        //TODO: pass the data to other scripts so they can update it
         foreach(IDataPersistence dataPersistenceObject in this.dataPersistenceObjects){
             dataPersistenceObject.SaveData(ref gameData);
         }
-        
-        //Debug.Log("Saved health: " + gameData.maxHealth);
-        //Debug.Log("Saved current max health" + gameData.currentMaxHealth);
-        //Debug.Log("Saved current health: " + gameData.currentHealth);
+        //TODO: save the data to a file using the data handler
 
-        //save the data to a file using the data handler
-        dataHandler.Save(gameData);
+        Debug.Log("Saved health: " + gameData.maxHealth);
+        Debug.Log("Saved current max health" + gameData.currentMaxHealth);
+        Debug.Log("Saved current health: " + gameData.currentHealth);
     }
     /////////////////////////////////////////////////////////////////////
     private void OnApplicationQuit() {
