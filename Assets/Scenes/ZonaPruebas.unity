@@ -157,7 +157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2866b13254129b428e0dee1ef77d83b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileName: ensayo.game
+  fileName: MiNegra.game
 --- !u!4 &123107811
 Transform:
   m_ObjectHideFlags: 0
@@ -2021,6 +2021,10 @@ PrefabInstance:
       propertyPath: currentHealthBar
       value: 
       objectReference: {fileID: 1441318068}
+    - target: {fileID: 8953422883378775263, guid: 1c8425e8ae2bd7c47b08c95ee0385bf7, type: 3}
+      propertyPath: currentMaxHealth
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c8425e8ae2bd7c47b08c95ee0385bf7, type: 3}
 --- !u!1001 &6563493515830849557

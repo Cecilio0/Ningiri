@@ -7,9 +7,9 @@ using System.IO;
 public class FileDataHandler
 {
     //Path del directorio donde queremos guardar los datos en el computador
-    private string dataDirPath = "";
+    private string dataDirPath;
     //Nombre del archivo donde se guardaran los datos
-    private string dataFileName = "";
+    private string dataFileName;
 
     //Constructor
     public FileDataHandler(string dataDirPath, string dataFileName){
