@@ -18,7 +18,7 @@ public class FileDataHandler
     }
 
     //Metodo de carga
-    public GameData LoadData(){
+    public GameData Load(){
          //Creacion del Path combinado
         string fullPath  = Path.Combine(dataDirPath, dataFileName);
         GameData loadedData = null;
@@ -43,7 +43,7 @@ public class FileDataHandler
     }
 
     //Metodo de guardado
-    public void SaveData(GameData data){
+    public void Save(GameData data){
         //Creacion del Path combinado
         string fullPath  = Path.Combine(dataDirPath, dataFileName);
         //Try-Catch para evitar errores
