@@ -8,10 +8,12 @@ public class GameData
     public float maxHealth;
     public float currentMaxHealth ;
     public float currentHealth;
+    public Vector2 playerPosition;
 
     public GameData(){
         maxHealth = 100f;
         currentMaxHealth = 100f;
         currentHealth = 100f;
+        playerPosition = Vector2.zero;
     }
 }
