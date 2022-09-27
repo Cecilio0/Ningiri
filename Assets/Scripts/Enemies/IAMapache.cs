@@ -4,17 +4,29 @@ using UnityEngine;
 
 public class IAMapache : MonoBehaviour
 {
-    
+    [Header("Ataque")]
+    [SerializeField] private Transform target;
     [SerializeField] private float pursuitSpeed;
+    [SerializeField] private float attackRange;
+    [SerializeField] private float attackLength;
+    [SerializeField] private float hitBoxSpeed;
+    [SerializeField] private Collider2D attackHitBox;
+    private bool attacking;
+
+    [Header("Patrulla")]
     [SerializeField] private float patrolSpeed;
+    [SerializeField] private float patrolRange;
     [SerializeField] private float timerRutinas;
     private float cronometro;
     private Rigidbody2D rb;
 
 
+
     // Start is called before the first frame update
     void Awake()
     {
+        attackHitBox.enabled = false;
+        attacking = false;
         cronometro = 0;
         rb = GetComponent<Rigidbody2D>();
     }
@@ -24,8 +36,36 @@ public class IAMapache : MonoBehaviour
     {
         cronometro += Time.deltaTime;
         //si el cronometro supera al timer se hace una rutina nueva
-        if (cronometro > timerRutinas)
+        Vector2 distance = new Vector2(target.position.x - transform.position.x, target.position.y - transform.position.y);
+        if (distance.sqrMagnitude < patrolRange*patrolRange)
+            AttackBehaviour(distance);
+        else if (cronometro > timerRutinas)
             Behaviour();
+        
+    }
+
+    private void AttackBehaviour(Vector2 distance)
+    {
+        if (distance.sqrMagnitude > attackRange*attackRange)
+        {
+            Move(pursuitSpeed, Mathf.Sign(distance.x));
+        } 
+        else if (!attacking)
+        {
+            StartCoroutine(Attack());
+        }
+        
+    }
+
+    private IEnumerator Attack()
+    {
+        attacking = true;
+        rb.velocity = Vector2.zero;
+        yield return new WaitForSeconds(hitBoxSpeed);
+        attackHitBox.enabled = true;
+        yield return new WaitForSeconds(attackLength-hitBoxSpeed);
+        attackHitBox.enabled = false;
+        attacking = false;
     }
 
     //esto unicamente se hace si el personaje no esta dentro del rango de vision
@@ -43,20 +83,20 @@ public class IAMapache : MonoBehaviour
                 switch (direction)
                 {
                     case 0:
-                        Move(patrolSpeed, direction);
+                        Move(patrolSpeed, -1);
                         break;
                     case 1:
-                        Move(patrolSpeed, direction);
+                        Move(patrolSpeed, 1);
                         break;
                 }
                 break;
         }
     }
 
-    private void Move(float speed, int direction)
+    private void Move(float speed, float direction)
     {
-        rb.velocity = new Vector2(speed*(float)direction, rb.velocity.y);
-        //transform.localScale = new Vector2(transform.localScale.x);
+        rb.velocity = new Vector2(speed*direction, rb.velocity.y);
+        transform.localScale = new Vector2(-transform.localScale.x*direction, transform.localScale.y);
     }
     
 }
