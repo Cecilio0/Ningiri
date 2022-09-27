@@ -151,6 +151,7 @@ MonoBehaviour:
   enemyAttackSpeed: 5
   enemyReturnSpeed: 2
   patrolRange: 15
+  attackRange: 0.5
   enemyCollider: {fileID: 6114134215515125490}
   rb: {fileID: 6114134215515125452}
   target: {fileID: 0}

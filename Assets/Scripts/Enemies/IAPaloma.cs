@@ -8,6 +8,7 @@ public class IAPaloma : MonoBehaviour
     public float enemyAttackSpeed;
     public float enemyReturnSpeed;
     public float patrolRange;
+    public float attackRange;
     public Collider2D enemyCollider;
     public Rigidbody2D rb;
     public GameObject target;
@@ -33,11 +34,18 @@ public class IAPaloma : MonoBehaviour
         //si se esta dentro de cierto rango el enemigo debera buscar a el target.
         if (distance.sqrMagnitude < patrolRange*patrolRange)
         {
-
-            float vX = -distance.normalized.x*enemyAttackSpeed;
-            float vY = -distance.normalized.y*enemyAttackSpeed;
-            Flip(distance);
-            rb.velocity = new Vector2(vX, vY);
+            if (distance.sqrMagnitude < attackRange*attackRange)
+            {
+                rb.velocity = Vector2.zero;
+            } 
+            else
+            {
+                float vX = -distance.normalized.x*enemyAttackSpeed;
+                float vY = -distance.normalized.y*enemyAttackSpeed;
+                Flip(distance);
+                rb.velocity = new Vector2(vX, vY);
+            }
+            
         } 
         else //si no vuelve al spawn
         {
