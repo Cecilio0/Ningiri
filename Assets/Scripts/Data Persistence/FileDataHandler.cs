@@ -10,11 +10,14 @@ public class FileDataHandler
     private string dataDirPath;
     //Nombre del archivo donde se guardaran los datos
     private string dataFileName;
+    private bool useEncryption = false;
+    private readonly string encryptionCodeWord = "word";
 
     //Constructor
-    public FileDataHandler(string dataDirPath, string dataFileName){
+    public FileDataHandler(string dataDirPath, string dataFileName, bool useEncryption){
         this.dataDirPath = dataDirPath;
         this.dataFileName = dataFileName;
+        this.useEncryption = useEncryption;
     }
 
     //Metodo de carga
@@ -30,6 +33,10 @@ public class FileDataHandler
                     using(StreamReader reader = new StreamReader(fileStream)){
                         dataToLoad = reader.ReadToEnd();
                     }
+                }
+                //Desencriptar los datos (opcional)
+                if(useEncryption){
+                    dataToLoad = EncryptDecrypt(dataToLoad);
                 }
                 //Deserializar los datos del JSON a un objeto de tipo GameData
                 loadedData = JsonUtility.FromJson<GameData>(dataToLoad);
@@ -54,6 +61,11 @@ public class FileDataHandler
             //Serializacion del gameData Object a un JSON
             string dataToStore = JsonUtility.ToJson(data, true);
 
+            //Encriptacion de los datos (opcional)
+            if(useEncryption){
+                dataToStore = EncryptDecrypt(dataToStore);
+            }
+
             //Escribir la serializacion de datos en el archivo
             using(FileStream stream = new FileStream(fullPath, FileMode.Create)){
                 using(StreamWriter writer = new StreamWriter(stream)){
@@ -67,4 +79,11 @@ public class FileDataHandler
         }
     }
 
+    private string EncryptDecrypt(string data){
+        string modifiedData = "";
+        for(int i = 0; i < data.Length; i++){
+            modifiedData += (char)(data[i] ^ encryptionCodeWord[i % encryptionCodeWord.Length]);
+        }
+        return modifiedData;
+    }
 }
