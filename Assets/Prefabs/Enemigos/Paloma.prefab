@@ -127,7 +127,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.3, y: 1.3}
+  m_Size: {x: 1.3, y: 1.2}
   m_EdgeRadius: 0
 --- !u!50 &6114134215515125452
 Rigidbody2D:
@@ -170,7 +170,6 @@ MonoBehaviour:
   patrolRange: 15
   enemyCollider: {fileID: 6114134215515125490}
   rb: {fileID: 6114134215515125452}
-  target: {fileID: 0}
 --- !u!114 &716290726072795175
 MonoBehaviour:
   m_ObjectHideFlags: 0

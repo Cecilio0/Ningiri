@@ -9,7 +9,7 @@ public class DamageOnContact : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player" && collision is Collider2D)
+        if (collision.tag == "Player" && collision is BoxCollider2D)
         {
             collision.GetComponent<Health>().TakeDamage(damage);
         }

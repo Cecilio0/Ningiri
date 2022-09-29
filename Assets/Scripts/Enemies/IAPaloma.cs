@@ -93,7 +93,7 @@ public class IAPaloma : MonoBehaviour
     {
         attacking = true;
         rb.velocity = Vector2.zero;
-        float velocity = 10f/(2f*(attackLength));
+        float velocity = attackRange*attackRange/(2f*(attackLength));
         distance = distance.normalized*velocity;
         yield return new WaitForSeconds(attackStartup);
         rb.velocity = new Vector2(-distance.x, -distance.y);
