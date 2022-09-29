@@ -18,7 +18,7 @@ public class IAPaloma : MonoBehaviour
     [SerializeField] private float patrolRange;
     [SerializeField] private Collider2D enemyCollider;
     [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private GameObject target;
+    private Transform target;
 
 
     private Vector2 posInicial;
@@ -26,6 +26,7 @@ public class IAPaloma : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        target = GameObject.FindGameObjectWithTag("Player").transform;
         attacking = false;
         posInicial = transform.position;
     }
@@ -40,7 +41,7 @@ public class IAPaloma : MonoBehaviour
     {
         if (!attacking)
         {
-            Vector2 distance = new Vector2(transform.position.x - target.transform.position.x, transform.position.y - target.transform.position.y);
+            Vector2 distance = new Vector2(transform.position.x - target.position.x, transform.position.y - target.position.y);
             //si se esta dentro de cierto rango el enemigo debera buscar a el target.
             if (distance.sqrMagnitude < patrolRange*patrolRange)
             {

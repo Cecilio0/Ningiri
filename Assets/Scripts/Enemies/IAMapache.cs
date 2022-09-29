@@ -5,12 +5,12 @@ using UnityEngine;
 public class IAMapache : MonoBehaviour
 {
     [Header("Ataque")]
-    [SerializeField] private Transform target;
     [SerializeField] private float pursuitSpeed;
     [SerializeField] private float attackRange;
     [SerializeField] private float attackLength;
     [SerializeField] private float hitBoxSpeed;
     [SerializeField] private Collider2D attackHitBox;
+    private Transform target;
     private bool attacking;
 
     [Header("Patrulla")]
@@ -27,6 +27,7 @@ public class IAMapache : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        target = GameObject.FindGameObjectWithTag("Player").transform;
         attackHitBox.enabled = false;
         attacking = false;
         cronometro = 0;

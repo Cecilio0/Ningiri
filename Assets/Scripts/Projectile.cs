@@ -41,17 +41,18 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        
         if (collision.tag == "Enemy")
-        {
-            collision.GetComponent<EnemyHealth>().TakeDamage(damage);
-        }
+                collision.gameObject.GetComponent<EnemyHealth>().TakeDamage(damage);
+        else if (collision.tag == "Boss")
+            collision.gameObject.GetComponent<BossHealth>().TakeDamage(damage);
         coll.enabled = false;
         gameObject.SetActive(false);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.tag == "Enemy" || collision.collider.tag == "Untagged")
+        if (collision.collider.tag == "Enemy" || collision.collider.tag == "Untagged" || collision.collider.tag == "Boss")
         {
             coll.enabled = false;
             gameObject.SetActive(false);
