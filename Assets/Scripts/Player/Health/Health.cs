@@ -46,8 +46,7 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        currentHealth = Mathf.Clamp(currentHealth - damage, 0, currentMaxHealth);
-        currentHealthBar.fillAmount = currentHealth/currentMaxHealth * maxHealthBar.fillAmount;
+        RestoreHealth(-damage);
         if (currentHealth > 0)
         {
             //Hurt

@@ -17,6 +17,8 @@ public class IAMapache : MonoBehaviour
     [SerializeField] private float patrolSpeed;
     [SerializeField] private float patrolRange;
     [SerializeField] private float timerRutinas;
+    [SerializeField] private Collider2D enemyCollider;
+    [SerializeField] private LayerMask wallLayer;
     private float cronometro;
     private Rigidbody2D rb;
 
@@ -35,9 +37,11 @@ public class IAMapache : MonoBehaviour
     void Update()
     {
         cronometro += Time.deltaTime;
+        if (enemyCollider.IsTouchingLayers(wallLayer))
+            rb.velocity = -1*rb.velocity;
         //si el cronometro supera al timer se hace una rutina nueva
         Vector2 distance = new Vector2(target.position.x - transform.position.x, target.position.y - transform.position.y);
-        if (distance.sqrMagnitude < patrolRange*patrolRange)
+        if (distance.sqrMagnitude < patrolRange*patrolRange && Mathf.Abs(distance.y) < 2)
             AttackBehaviour(distance);
         else if (cronometro > timerRutinas)
             Behaviour();

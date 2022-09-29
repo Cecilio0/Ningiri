@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6114134215515125489}
   - component: {fileID: 6114134215515125488}
+  - component: {fileID: 2444511072484233752}
   - component: {fileID: 6114134215515125490}
   - component: {fileID: 6114134215515125452}
   - component: {fileID: 6114134215515125491}
-  - component: {fileID: 2444511072484233752}
   - component: {fileID: 716290726072795175}
   m_Layer: 7
   m_Name: Paloma
@@ -89,6 +89,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2444511072484233752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6114134215515125495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ed9336c005e6994d8902c70110a5d9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 30
+  flashTime: 0.25
 --- !u!61 &6114134215515125490
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -148,27 +162,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47b6898512634e14c9fbefb5c6fb3e8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyAttackSpeed: 5
-  enemyReturnSpeed: 2
+  enemyPursuitSpeed: 5
+  enemyReturnSpeed: 5
+  attackLength: 0.5
+  attackRange: 3
+  attackStartup: 0.2
   patrolRange: 15
-  attackRange: 0.5
   enemyCollider: {fileID: 6114134215515125490}
   rb: {fileID: 6114134215515125452}
   target: {fileID: 0}
---- !u!114 &2444511072484233752
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6114134215515125495}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ed9336c005e6994d8902c70110a5d9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 30
-  flashTime: 0.25
 --- !u!114 &716290726072795175
 MonoBehaviour:
   m_ObjectHideFlags: 0

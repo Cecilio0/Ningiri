@@ -43,10 +43,13 @@ public class Melee : MonoBehaviour
         
         foreach(Collider2D enemy in hitEnemies)
         {
-            enemy.gameObject.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
+            if (enemy is BoxCollider2D)
+            {
+                if (enemy.tag == "Enemy")
+                    enemy.gameObject.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
+                else enemy.gameObject.GetComponent<BossHealth>().TakeDamage(attackDamage);
+            }
         }
-        Debug.Log("Ataca");
-
         StartCoroutine(graficoAtaque());
     }
 
@@ -63,7 +66,7 @@ public class Melee : MonoBehaviour
         float direccion = transform.localScale.x;
         Quaternion origen = provisional.rotation;
         float iteraciones = 10f;
-        float fraccion = 0.01f/iteraciones;
+        float fraccion = 0.05f/iteraciones;
         for (int i = 0; i < iteraciones; i++)
         {
             provisional.eulerAngles = new Vector3(0, 0, 90/iteraciones*i*direccion);

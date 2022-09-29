@@ -5,8 +5,8 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
 
-    [SerializeField] private float maxHealth;
-    private float currentHealth;
+    [SerializeField] protected float maxHealth;
+    protected float currentHealth;
 
     [SerializeField] private float flashTime;
     private SpriteRenderer sprite;
@@ -15,12 +15,6 @@ public class EnemyHealth : MonoBehaviour
     {
         currentHealth = maxHealth;
         sprite = GetComponent<SpriteRenderer>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void TakeDamage(float damage)
