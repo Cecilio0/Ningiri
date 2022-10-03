@@ -58,14 +58,15 @@ public class IAMapache : MonoBehaviour
         } 
         else if (!attacking)
         {
-            StartCoroutine(Attack());
+            StartCoroutine(Attack(distance));
         }
         
     }
 
-    private IEnumerator Attack()
+    private IEnumerator Attack(Vector2 distance)
     {
         //tiempo que se demora en aparecer el ataque
+        transform.localScale = new Vector2(transform.localScale.x*Mathf.Sign(distance.x), transform.localScale.y*Mathf.Sign(distance.y));
         attacking = true;
         rb.velocity = Vector2.zero;
         for (int i = 0; i < hitBoxSpeed; i++)
@@ -80,7 +81,7 @@ public class IAMapache : MonoBehaviour
         float fraccion = 120/(float)attackLength;
         for (int i = 0; i < attackLength; i++)
         {
-            pivoteBrazo.eulerAngles = new Vector3(0, 0, pivoteBrazo.eulerAngles.z + fraccion);
+            pivoteBrazo.eulerAngles = new Vector3(0, 0, pivoteBrazo.eulerAngles.z + fraccion*direccion);
             yield return new WaitForFixedUpdate();
         }
 

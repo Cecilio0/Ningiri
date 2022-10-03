@@ -218,8 +218,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pursuitSpeed: 7
   attackRange: 2.5
-  attackLength: 0
-  hitBoxSpeed: 0
+  attackLength: 40
+  hitBoxSpeed: 10
   attackHitBox: {fileID: 3388838573250523074}
   pivoteBrazo: {fileID: 8427492077895578242}
   patrolSpeed: 5

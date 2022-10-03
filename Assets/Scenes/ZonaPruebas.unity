@@ -494,6 +494,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VigasCruzada (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
 --- !u!4 &78577613 stripped
@@ -609,7 +613,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 184587161}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Escaleras
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -686,6 +690,10 @@ PrefabInstance:
     - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
       propertyPath: m_Name
       value: VigasCruzada
+      objectReference: {fileID: 0}
+    - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
@@ -927,6 +935,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VigasCruzada (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
 --- !u!4 &236840001 stripped
@@ -1157,6 +1169,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VigasCruzada (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
 --- !u!4 &271084910 stripped
@@ -1218,6 +1234,10 @@ PrefabInstance:
     - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
       propertyPath: m_Name
       value: VigasCruzada
+      objectReference: {fileID: 0}
+    - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
@@ -1371,7 +1391,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 321696492}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SegundoPiso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1532,6 +1552,10 @@ PrefabInstance:
     - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
       propertyPath: m_Name
       value: Vigas_cruzadas 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
@@ -1722,7 +1746,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 482311864}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1805,6 +1829,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VigasCruzada (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
 --- !u!4 &507011836 stripped
@@ -1866,6 +1894,10 @@ PrefabInstance:
     - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
       propertyPath: m_Name
       value: VigasCruzada (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
@@ -2210,6 +2242,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VigasCruzada (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
 --- !u!4 &585247143 stripped
@@ -2404,7 +2440,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 667584662}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Piso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2524,7 +2560,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 672413769}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GameObject (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2607,6 +2643,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Vigas_cruzadas 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
 --- !u!4 &708268109 stripped
@@ -2678,6 +2718,10 @@ PrefabInstance:
     - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
       propertyPath: m_Name
       value: VigasCruzada (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
@@ -2824,6 +2868,10 @@ PrefabInstance:
     - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
       propertyPath: m_Name
       value: Vigas_cruzadas 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
@@ -3006,6 +3054,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VigasCruzada
       objectReference: {fileID: 0}
+    - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
 --- !u!4 &858268648 stripped
@@ -3108,6 +3160,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VigasCruzada (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
 --- !u!4 &885458977 stripped
@@ -3169,6 +3225,10 @@ PrefabInstance:
     - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
       propertyPath: m_Name
       value: VigasCruzada (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
@@ -3440,6 +3500,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VigasCruzada (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
 --- !u!4 &926042599 stripped
@@ -3586,6 +3650,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VigasCruzada (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
 --- !u!4 &935464947 stripped
@@ -3647,6 +3715,10 @@ PrefabInstance:
     - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
       propertyPath: m_Name
       value: VigasCruzada (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
@@ -3894,6 +3966,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Vigas_cruzadas 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
 --- !u!4 &1012735357 stripped
@@ -3999,7 +4075,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1073417375}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4082,6 +4158,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VigasCruzada (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
 --- !u!4 &1073981311 stripped
@@ -4143,6 +4223,10 @@ PrefabInstance:
     - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
       propertyPath: m_Name
       value: VigasCruzada (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
@@ -4333,7 +4417,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1163949484}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GameObject (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4588,6 +4672,10 @@ PrefabInstance:
     - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
       propertyPath: m_Name
       value: VigasCruzada (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
@@ -4907,6 +4995,10 @@ PrefabInstance:
     - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
       propertyPath: m_Name
       value: VigasCruzada (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
@@ -5243,6 +5335,10 @@ PrefabInstance:
     - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
       propertyPath: m_Name
       value: Vigas_cruzadas 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
@@ -5678,6 +5774,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VigasCruzada
       objectReference: {fileID: 0}
+    - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
 --- !u!4 &1488058092 stripped
@@ -5739,6 +5839,10 @@ PrefabInstance:
     - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
       propertyPath: m_Name
       value: VigasCruzada (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
@@ -5970,6 +6074,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VigasCruzada (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
 --- !u!4 &1509390767 stripped
@@ -5986,7 +6094,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1515266047}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6023,7 +6131,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1525367754}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pared
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6229,6 +6337,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VigasCruzada (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
 --- !u!4 &1565481875 stripped
@@ -6364,6 +6476,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VigasCruzada (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
 --- !u!4 &1587525846 stripped
@@ -6425,6 +6541,10 @@ PrefabInstance:
     - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
       propertyPath: m_Name
       value: Vigas_cruzadas 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
@@ -6638,6 +6758,10 @@ PrefabInstance:
     - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
       propertyPath: m_Name
       value: VigasCruzada (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
@@ -7069,6 +7193,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VigasCruzada
       objectReference: {fileID: 0}
+    - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
 --- !u!4 &1727447222 stripped
@@ -7220,6 +7348,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VigasCruzada
       objectReference: {fileID: 0}
+    - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
 --- !u!4 &1778531732 stripped
@@ -7273,7 +7405,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.515823, y: 1}
+    m_SensorSize: {x: 1.7772021, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -7307,7 +7439,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1784564061}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plataformas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7481,6 +7613,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VigasCruzada (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
 --- !u!4 &1795889711 stripped
@@ -7543,6 +7679,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VigasCruzada (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
 --- !u!4 &1807569221 stripped
@@ -7604,6 +7744,10 @@ PrefabInstance:
     - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
       propertyPath: m_Name
       value: VigasCruzada
+      objectReference: {fileID: 0}
+    - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
@@ -7947,6 +8091,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VigasCruzada (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
 --- !u!4 &1987596541 stripped
@@ -8093,6 +8241,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VigasCruzada
       objectReference: {fileID: 0}
+    - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
 --- !u!4 &2019868718 stripped
@@ -8193,7 +8345,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2037443560}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8444,6 +8596,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VigasCruzada (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
 --- !u!4 &2075372897 stripped
@@ -8505,6 +8661,10 @@ PrefabInstance:
     - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
       propertyPath: m_Name
       value: VigasCruzada (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
@@ -9429,6 +9589,10 @@ PrefabInstance:
     - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
       propertyPath: m_Name
       value: Vigas_cruzadas 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9016711510279294139, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb6c2f3e5241c4fb0b641f9a6a45abbc, type: 3}
