@@ -46,7 +46,7 @@ public class FightEnter : MonoBehaviour
         }
 
         yield return new WaitForSeconds(2);
-
+            
         for(int i = 0; i < frames/2; i++)
         {
             titulo.position = new Vector2(titulo.position.x + dist, titulo.position.y);
@@ -59,5 +59,4 @@ public class FightEnter : MonoBehaviour
                 thing.SetActive(true);
         lateDisable.SetActive(false);
     }
-
 }
