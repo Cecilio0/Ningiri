@@ -34,8 +34,7 @@ public class DataPersistenceManager : MonoBehaviour{
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode){
         Debug.Log("OnSceneLoaded called");
         this.dataPersistenceObjects = FindAllDataPersistenceObjects();
-        LoadGame();
-
+        
     }
     public void OnSceneUnloaded(Scene scene){
         Debug.Log("OnSceneUnloaded called");
@@ -44,6 +43,7 @@ public class DataPersistenceManager : MonoBehaviour{
     
     public void NewGame(){
         this.gameData = new GameData();
+
     }
     public void LoadGame(){
         //Load any save data from a file using the data handler
