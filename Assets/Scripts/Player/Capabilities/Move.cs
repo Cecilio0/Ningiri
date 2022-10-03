@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Move : MonoBehaviour
 {
 
-    private PlayerControls inputs;
+    private PlayerInput inputs;
 
     public float maxSpeed;
     public float maxAcceleration;
@@ -26,26 +27,19 @@ public class Move : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        inputs = new PlayerControls();
+        inputs = GetComponent<PlayerInput>();
         body = GetComponent<Rigidbody2D>();
         ground = GetComponent<Ground>();
-    }
-
-    //para el funcionamiento de los controles
-    private void OnEnable()
-    {
-        inputs.Enable();
-    }
-
-    private void OnDisable()
-    {
-        inputs.Disable();
     }
 
     // Update is called once per frame
     void Update()
     {
-        direction.x = inputs.Land.Horizontal.ReadValue<Vector2>().x;
+        direction.x = inputs.actions["Horizontal"].ReadValue<Vector2>().x;
+        if (direction.x < 0)
+            transform.localScale = new Vector2( Mathf.Abs(transform.localScale.x), transform.localScale.y);
+        else if (direction.x > 0)
+            transform.localScale = new Vector2( -Mathf.Abs(transform.localScale.x), transform.localScale.y);
         desiredVelocity = new Vector2(direction.x, 0f) * Mathf.Max(maxSpeed - ground.Friction, 0f);
     }
 
@@ -55,7 +49,7 @@ public class Move : MonoBehaviour
         velocity = body.velocity;
 
         acceleration = onGround ? maxAcceleration : maxAirAcceleration;
-        maxSpeedChange = acceleration * Time.deltaTime;
+        maxSpeedChange = acceleration * Time.fixedDeltaTime;
         velocity.x = Mathf.MoveTowards(velocity.x, desiredVelocity.x, maxSpeedChange);
         body.velocity = velocity;
     }
