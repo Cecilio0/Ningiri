@@ -7,9 +7,10 @@ public class IAMapache : MonoBehaviour
     [Header("Ataque")]
     [SerializeField] private float pursuitSpeed;
     [SerializeField] private float attackRange;
-    [SerializeField] private float attackLength;
-    [SerializeField] private float hitBoxSpeed;
+    [SerializeField] private int attackLength;//duracion completa del ataque
+    [SerializeField] private int hitBoxSpeed;//frames que se demora en salir la hitbox
     [SerializeField] private Collider2D attackHitBox;
+    [SerializeField] Transform pivoteBrazo;
     private Transform target;
     private bool attacking;
 
@@ -64,11 +65,27 @@ public class IAMapache : MonoBehaviour
 
     private IEnumerator Attack()
     {
+        //tiempo que se demora en aparecer el ataque
         attacking = true;
         rb.velocity = Vector2.zero;
-        yield return new WaitForSeconds(hitBoxSpeed);
+        for (int i = 0; i < hitBoxSpeed; i++)
+        {
+            yield return new WaitForFixedUpdate();    
+        }
+
+        //animacion provisional de ataque
+        float direccion = transform.localScale.x;
+        Quaternion origen = pivoteBrazo.rotation;
         attackHitBox.enabled = true;
-        yield return new WaitForSeconds(attackLength-hitBoxSpeed);
+        float fraccion = 120/(float)attackLength;
+        for (int i = 0; i < attackLength; i++)
+        {
+            pivoteBrazo.eulerAngles = new Vector3(0, 0, pivoteBrazo.eulerAngles.z + fraccion);
+            yield return new WaitForFixedUpdate();
+        }
+
+        //final del ataque
+        pivoteBrazo.rotation = origen;
         attackHitBox.enabled = false;
         attacking = false;
     }
