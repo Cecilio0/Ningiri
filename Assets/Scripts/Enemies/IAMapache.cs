@@ -7,6 +7,7 @@ public class IAMapache : MonoBehaviour
     [Header("Ataque")]
     [SerializeField] private float pursuitSpeed;
     [SerializeField] private float attackRange;
+    [SerializeField] private int attackEndLag;
     [SerializeField] private int attackLength;//duracion completa del ataque
     [SerializeField] private int hitBoxSpeed;//frames que se demora en salir la hitbox
     [SerializeField] private Collider2D attackHitBox;
@@ -19,7 +20,9 @@ public class IAMapache : MonoBehaviour
     [SerializeField] private float patrolRange;
     [SerializeField] private float timerRutinas;
     [SerializeField] private Collider2D enemyCollider;
+    [SerializeField] private Transform platformCheck;
     [SerializeField] private LayerMask wallLayer;
+    
     private float cronometro;
     private Rigidbody2D rb;
 
@@ -39,8 +42,11 @@ public class IAMapache : MonoBehaviour
     void Update()
     {
         cronometro += Time.deltaTime;
-        if (enemyCollider.IsTouchingLayers(wallLayer))
-            rb.velocity = -1*rb.velocity;
+        if (enemyCollider.IsTouchingLayers(wallLayer) || !Physics2D.OverlapCircle(platformCheck.position, 0.1f, wallLayer))
+        {
+            Move(rb.velocity.x, -1);
+        }
+            
         //si el cronometro supera al timer se hace una rutina nueva
         Vector2 distance = new Vector2(target.position.x - transform.position.x, target.position.y - transform.position.y);
         if (distance.sqrMagnitude < patrolRange*patrolRange && Mathf.Abs(distance.y) < 2)
@@ -54,7 +60,17 @@ public class IAMapache : MonoBehaviour
     {
         if (distance.sqrMagnitude > attackRange*attackRange)
         {
-            Move(pursuitSpeed, Mathf.Sign(distance.x));
+            if (distance.x < 0)
+            {
+                transform.localScale = new Vector2( Mathf.Abs(transform.localScale.x), transform.localScale.y);
+                Move(pursuitSpeed, 1);
+            }
+            else if (distance.x > 0)
+            {
+                transform.localScale = new Vector2( -Mathf.Abs(transform.localScale.x), transform.localScale.y);
+                Move(pursuitSpeed, 1);
+            }
+
         } 
         else if (!attacking)
         {
@@ -66,7 +82,6 @@ public class IAMapache : MonoBehaviour
     private IEnumerator Attack(Vector2 distance)
     {
         //tiempo que se demora en aparecer el ataque
-        transform.localScale = new Vector2(transform.localScale.x*Mathf.Sign(distance.x), transform.localScale.y*Mathf.Sign(distance.y));
         attacking = true;
         rb.velocity = Vector2.zero;
         for (int i = 0; i < hitBoxSpeed; i++)
@@ -75,26 +90,28 @@ public class IAMapache : MonoBehaviour
         }
 
         //animacion provisional de ataque
-        float direccion = transform.localScale.x;
-        Quaternion origen = pivoteBrazo.rotation;
+        Vector3 inicio = pivoteBrazo.localEulerAngles;
         attackHitBox.enabled = true;
-        float fraccion = 120/(float)attackLength;
+        int fraccion = 120/attackLength;
+        Vector3 rotacion = new Vector3(0f, 0f, fraccion);
         for (int i = 0; i < attackLength; i++)
         {
-            pivoteBrazo.eulerAngles = new Vector3(0, 0, pivoteBrazo.eulerAngles.z + fraccion*direccion);
+            pivoteBrazo.Rotate(rotacion);
             yield return new WaitForFixedUpdate();
         }
 
         //final del ataque
-        pivoteBrazo.rotation = origen;
+        pivoteBrazo.localEulerAngles = inicio;
         attackHitBox.enabled = false;
+        for (int i = 0; i < attackEndLag; i++)
+            yield return new WaitForFixedUpdate();
         attacking = false;
     }
 
     //esto unicamente se hace si el personaje no esta dentro del rango de vision
     private void Behaviour()
     {
-
+        
         cronometro = 0;
         int action = Random.Range(0, 2);
         switch(action)
@@ -118,8 +135,8 @@ public class IAMapache : MonoBehaviour
 
     private void Move(float speed, float direction)
     {
-        rb.velocity = new Vector2(speed*direction, rb.velocity.y);
-        transform.localScale = new Vector2(-transform.localScale.x*direction, transform.localScale.y);
+        transform.localScale = new Vector2(transform.localScale.x*direction, transform.localScale.y);
+        rb.velocity = new Vector2(-speed*Mathf.Sign(transform.localScale.x), rb.velocity.y);
     }
     
 }

@@ -36,6 +36,7 @@ public class Health : MonoBehaviour
         
     }
 
+    //Current health updated
     public void RestoreHealth (float healthRestored)
     {
         currentHealth = Mathf.Clamp(currentHealth + healthRestored, 0, currentMaxHealth);
@@ -44,6 +45,25 @@ public class Health : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
+    //Current max health increased
+    public void HealthUp(float healthIncreased)
+    {
+        currentMaxHealth += healthIncreased;
+        maxHealthBar.fillAmount = currentMaxHealth/maxHealth;
+        currentHealthBar.fillAmount = currentHealth/currentMaxHealth * maxHealthBar.fillAmount;
+
+    }
+
+    //Current max health decreased
+    public void HealthDown(float healthIncreased)
+    {
+        currentMaxHealth += healthIncreased;
+        maxHealthBar.fillAmount = currentMaxHealth/maxHealth;
+        currentHealthBar.fillAmount = currentHealth/currentMaxHealth * maxHealthBar.fillAmount;
+        
+    }
+
+    //Current health updated + Iframes or death
     public void TakeDamage(float damage)
     {
         RestoreHealth(-damage);
