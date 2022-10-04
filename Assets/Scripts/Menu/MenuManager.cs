@@ -8,9 +8,9 @@ public class MenuManager : MonoBehaviour
 {
     [Header("Play Buttons")]
     [SerializeField] private Button newGameButton;
-    [SerializeField] private Button saveFile1Button;
-    [SerializeField] private Button saveFile2Button;
-    [SerializeField] private Button saveFile3Button;
+    [SerializeField] private Button SaveFileButton1;
+    [SerializeField] private Button SaveFileButton2;
+    [SerializeField] private Button SaveFileButton3;
 
     //Cuando se presiona el boton Quit
     public void ButtonQuit() {
@@ -28,8 +28,8 @@ public class MenuManager : MonoBehaviour
         //create a new game - which will initialize our game 
         
         //Load the gameplay scene - which will in turn save the game because of the OnSceneUnloaded() in DataPersistenceManager
-        SceneManager.LoadSceneAsync("ZonaPruebas");
         DataPersistenceManager.instance.NewGame();
+        SceneManager.LoadSceneAsync("ZonaPruebas");
         
     }
 
@@ -42,8 +42,8 @@ public class MenuManager : MonoBehaviour
 
     private void DisablePlayButtons(){
         newGameButton.interactable = false;
-        saveFile1Button.interactable = false;
-        saveFile2Button.interactable = false;
-        saveFile3Button.interactable = false;
+        SaveFileButton1.interactable = false;
+        SaveFileButton2.interactable = false;
+        SaveFileButton3.interactable = false;
     }
 }

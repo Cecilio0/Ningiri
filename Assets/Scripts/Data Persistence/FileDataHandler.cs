@@ -7,9 +7,9 @@ using System.IO;
 public class FileDataHandler
 {
     //Path del directorio donde queremos guardar los datos en el computador
-    private string dataDirPath;
+    private string dataDirPath = "";
     //Nombre del archivo donde se guardaran los datos
-    private string dataFileName;
+    private string dataFileName = "";
     private bool useEncryption = false;
     private readonly string encryptionCodeWord = "word";
 
@@ -35,7 +35,8 @@ public class FileDataHandler
                     }
                 }
                 //Desencriptar los datos (opcional)
-                if(useEncryption){
+                if(useEncryption)
+                {
                     dataToLoad = EncryptDecrypt(dataToLoad);
                 }
                 //Deserializar los datos del JSON a un objeto de tipo GameData
@@ -62,7 +63,8 @@ public class FileDataHandler
             string dataToStore = JsonUtility.ToJson(data, true);
 
             //Encriptacion de los datos (opcional)
-            if(useEncryption){
+            if(useEncryption)
+            {
                 dataToStore = EncryptDecrypt(dataToStore);
             }
 

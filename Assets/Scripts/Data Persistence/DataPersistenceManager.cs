@@ -16,10 +16,12 @@ public class DataPersistenceManager : MonoBehaviour{
     public static DataPersistenceManager instance { get; private set; }
 
     private void Awake() {
-        if(instance != null){
-        Debug.LogError("More than one DataPersistenceManager in scene!");
+        if(instance != null)
+        {
+            Debug.LogError("More than one DataPersistenceManager in scene!");
         } 
         instance = this;
+
         this.dataHandler = new FileDataHandler(Application.persistentDataPath, fileName, useEncryption);
     }
     
@@ -34,6 +36,7 @@ public class DataPersistenceManager : MonoBehaviour{
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode){
         Debug.Log("OnSceneLoaded called");
         this.dataPersistenceObjects = FindAllDataPersistenceObjects();
+        LoadGame();
         
     }
     public void OnSceneUnloaded(Scene scene){
@@ -55,28 +58,22 @@ public class DataPersistenceManager : MonoBehaviour{
             NewGame();
         }
 
-        //TODO: push the loaded data to all the scripts that need it
-        foreach(IDataPersistence dataPersistenceObject in this.dataPersistenceObjects){
-            dataPersistenceObject.LoadData(gameData);
+        //push the loaded data to all the scripts that need it
+        foreach(IDataPersistence dataPersistenceObj in this.dataPersistenceObjects){
+            dataPersistenceObj.LoadData(gameData);
         }
-        //Debug.Log("Loaded health: " + gameData.maxHealth);
-        //Debug.Log("Loaded current max health" + gameData.currentMaxHealth);
-        // Debug.Log("Loaded current health: " + gameData.currentHealth);
     }
     public void SaveGame(){
-        //TODO: pass the data to other scripts so they can update it
-        foreach(IDataPersistence dataPersistenceObject in this.dataPersistenceObjects){
-            dataPersistenceObject.SaveData(ref gameData);
+        //pass the data to other scripts so they can update it
+        foreach(IDataPersistence dataPersistenceObj in this.dataPersistenceObjects){
+            dataPersistenceObj.SaveData(ref gameData);
         }
-        //Debug.Log("Saved health: " + gameData.maxHealth);
-        //Debug.Log("Saved current max health" + gameData.currentMaxHealth);
-        //Debug.Log("Saved current health: " + gameData.currentHealth);
-
-        //TODO: save the data to a file using the data handler
+        //save the data to a file using the data handler
         dataHandler.Save(gameData);
     }
-    /////////////////////////////////////////////////////////////////////
-    private void OnApplicationQuit() {
+
+    private void OnApplicationQuit() 
+    {
         SaveGame();
     }
 

@@ -4883,9 +4883,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newGameButton: {fileID: 968316722}
-  saveFile1Button: {fileID: 1924612278}
-  saveFile2Button: {fileID: 1712362481}
-  saveFile3Button: {fileID: 1403287350}
+  SaveFileButton1: {fileID: 1924612278}
+  SaveFileButton2: {fileID: 1712362481}
+  SaveFileButton3: {fileID: 1403287350}
 --- !u!4 &989019001
 Transform:
   m_ObjectHideFlags: 0
@@ -8532,7 +8532,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7764990935314303376, guid: 8809d7b2b815ae14ca87a2ef9114f380, type: 3}
       propertyPath: m_Name
-      value: New Game Button
+      value: newGameButton
       objectReference: {fileID: 0}
     - target: {fileID: 7764990935314303376, guid: 8809d7b2b815ae14ca87a2ef9114f380, type: 3}
       propertyPath: m_Layer
