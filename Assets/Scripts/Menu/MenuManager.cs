@@ -28,14 +28,15 @@ public class MenuManager : MonoBehaviour
         //create a new game - which will initialize our game 
         
         //Load the gameplay scene - which will in turn save the game because of the OnSceneUnloaded() in DataPersistenceManager
-        DataPersistenceManager.instance.NewGame();
+        DataPersistenceManager.instance.isNewGame = true;
         SceneManager.LoadSceneAsync("ZonaPruebas");
-        
+        DataPersistenceManager.instance.LoadGame();
     }
 
     public void OnSaveFileClicked(){
         DisablePlayButtons();
         //Load the next scene - which will in turn save the game because of the OnSceneLoaded() in DataPersistenceManager
+        DataPersistenceManager.instance.isNewGame = false;
         SceneManager.LoadSceneAsync("ZonaPruebas");
         DataPersistenceManager.instance.LoadGame();
     }

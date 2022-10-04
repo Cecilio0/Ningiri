@@ -15,6 +15,8 @@ public class DataPersistenceManager : MonoBehaviour{
     private FileDataHandler dataHandler;
     public static DataPersistenceManager instance { get; private set; }
 
+    public bool isNewGame;//variable para saber si la partida es un juego nuevo o no
+
     private void Awake() {
         if(instance != null)
         {
@@ -24,8 +26,8 @@ public class DataPersistenceManager : MonoBehaviour{
         } 
         instance = this;
         DontDestroyOnLoad(this.gameObject);
-
         this.dataHandler = new FileDataHandler(Application.persistentDataPath, fileName, useEncryption);
+        
     }
     
     private void OnEnable(){
@@ -49,15 +51,17 @@ public class DataPersistenceManager : MonoBehaviour{
     
     public void NewGame(){
         this.gameData = new GameData();
-
     }
+
+
     public void LoadGame(){
         //Load any save data from a file using the data handler
         this.gameData = dataHandler.Load();
 
         // if no data can be loadad, initialize a new game
-        if (this.gameData == null){
+        if (this.gameData == null || isNewGame){
             Debug.Log("No data was found. Initializing data to defaults");
+            NewGame();
             return;
         }
 
