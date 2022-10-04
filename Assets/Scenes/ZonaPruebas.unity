@@ -2418,6 +2418,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DataPersistenceManager
       objectReference: {fileID: 0}
+    - target: {fileID: 7079386561987168910, guid: 07cd3e4343815bc4bbd0bf7634d04873, type: 3}
+      propertyPath: fileName
+      value: data,json
+      objectReference: {fileID: 0}
     - target: {fileID: 7079386561987168911, guid: 07cd3e4343815bc4bbd0bf7634d04873, type: 3}
       propertyPath: m_RootOrder
       value: 0
