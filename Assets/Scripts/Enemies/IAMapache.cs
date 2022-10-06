@@ -72,9 +72,11 @@ public class IAMapache : MonoBehaviour
             }
 
         } 
-        else if (!attacking)
+        else 
         {
-            StartCoroutine(Attack(distance));
+            rb.velocity = Vector2.zero;
+            if (!attacking)
+                StartCoroutine(Attack(distance));
         }
         
     }
@@ -83,7 +85,7 @@ public class IAMapache : MonoBehaviour
     {
         //tiempo que se demora en aparecer el ataque
         attacking = true;
-        rb.velocity = Vector2.zero;
+        
         for (int i = 0; i < hitBoxSpeed; i++)
         {
             yield return new WaitForFixedUpdate();    

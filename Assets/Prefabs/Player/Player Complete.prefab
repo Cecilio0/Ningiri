@@ -128,6 +128,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 1644609761
       objectReference: {fileID: 0}
+    - target: {fileID: 3631936270733839558, guid: b0c279990890b9747a5cfc902a614303, type: 3}
+      propertyPath: jumpHeight
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 3631936270733839559, guid: b0c279990890b9747a5cfc902a614303, type: 3}
       propertyPath: m_Points.Array.data[0].x
       value: -0.75
