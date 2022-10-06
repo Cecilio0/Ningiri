@@ -13,5 +13,10 @@ public class BossHealth : EnemyHealth
     {
         base.TakeDamage(damage);
         currentHealthBar.fillAmount = currentHealth/maxHealth;
+        if (currentHealth == 0)
+        {
+            //muerte del jefe
+            Destroy(this.gameObject);
+        }
     }
 }

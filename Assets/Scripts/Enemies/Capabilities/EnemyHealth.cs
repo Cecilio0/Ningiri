@@ -27,7 +27,7 @@ public class EnemyHealth : MonoBehaviour
             //parte grafica
             StartCoroutine(Flash());
         }
-        else
+        else if(gameObject.tag != "Boss")
         {
             //dropear cosas
 

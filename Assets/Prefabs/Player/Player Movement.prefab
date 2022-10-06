@@ -425,13 +425,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackPoint: {fileID: 3619906872210289414}
-  attackRange: 1
-  attackDamage: 30
-  attackCooldown: 0.05
+  attackRange: 1.5
+  attackDamage: 15
+  attackCooldown: 0.5
   enemyLayer:
     serializedVersion: 2
     m_Bits: 128
-  provisional: {fileID: 0}
+  provisional: {fileID: 1672749012943471226}
 --- !u!1 &5502302944145485856
 GameObject:
   m_ObjectHideFlags: 0

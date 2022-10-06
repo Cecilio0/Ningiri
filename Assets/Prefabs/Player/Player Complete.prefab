@@ -145,14 +145,6 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 3818726094127245243, guid: b0c279990890b9747a5cfc902a614303, type: 3}
-      propertyPath: firePoint
-      value: 
-      objectReference: {fileID: 6440850770828066767}
-    - target: {fileID: 3818726094127245243, guid: b0c279990890b9747a5cfc902a614303, type: 3}
-      propertyPath: projectiles.Array.size
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3818726094127245243, guid: b0c279990890b9747a5cfc902a614303, type: 3}
       propertyPath: projectiles.Array.data[0]
       value: 
       objectReference: {fileID: 7300221643162005085}
@@ -180,25 +172,12 @@ PrefabInstance:
       propertyPath: projectiles.Array.data[6]
       value: 
       objectReference: {fileID: 9171246667534580732}
-    - target: {fileID: 6233382352232764198, guid: b0c279990890b9747a5cfc902a614303, type: 3}
-      propertyPath: attackRange
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6233382352232764198, guid: b0c279990890b9747a5cfc902a614303, type: 3}
-      propertyPath: attackCooldown
-      value: 0.05
-      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: b0c279990890b9747a5cfc902a614303, type: 3}
 --- !u!4 &6258793962973898113 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3631936270733839552, guid: b0c279990890b9747a5cfc902a614303, type: 3}
-  m_PrefabInstance: {fileID: 7258827579377428801}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &6440850770828066767 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4458271847596185230, guid: b0c279990890b9747a5cfc902a614303, type: 3}
   m_PrefabInstance: {fileID: 7258827579377428801}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7836303734376774001
