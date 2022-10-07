@@ -25,7 +25,11 @@ public class FightEnter : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        StartCoroutine(Titulo());        
+        if (collision.tag == "Player")
+        {
+            StartCoroutine(Titulo());
+        }
+                
     }
 
     private IEnumerator Titulo()
@@ -52,6 +56,7 @@ public class FightEnter : MonoBehaviour
             titulo.position = new Vector2(titulo.position.x + dist, titulo.position.y);
             yield return new WaitForSecondsRealtime(Time.fixedUnscaledDeltaTime);
         }
+
         titulo.gameObject.GetComponentInParent<Transform>().gameObject.SetActive(false);
         brillo.color = new Color(brillo.color.r, brillo.color.g, brillo.color.b, 0);
         foreach (GameObject thing in toEnable)

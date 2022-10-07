@@ -22,6 +22,7 @@ public class IAReyMapache : MonoBehaviour
     [Header("Elementos de lanzar proyectil")]
     [SerializeField] private GameObject[] projectiles;
     [SerializeField] private float tiempoEntreDisparos;
+    [SerializeField] private float airTime;
     private Transform projectileSpawn;
 
     [Header("Elementos de dash")]
@@ -29,7 +30,8 @@ public class IAReyMapache : MonoBehaviour
     [SerializeField] private LayerMask wallLayer;
     bool isDashing;
 
-
+    //elementos de pruebas
+    //int attack = 0;
     
     
 
@@ -40,7 +42,7 @@ public class IAReyMapache : MonoBehaviour
         //elementos generales
         target = GameObject.FindGameObjectWithTag("Player").transform;
         rb = GetComponent<Rigidbody2D>();
-        timer = 0;
+        timer = 3;
 
         //elementos de lanzar proyectil
         projectileSpawn = transform;
@@ -48,9 +50,7 @@ public class IAReyMapache : MonoBehaviour
         //elementos de dash
         isDashing = false;
 
-        //apenas inicia el nivel el rey mapache debe estar desactivado para que no use sus patrones de ataque
-        //gameObject.SetActive(false);
-        //se activara de nuevo cuando el juegador entre a la pelea de jefe
+        //elementos de pruebas
         
     }
 
@@ -70,7 +70,14 @@ public class IAReyMapache : MonoBehaviour
         {
             timer = 0;
             int attack = Random.Range(0,3);
-            //int attack = 0;//para hacer pruebas
+            //int attack = 1;//para hacer pruebas
+            
+            /*
+            attack++;
+            if (attack > 2)
+                attack = 0;
+            */
+            
             switch (attack)
             {
                 case 0:
@@ -128,23 +135,25 @@ public class IAReyMapache : MonoBehaviour
     //El Jefe lanza una serie de proyectiles con trayectoria parabolica
     private IEnumerator Shoot(int cicles, float waitTime)
     {   
-        float distance;
+        float dx;
+        float dy;
         for (int i = 0; i < cicles-1; i++)
         {
             //distancia hasta el jugador
-            distance = target.position.x - transform.position.x;
-            ThrowProjectile(distance);
+            dy = target.position.y - transform.position.y;//se calcula al contrario por la formula
+            dx = target.position.x - transform.position.x;
+            ThrowProjectile(dx, dy);
             yield return new WaitForSecondsRealtime(tiempoEntreDisparos);
         }
     }
 
     //El Jefe lanza un proyectil con trayectoria parabolica
-    private void ThrowProjectile(float distance)
+    private void ThrowProjectile(float dx, float dy)
     {
         
         int projectile = FindProjectile();
         projectiles[projectile].transform.position = transform.position;
-        projectiles[projectile].GetComponent<EnemyProjectile>().Cast(-Mathf.Sign(transform.localScale.x), new Vector2(distance/2, 18f));
+        projectiles[projectile].GetComponent<EnemyProjectile>().Cast(-Mathf.Sign(transform.localScale.x), new Vector2(dx/airTime, 2f*dy/airTime + rb.gravityScale*airTime*10f));
 
     }
 
