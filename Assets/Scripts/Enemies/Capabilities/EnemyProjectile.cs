@@ -2,23 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour
+public class EnemyProjectile : MonoBehaviour
 {
     [SerializeField] private float damage;
-    [SerializeField] private float speed;
     [SerializeField] private float lifeTime;
     private float currentLifeTime;
     private float direction;
 
-    private BoxCollider2D coll;
+    private Collider2D coll;
 
-    private Rigidbody2D body;
+    private Rigidbody2D rb;
     // Start is called before the first frame update
     private void Awake()
     {
-        coll = GetComponent<BoxCollider2D>();
-        body = GetComponent<Rigidbody2D>();
+        coll = GetComponent<Collider2D>();
+        rb = GetComponent<Rigidbody2D>();
         currentLifeTime = 0;
+        gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -32,35 +32,22 @@ public class Projectile : MonoBehaviour
         
         //si el proyectil lleva mas tiempo vivo que el tiempo que puede pasar vivo
         if (currentLifeTime > lifeTime)
+        {
             gameObject.SetActive(false);
-
-        //calcula el movimiento en x que debe hacer el proyectil
-        body.velocity = new Vector2(speed*direction, 0);
+            coll.enabled = false;
+        }
+            
 
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.tag == "Player")
+            collision.gameObject.GetComponent<Health>().TakeDamage(damage);
         
-        if (collision.tag == "Enemy")
-            collision.gameObject.GetComponent<EnemyHealth>().TakeDamage(damage);
-        else if (collision.tag == "Boss")
-            collision.gameObject.GetComponent<BossHealth>().TakeDamage(damage);
-        coll.enabled = false;
-        gameObject.SetActive(false);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.collider.tag == "Enemy" || collision.collider.tag == "Untagged" || collision.collider.tag == "Boss")
-        {
-            coll.enabled = false;
-            gameObject.SetActive(false);
-        }
-
-    }
-
-    public void Cast(float direction)
+    public void Cast(float direction, Vector2 velocity)
     {
         gameObject.SetActive(true);
         currentLifeTime = 0;
@@ -72,6 +59,7 @@ public class Projectile : MonoBehaviour
             localScaleX = -localScaleX;
 
         transform.localScale = new Vector2(localScaleX, transform.localScale.y);
+        rb.velocity = velocity;
     }
 
 
