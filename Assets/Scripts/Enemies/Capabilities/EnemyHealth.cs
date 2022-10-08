@@ -5,11 +5,19 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
 
+    [Header("Generic health elements")]
     [SerializeField] protected float maxHealth;
     protected float currentHealth;
 
     [SerializeField] private float flashTime;
     private SpriteRenderer sprite;
+
+    [Header("On death")]
+
+    [SerializeField] private GameObject[] toDrop;
+    [SerializeField] private float dropChance;
+    
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -30,7 +38,7 @@ public class EnemyHealth : MonoBehaviour
         else if(gameObject.tag != "Boss")
         {
             //dropear cosas
-
+            
             //matar al enemigo
             Destroy(this.gameObject);
         }

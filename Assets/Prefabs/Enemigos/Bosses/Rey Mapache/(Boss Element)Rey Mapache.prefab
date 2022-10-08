@@ -273,7 +273,7 @@ MonoBehaviour:
   spawnAire: {fileID: 5559738331538406384}
   projectiles:
   - {fileID: 0}
-  tiempoEntreDisparos: 0.5
+  tiempoEntreDisparos: 0.4
   airTime: 2
   speed: 10
   wallLayer:

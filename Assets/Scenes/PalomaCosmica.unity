@@ -440,7 +440,7 @@ GameObject:
   - component: {fileID: 91887070}
   - component: {fileID: 91887071}
   m_Layer: 3
-  m_Name: GameObject
+  m_Name: Collider limitante Mapache
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1661,6 +1661,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   flashTime: 0.15
+  toDrop: []
+  dropChance: 0
+  toDisable: []
   currentHealthBar: {fileID: 1445657382}
   maxHealthBar: {fileID: 528356956}
 --- !u!212 &547134841
@@ -5285,6 +5288,64 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1382368092
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1382368093}
+  - component: {fileID: 1382368094}
+  m_Layer: 3
+  m_Name: Collider limitante Paloma
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1382368093
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382368092}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 40, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1980010006}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1382368094
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382368092}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: aa2b2a2ca832b1140a396cde149b027d, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 25, y: 5}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 30}
+  m_EdgeRadius: 0
 --- !u!1 &1384996771
 GameObject:
   m_ObjectHideFlags: 0
@@ -5864,7 +5925,7 @@ GameObject:
   - component: {fileID: 1499512940}
   - component: {fileID: 1499512939}
   m_Layer: 3
-  m_Name: FightEnter
+  m_Name: FightEnter(Mapache)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7508,6 +7569,94 @@ Transform:
   m_Father: {fileID: 110816483}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1962988617
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1962988618}
+  - component: {fileID: 1962988620}
+  - component: {fileID: 1962988619}
+  m_Layer: 3
+  m_Name: FightEnter(Paloma)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!4 &1962988618
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962988617}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1980010006}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1962988619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962988617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 466c092f371d1f740b66f0d997153856, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toDisable:
+  - {fileID: 1791328657}
+  - {fileID: 1152796609}
+  - {fileID: 931343301}
+  - {fileID: 1017675194}
+  - {fileID: 1289705388}
+  - {fileID: 1159818690}
+  - {fileID: 810303194}
+  - {fileID: 1552174069}
+  toEnable:
+  - {fileID: 2037202574}
+  - {fileID: 547134835}
+  - {fileID: 1250992463}
+  lateDisable: {fileID: 1382368092}
+  bossElements: {fileID: 595045485}
+  frames: 150
+  bossName: "PALOMA, ENTE C\xD3SMICO"
+--- !u!61 &1962988620
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962988617}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: aa2b2a2ca832b1140a396cde149b027d, type: 2}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 62, y: -3}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 20}
+  m_EdgeRadius: 0
 --- !u!1 &1969291700
 GameObject:
   m_ObjectHideFlags: 0
@@ -7622,6 +7771,8 @@ Transform:
   m_Children:
   - {fileID: 1499512938}
   - {fileID: 91887070}
+  - {fileID: 1962988618}
+  - {fileID: 1382368093}
   m_Father: {fileID: 1877733310}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8798,6 +8949,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1586451229993223502, guid: b58bec37b6e112140ab7d344435f346c, type: 3}
+      propertyPath: maxHealth
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1586451229993223502, guid: b58bec37b6e112140ab7d344435f346c, type: 3}
       propertyPath: maxHealthBar
       value: 
       objectReference: {fileID: 528356956}
@@ -8805,6 +8960,18 @@ PrefabInstance:
       propertyPath: currentHealthBar
       value: 
       objectReference: {fileID: 1445657382}
+    - target: {fileID: 1586451229993223502, guid: b58bec37b6e112140ab7d344435f346c, type: 3}
+      propertyPath: toDisable.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1586451229993223502, guid: b58bec37b6e112140ab7d344435f346c, type: 3}
+      propertyPath: toDisable.Array.data[0]
+      value: 
+      objectReference: {fileID: 2037202574}
+    - target: {fileID: 1586451229993223502, guid: b58bec37b6e112140ab7d344435f346c, type: 3}
+      propertyPath: toDisable.Array.data[1]
+      value: 
+      objectReference: {fileID: 595045485}
     - target: {fileID: 1586451230865368077, guid: b58bec37b6e112140ab7d344435f346c, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -9377,6 +9544,10 @@ PrefabInstance:
     - target: {fileID: 6258793962117838780, guid: 1c8425e8ae2bd7c47b08c95ee0385bf7, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258793962117838780, guid: 1c8425e8ae2bd7c47b08c95ee0385bf7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6258793962117838781, guid: 1c8425e8ae2bd7c47b08c95ee0385bf7, type: 3}
       propertyPath: m_RootOrder

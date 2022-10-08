@@ -21,12 +21,12 @@ public class FightEnter : MonoBehaviour
         resolution = GetComponent<Resolution>();
         brillo = bossElements.GetComponent<Image>();
         titulo = bossElements.transform.GetChild(0).transform.GetChild(0).GetComponent<RectTransform>();
-        bossElements.transform.GetChild(1).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = bossName;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
+            bossElements.transform.GetChild(1).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = bossName;
             StartCoroutine(Titulo());
         }
                 
