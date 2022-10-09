@@ -10,6 +10,13 @@ public class BossHealth : EnemyHealth
     [SerializeField] private Image currentHealthBar;
     [SerializeField] private Image maxHealthBar;
 
+    void Awake()
+    {
+        currentHealth = maxHealth;
+        sprite = GetComponent<SpriteRenderer>();
+        currentHealthBar.fillAmount = 1;
+    }
+
     public new void TakeDamage(float damage)
     {
         base.TakeDamage(damage);
@@ -21,6 +28,7 @@ public class BossHealth : EnemyHealth
                 thing.SetActive(false);
             }
             //muerte del jefe
+            base.Drop();
             Destroy(this.gameObject);
         }
     }

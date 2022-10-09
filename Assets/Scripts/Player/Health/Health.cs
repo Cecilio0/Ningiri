@@ -24,6 +24,7 @@ public class Health : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        Physics2D.IgnoreLayerCollision(6, 7, false);
         currentHealth = currentMaxHealth;
         maxHealthBar.fillAmount = currentMaxHealth/maxHealth;
         currentHealthBar.fillAmount = currentHealth/currentMaxHealth * maxHealthBar.fillAmount;

@@ -167,7 +167,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 300
+  currentHealth: 0
   flashTime: 0.15
+  toDrop:
+  - {fileID: 4481014226282277812, guid: 5798793506601a849993074bc40250c9, type: 3}
+  dropChance: 100
+  toDisable: []
   currentHealthBar: {fileID: 0}
   maxHealthBar: {fileID: 0}
 --- !u!50 &5559738332347725811
@@ -266,10 +271,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyCollider: {fileID: 5559738332347725812}
   routineTimer: 5
-  rata: {fileID: 6563493514109035324, guid: e94fd42845280df4fa5d1992ea0e27f3, type: 3}
-  mapache: {fileID: 3284446156048095713, guid: deb3d6fec0ab4ad4fbfcd9c839bc9c1e, type: 3}
+  rata: {fileID: 6563493514109035324, guid: 3d7fb645faa03b945badc464378b7b0d, type: 3}
+  mapache: {fileID: 3284446156048095713, guid: 7e94cde04ade4d547ba9e946229b65a3, type: 3}
   spawnTierra: {fileID: 5559738330981097960}
-  paloma: {fileID: 6114134215515125495, guid: d0664a29fa1433e4884d78a94a4b57cb, type: 3}
+  paloma: {fileID: 6114134215515125495, guid: 80a9bde13200c354b84578c71cd185f2, type: 3}
   spawnAire: {fileID: 5559738331538406384}
   projectiles:
   - {fileID: 0}

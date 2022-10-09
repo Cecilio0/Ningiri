@@ -43,7 +43,7 @@ public class IAPaloma : MonoBehaviour
         {
             Vector2 distance = new Vector2(transform.position.x - target.position.x, transform.position.y - target.position.y);
             //si se esta dentro de cierto rango el enemigo debera buscar a el target.
-            if (distance.sqrMagnitude < patrolRange*patrolRange)
+            if (Physics2D.Raycast(transform.position, target.position) && distance.sqrMagnitude < patrolRange*patrolRange)
             {
                 if (distance.sqrMagnitude < attackRange*attackRange)
                 {

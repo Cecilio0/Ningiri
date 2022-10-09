@@ -10,7 +10,9 @@ public class IAReyMapache : MonoBehaviour
     [SerializeField] private float routineTimer;
     private Rigidbody2D rb;
     private Transform target;
-    private float timer;//delimita cada cuanto ataca el jefe   
+    private float timer;//delimita cada cuanto ataca el jefe  
+    private bool isOnSecondPhase; 
+    private BossHealth health;
     
     [Header("Elementos de spawnear ayudante")]
     [SerializeField] private GameObject rata;
@@ -43,6 +45,8 @@ public class IAReyMapache : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player").transform;
         rb = GetComponent<Rigidbody2D>();
         timer = 3;
+        isOnSecondPhase = false;
+        health = GetComponent<BossHealth>();
 
         //elementos de lanzar proyectil
         projectileSpawn = transform;
@@ -57,6 +61,9 @@ public class IAReyMapache : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!isOnSecondPhase && health.currentHealth/health.maxHealth < 0.3f)
+            isOnSecondPhase = true;
+
         if (isDashing && enemyCollider.IsTouchingLayers(wallLayer))
         {
             rb.velocity = Vector2.zero;
@@ -78,24 +85,51 @@ public class IAReyMapache : MonoBehaviour
                 attack = 0;
             */
             
-            switch (attack)
-            {
-                case 0:
-                    StartCoroutine(Dash());
-                    break;
+            Attack(attack);
 
-                case 1:
-                    int cantDisparos = (int)(routineTimer/tiempoEntreDisparos);
-                    StartCoroutine(Shoot(cantDisparos - (int)(1/tiempoEntreDisparos), tiempoEntreDisparos));
-                    break;
+            
+            if (isOnSecondPhase)
+            {
+                int proxAttack = Random.Range(0,3);
+                if (proxAttack == 0)
+                {
+                    attack --;
+                    if (attack < 0)
+                        attack = 2;
+                }   
+                else if (proxAttack == 1)
+                {
+                    attack ++;
+                    if (attack > 2)
+                        attack = 0;
+                }
+                else return;//en el tercer caso no hace un segundo ataque
+                Attack(attack);
                 
-                case 2:
-                    int enemy = Random.Range(0, 3);
-                    SpawnLackey(enemy);
-                    break;
             }
+            
+            
         }
         
+    }
+    
+    private void Attack(int attack)
+    {
+        switch (attack)
+        {
+            case 0:
+                StartCoroutine(Dash());
+                break;
+            case 1:
+                int cantDisparos = (int)(routineTimer/tiempoEntreDisparos);
+                StartCoroutine(Shoot(cantDisparos - (int)(1/tiempoEntreDisparos), tiempoEntreDisparos));
+                break;
+            
+            case 2:
+                int enemy = Random.Range(0, 3);
+                SpawnLackey(enemy);
+                break;
+        }
     }
 
     //hacer corrutina en la que salte dos veces para indicar que va a hacer el dash
@@ -135,15 +169,22 @@ public class IAReyMapache : MonoBehaviour
     //El Jefe lanza una serie de proyectiles con trayectoria parabolica
     private IEnumerator Shoot(int cicles, float waitTime)
     {   
+        Rigidbody2D targetRb = target.gameObject.GetComponent<Rigidbody2D>();
         float dx;
         float dy;
         for (int i = 0; i < cicles-1; i++)
         {
             //distancia hasta el jugador
+            Vector2 velocity = targetRb.velocity;
             dy = target.position.y - transform.position.y;//se calcula al contrario por la formula
             dx = target.position.x - transform.position.x;
-            ThrowProjectile(dx, dy);
-            yield return new WaitForSecondsRealtime(tiempoEntreDisparos);
+
+            if (velocity.x*dx > 0)
+                ThrowProjectile(dx*1.3f, dy*1.3f);
+            else if (velocity.x*dx < 0)
+                ThrowProjectile(dx*0.7f, dy*0.7f);
+            else ThrowProjectile(dx, dy);
+            yield return new WaitForSeconds(tiempoEntreDisparos);
         }
     }
 

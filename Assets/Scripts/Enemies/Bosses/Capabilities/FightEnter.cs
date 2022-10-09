@@ -6,7 +6,7 @@ using TMPro;
 
 public class FightEnter : MonoBehaviour
 {
-    [SerializeField] private GameObject[] toDisable;
+    private GameObject[] toDisable;
     [SerializeField] private GameObject[] toEnable;
     [SerializeField] private GameObject lateDisable;
     [SerializeField] private GameObject bossElements;
@@ -26,6 +26,8 @@ public class FightEnter : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            toDisable = GameObject.FindGameObjectsWithTag("Enemy");
+            titulo.GetComponent<TextMeshProUGUI>().text = bossName;
             bossElements.transform.GetChild(1).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = bossName;
             StartCoroutine(Titulo());
         }
@@ -34,6 +36,8 @@ public class FightEnter : MonoBehaviour
 
     private IEnumerator Titulo()
     {
+        Vector2 origen = titulo.position;
+
         bossElements.SetActive(true);
         foreach (GameObject thing in toDisable)
         {
@@ -57,11 +61,13 @@ public class FightEnter : MonoBehaviour
             yield return new WaitForSecondsRealtime(Time.fixedUnscaledDeltaTime);
         }
 
-        titulo.gameObject.GetComponentInParent<Transform>().gameObject.SetActive(false);
         brillo.color = new Color(brillo.color.r, brillo.color.g, brillo.color.b, 0);
         foreach (GameObject thing in toEnable)
             if (thing != null)
                 thing.SetActive(true);
+
         lateDisable.SetActive(false);
+        titulo.position = origen;
+        gameObject.SetActive(false);
     }
 }

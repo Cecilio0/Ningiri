@@ -6,16 +6,16 @@ public class EnemyHealth : MonoBehaviour
 {
 
     [Header("Generic health elements")]
-    [SerializeField] protected float maxHealth;
-    protected float currentHealth;
+    [SerializeField] public float maxHealth;
+    [HideInInspector] public float currentHealth;
 
     [SerializeField] private float flashTime;
-    private SpriteRenderer sprite;
+    protected SpriteRenderer sprite;
 
     [Header("On death")]
 
-    [SerializeField] private GameObject[] toDrop;
-    [SerializeField] private float dropChance;
+    [SerializeField] protected GameObject[] toDrop;//Elementos que puede dropear 
+    [SerializeField, Range(0f, 100f)] protected float dropChance;//Probabilidad de dropear un elemento en porcentaje
     
 
     // Start is called before the first frame update
@@ -23,6 +23,7 @@ public class EnemyHealth : MonoBehaviour
     {
         currentHealth = maxHealth;
         sprite = GetComponent<SpriteRenderer>();
+        dropChance = dropChance/100f;
     }
 
     public void TakeDamage(float damage)
@@ -38,7 +39,7 @@ public class EnemyHealth : MonoBehaviour
         else if(gameObject.tag != "Boss")
         {
             //dropear cosas
-            
+            Drop();
             //matar al enemigo
             Destroy(this.gameObject);
         }
@@ -51,5 +52,13 @@ public class EnemyHealth : MonoBehaviour
         yield return new WaitForSeconds(flashTime);
         sprite.color = originalColor;
 
+    }
+
+    protected void Drop()
+    {
+        if (toDrop != null && Random.value < dropChance)
+        {
+            Instantiate(toDrop[Random.Range(0, toDrop.Length)], transform.position, Quaternion.identity);
+        }
     }
 }
