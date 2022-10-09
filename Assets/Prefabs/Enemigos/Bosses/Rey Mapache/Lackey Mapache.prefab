@@ -222,7 +222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pursuitSpeed: 7
-  attackRange: 2.5
+  attackRange: 1.5
   attackEndLag: 20
   attackLength: 20
   hitBoxSpeed: 20

@@ -426,7 +426,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackPoint: {fileID: 3619906872210289414}
   attackRange: 1.5
-  attackDamage: 20
+  attackDamage: 30
   attackCooldown: 0.5
   enemyLayer:
     serializedVersion: 2
@@ -488,7 +488,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5522172614594933704}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2, y: 0, z: 0}
+  m_LocalPosition: {x: -2, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -600,7 +600,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: ad0a0e71ed2407b48ba4448de9eb0595, type: 3}
-  m_Color: {r: 0.26415092, g: 0.089014165, b: 0, a: 1}
+  m_Color: {r: 0.1981132, g: 0.13508128, b: 0.096066214, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

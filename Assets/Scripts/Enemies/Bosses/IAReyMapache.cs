@@ -61,7 +61,7 @@ public class IAReyMapache : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!isOnSecondPhase && health.currentHealth/health.maxHealth < 0.3f)
+        if (!isOnSecondPhase && health.currentHealth/health.maxHealth < 0.5f)
             isOnSecondPhase = true;
 
         if (isDashing && enemyCollider.IsTouchingLayers(wallLayer))
@@ -76,7 +76,11 @@ public class IAReyMapache : MonoBehaviour
         if (!isDashing && timer > routineTimer)
         {
             timer = 0;
-            int attack = Random.Range(0,3);
+            int attack;
+            if(isOnSecondPhase)
+                attack = Random.Range(0,2);
+            else attack = Random.Range(0,3);
+
             //int attack = 1;//para hacer pruebas
             
             /*
@@ -86,31 +90,12 @@ public class IAReyMapache : MonoBehaviour
             */
             
             Attack(attack);
-
-            
+            //en la segunda fase hara un comportamiento mas spawnear enemigo
             if (isOnSecondPhase)
             {
-                int proxAttack = Random.Range(0,3);
-                if (proxAttack == 0)
-                {
-                    attack --;
-                    if (attack < 0)
-                        attack = 2;
-                }   
-                else if (proxAttack == 1)
-                {
-                    attack ++;
-                    if (attack > 2)
-                        attack = 0;
-                }
-                else return;//en el tercer caso no hace un segundo ataque
-                Attack(attack);
-                
+                Attack(2); 
             }
-            
-            
         }
-        
     }
     
     private void Attack(int attack)
@@ -128,6 +113,9 @@ public class IAReyMapache : MonoBehaviour
             case 2:
                 int enemy = Random.Range(0, 3);
                 SpawnLackey(enemy);
+                break;
+
+            case 3://pensar en comportamiento en el que spawnee pinchos en el suelo
                 break;
         }
     }

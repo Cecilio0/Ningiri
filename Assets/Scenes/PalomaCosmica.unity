@@ -1587,6 +1587,9 @@ MonoBehaviour:
   patrolRange: 30
   enemyCollider: {fileID: 547134838}
   rb: {fileID: 547134839}
+  wallLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &547134837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5939,6 +5942,7 @@ MonoBehaviour:
   bossElements: {fileID: 595045485}
   frames: 150
   bossName: REY MAPACHE
+  bossSubtitle: CUARTO LIDER DEL CLAN TOJO
 --- !u!61 &1499512940
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7576,6 +7580,7 @@ MonoBehaviour:
   bossElements: {fileID: 595045485}
   frames: 150
   bossName: "PALOMA, ENTE C\xD3SMICO"
+  bossSubtitle: 
 --- !u!61 &1962988620
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9035,6 +9040,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 306385491885662385, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -390
+      objectReference: {fileID: 0}
+    - target: {fileID: 2605748567345490934, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -80
+      objectReference: {fileID: 0}
     - target: {fileID: 3185723481011213397, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -9179,6 +9192,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3185723482217439613, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -320
+      objectReference: {fileID: 0}
     - target: {fileID: 3185723482540571785, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
       propertyPath: m_FillAmount
       value: 1
@@ -9194,6 +9211,14 @@ PrefabInstance:
     - target: {fileID: 7657933026094609542, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
       propertyPath: m_text
       value: REY MAPACHE
+      objectReference: {fileID: 0}
+    - target: {fileID: 9182493344954309247, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+      propertyPath: m_fontSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 9182493344954309247, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}

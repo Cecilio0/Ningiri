@@ -49,7 +49,8 @@ public class IAMapache : MonoBehaviour
             
         //si el cronometro supera al timer se hace una rutina nueva
         Vector2 distance = new Vector2(target.position.x - transform.position.x, target.position.y - transform.position.y);
-        if (distance.sqrMagnitude < patrolRange*patrolRange && Mathf.Abs(distance.y) < 2)
+        RaycastHit2D ray = Physics2D.Linecast(transform.position, target.position, wallLayer);
+        if (ray.collider == null && distance.sqrMagnitude < patrolRange*patrolRange && Mathf.Abs(distance.y) < 1.5f)
             AttackBehaviour(distance);
         else if (cronometro > timerRutinas)
             Behaviour();

@@ -18,6 +18,7 @@ public class IAPaloma : MonoBehaviour
     [SerializeField] private float patrolRange;
     [SerializeField] private Collider2D enemyCollider;
     [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private LayerMask wallLayer;
     private Transform target;
 
 
@@ -41,9 +42,13 @@ public class IAPaloma : MonoBehaviour
     {
         if (!attacking)
         {
+            
             Vector2 distance = new Vector2(transform.position.x - target.position.x, transform.position.y - target.position.y);
+
+            RaycastHit2D ray = Physics2D.Linecast(transform.position, target.position, wallLayer);
             //si se esta dentro de cierto rango el enemigo debera buscar a el target.
-            if (Physics2D.Raycast(transform.position, target.position) && distance.sqrMagnitude < patrolRange*patrolRange)
+
+            if (ray.collider == null && distance.sqrMagnitude < patrolRange*patrolRange)
             {
                 if (distance.sqrMagnitude < attackRange*attackRange)
                 {
