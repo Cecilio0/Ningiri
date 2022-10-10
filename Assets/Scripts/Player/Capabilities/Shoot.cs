@@ -64,7 +64,7 @@ public class Shoot : MonoBehaviour
         }
 
         //quita vida
-        GetComponent<Health>().RestoreHealth(-1);
+        GetComponent<Health>().RestoreHealth(-0.5f);
     }
 
     private int FindProjectile()

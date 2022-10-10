@@ -62,7 +62,10 @@ public class IAReyMapache : MonoBehaviour
     void Update()
     {
         if (!isOnSecondPhase && health.currentHealth/health.maxHealth < 0.5f)
+        {
             isOnSecondPhase = true;
+        }
+            
 
         if (isDashing && enemyCollider.IsTouchingLayers(wallLayer))
         {

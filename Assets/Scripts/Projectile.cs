@@ -43,11 +43,20 @@ public class Projectile : MonoBehaviour
     {
         
         if (collision.tag == "Enemy")
+        {
             collision.gameObject.GetComponent<EnemyHealth>().TakeDamage(damage);
+            coll.enabled = false;
+            gameObject.SetActive(false);
+
+        }
         else if (collision.tag == "Boss")
+        {
             collision.gameObject.GetComponent<BossHealth>().TakeDamage(damage);
-        coll.enabled = false;
-        gameObject.SetActive(false);
+            coll.enabled = false;
+            gameObject.SetActive(false);
+        }
+            
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

@@ -51,7 +51,6 @@ public class EnemyHealth : MonoBehaviour
         sprite.color = Color.red;
         yield return new WaitForSeconds(flashTime);
         sprite.color = originalColor;
-
     }
 
     protected void Drop()

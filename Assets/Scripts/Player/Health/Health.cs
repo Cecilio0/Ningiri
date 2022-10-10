@@ -17,6 +17,7 @@ public class Health : MonoBehaviour
     [SerializeField] private float iFrameDuration;
     [SerializeField] private int flashNumber;
     private SpriteRenderer sprite;
+    [HideInInspector] public Vector2 respawnPoint;
 
 
     private float currentHealth;
@@ -24,11 +25,13 @@ public class Health : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+
         Physics2D.IgnoreLayerCollision(6, 7, false);
         currentHealth = currentMaxHealth;
         maxHealthBar.fillAmount = currentMaxHealth/maxHealth;
         currentHealthBar.fillAmount = currentHealth/currentMaxHealth * maxHealthBar.fillAmount;
         sprite = GetComponent<SpriteRenderer>();
+        respawnPoint = transform.position;
     }
 
     // Update is called once per frame

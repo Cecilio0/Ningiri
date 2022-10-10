@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 6563493514109035326}
   - component: {fileID: 6563493514109035327}
-  - component: {fileID: 6563493514109035320}
+  - component: {fileID: 9160065325156442307}
   - component: {fileID: 6563493514109035321}
   - component: {fileID: 6563493514109035322}
   - component: {fileID: 6563493514109035323}
-  - component: {fileID: 9160065325156442307}
   - component: {fileID: 7333927138302687120}
+  - component: {fileID: 6563493514109035320}
   m_Layer: 7
   m_Name: Rata
   m_TagString: Enemy
@@ -92,7 +92,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6563493514109035320
+--- !u!114 &9160065325156442307
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -101,17 +101,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 6563493514109035324}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f57da6cea5be5ff4b8b0ac60d566f687, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ed9336c005e6994d8902c70110a5d9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrolSpeed: -10
-  platformCheck: {fileID: 6563493515061434479}
-  wallCheck: {fileID: 6563493514523654017}
-  EnemyCollider: {fileID: 6563493514109035322}
-  rb: {fileID: 6563493514109035321}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 8
+  maxHealth: 20
+  currentHealth: 0
+  flashTime: 0.15
+  toDrop:
+  - {fileID: 2260493299735602745, guid: 206e2e17fe57ead4e958e90eb80dfeec, type: 3}
+  dropChance: 10
 --- !u!50 &6563493514109035321
 Rigidbody2D:
   serializedVersion: 4
@@ -181,24 +179,6 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
---- !u!114 &9160065325156442307
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6563493514109035324}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ed9336c005e6994d8902c70110a5d9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 20
-  currentHealth: 0
-  flashTime: 0.15
-  toDrop:
-  - {fileID: 2260493299735602745, guid: 206e2e17fe57ead4e958e90eb80dfeec, type: 3}
-  dropChance: 10
 --- !u!114 &7333927138302687120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,6 +192,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
+--- !u!114 &6563493514109035320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6563493514109035324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f57da6cea5be5ff4b8b0ac60d566f687, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patrolSpeed: -10
+  platformCheck: {fileID: 6563493515061434479}
+  wallCheck: {fileID: 6563493514523654017}
+  EnemyCollider: {fileID: 6563493514109035322}
+  rb: {fileID: 6563493514109035321}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &6563493514523654017
 GameObject:
   m_ObjectHideFlags: 0
