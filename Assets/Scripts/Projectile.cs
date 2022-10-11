@@ -41,7 +41,6 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
         if (collision.tag == "Enemy")
         {
             collision.gameObject.GetComponent<EnemyHealth>().TakeDamage(damage);
@@ -55,8 +54,6 @@ public class Projectile : MonoBehaviour
             coll.enabled = false;
             gameObject.SetActive(false);
         }
-            
-        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -83,5 +80,8 @@ public class Projectile : MonoBehaviour
         transform.localScale = new Vector2(localScaleX, transform.localScale.y);
     }
 
-
+    public void DamageUp(float damageUp)
+    {
+        damage += damageUp;
+    }
 }

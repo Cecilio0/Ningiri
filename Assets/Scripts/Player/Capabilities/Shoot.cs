@@ -78,4 +78,12 @@ public class Shoot : MonoBehaviour
         }
         return 0;
     }
+
+    public void DamageUp(float damageUp)
+    {
+        foreach (GameObject projectile in projectiles)
+        {
+            projectile.GetComponent<Projectile>().DamageUp(damageUp);
+        }
+    }
 }

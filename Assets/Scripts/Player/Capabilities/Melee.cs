@@ -76,4 +76,9 @@ public class Melee : MonoBehaviour
         }
         provisional.rotation = origen;
     }
+
+    public void DamageUp(float damageUp)
+    {
+        attackDamage += damageUp;
+    }
 }

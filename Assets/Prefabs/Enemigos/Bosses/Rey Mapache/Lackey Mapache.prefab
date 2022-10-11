@@ -224,7 +224,7 @@ MonoBehaviour:
   pursuitSpeed: 7
   attackRange: 1.5
   attackEndLag: 20
-  attackLength: 20
+  attackLength: 10
   hitBoxSpeed: 20
   attackHitBox: {fileID: 3388838573250523074}
   pivoteBrazo: {fileID: 8427492077895578242}

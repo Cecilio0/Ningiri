@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ed9336c005e6994d8902c70110a5d9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 30
+  maxHealth: 40
   currentHealth: 0
   flashTime: 0.15
   toDrop:
@@ -224,7 +224,7 @@ MonoBehaviour:
   pursuitSpeed: 7
   attackRange: 2.5
   attackEndLag: 20
-  attackLength: 20
+  attackLength: 10
   hitBoxSpeed: 20
   attackHitBox: {fileID: 3388838573250523074}
   pivoteBrazo: {fileID: 8427492077895578242}

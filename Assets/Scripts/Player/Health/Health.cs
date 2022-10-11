@@ -12,17 +12,22 @@ public class Health : MonoBehaviour
     [SerializeField, Range(0f, 100f)] private float currentMaxHealth;
     [SerializeField] private Image currentHealthBar;
     [SerializeField] private Image maxHealthBar;
+    private float currentHealth;
 
     [Header("Frames de invulneravilidad")]
     [SerializeField] private float iFrameDuration;
     [SerializeField] private int flashNumber;
     private SpriteRenderer sprite;
+
+    [Header("Knockback")]
+    [SerializeField] private float knockbackSpeed;
+    [SerializeField] private int knockbackDuration;
+    private Move move;
+    private Jump jump;
+    private Rigidbody2D rb;
+
     [HideInInspector] public Vector2 respawnPoint;
 
-
-    private float currentHealth;
-
-    // Start is called before the first frame update
     void Awake()
     {
 
@@ -32,13 +37,16 @@ public class Health : MonoBehaviour
         currentHealthBar.fillAmount = currentHealth/currentMaxHealth * maxHealthBar.fillAmount;
         sprite = GetComponent<SpriteRenderer>();
         respawnPoint = transform.position;
+        move = GetComponent<Move>();
+        jump = GetComponent<Jump>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void Start()
     {
-        
+        currentHealthBar.fillAmount = currentHealth/currentMaxHealth * maxHealthBar.fillAmount;
     }
+
 
     //Current health updated
     public void RestoreHealth (float healthRestored)
@@ -68,12 +76,13 @@ public class Health : MonoBehaviour
     }
 
     //Current health updated + Iframes or death
-    public void TakeDamage(float damage)
+    public void TakeDamage(float damage, Vector2 enemyPos)
     {
         RestoreHealth(-damage);
         if (currentHealth > 0)
         {
-            //Hurt
+            //Knockback
+            StartCoroutine(Knockback(enemyPos));
             //iframes
             StartCoroutine(Invulneravility());
         }
@@ -96,6 +105,25 @@ public class Health : MonoBehaviour
             yield return new WaitForSeconds(iFrameDuration/(2*flashNumber));
         }
         Physics2D.IgnoreLayerCollision(6, 7, false);
+    }
+
+    private IEnumerator Knockback(Vector2 enemyPos)
+    {     
+        move.isKnockedBack = true;
+        jump.isKnockedBack = true;
+
+        float direction = Mathf.Sign(transform.position.x - enemyPos.x);
+        rb.velocity = new Vector2(knockbackSpeed*direction, 10f);
+
+        for (int i = 0; i < knockbackDuration; i++)
+        {
+            yield return new WaitForFixedUpdate();
+        }
+
+
+        move.isKnockedBack = false;
+        jump.isKnockedBack = false;
+
     }
 
 }

@@ -21,6 +21,7 @@ public class Jump : MonoBehaviour
 
     private bool desiredJump;
     private bool onGround;
+    [HideInInspector] public bool isKnockedBack;
     // Start is called before the first frame update
     void Awake()
     {
@@ -29,12 +30,14 @@ public class Jump : MonoBehaviour
         ground = GetComponent<Ground>();
 
         defaultGravityScale = 1f;
+        isKnockedBack = false;
     }
     // Update is called once per frame
     void Update()
     {
         //se usa |= ya que update y fixedUpdate() ocurren en intervalos distintos entonces que sea verdadero hasta que entre a fixedUpdate
-        desiredJump |= inputs.actions["Jump"].WasPressedThisFrame();
+        if (!isKnockedBack)
+            desiredJump |= inputs.actions["Jump"].WasPressedThisFrame();
     }
 
     private void FixedUpdate()
