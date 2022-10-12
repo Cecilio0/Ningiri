@@ -6,7 +6,15 @@ using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
-
+    public void OnNewGameButtonPressed()
+    {
+        Debug.Log("New Game Button Pressed");
+    }
+    public void OnContinueButtonPressed()
+    {
+        Debug.Log("Continue Button Pressed");
+    }
+    
     //Cuando se presiona el boton Quit
     public void ButtonQuit() {
         Debug.Log("sale del juego");
