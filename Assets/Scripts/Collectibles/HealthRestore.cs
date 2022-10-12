@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HealthRestore : MonoBehaviour , IDataPersistence
+public class HealthRestore : MonoBehaviour, IDataPersistence
 {
-
     [SerializeField] private float healthRestored;
     [SerializeField] private string healthCoinID;
     private bool isCollected = false;

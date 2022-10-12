@@ -4,12 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Health : MonoBehaviour, IDataPersistence
+public class Health : MonoBehaviour , IDataPersistence
 {
 
     [Header("Valores de vida y representacion grafica")]
     [SerializeField, Range(0f, 100f)] private float maxHealth;
     [SerializeField, Range(0f, 100f)] private float currentMaxHealth;
+    private float currentHealth;
     [SerializeField] private Image currentHealthBar;
     [SerializeField] private Image maxHealthBar;
 
@@ -31,8 +32,6 @@ public class Health : MonoBehaviour, IDataPersistence
         data.currentMaxHealth = this.currentMaxHealth;
         data.currentHealth = this.currentHealth;
     }
-
-    private float currentHealth;
 
     // Start is called before the first frame update
     void Awake()
