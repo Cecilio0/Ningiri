@@ -270,7 +270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyCollider: {fileID: 5559738332347725812}
-  routineTimer: 5
+  routineTimer: 6
   rata: {fileID: 6563493514109035324, guid: 3d7fb645faa03b945badc464378b7b0d, type: 3}
   mapache: {fileID: 3284446156048095713, guid: 7e94cde04ade4d547ba9e946229b65a3, type: 3}
   spawnTierra: {fileID: 5559738330981097960}
