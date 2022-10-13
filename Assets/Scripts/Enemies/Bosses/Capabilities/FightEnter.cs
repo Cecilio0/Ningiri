@@ -6,9 +6,10 @@ using TMPro;
 
 public class FightEnter : MonoBehaviour
 {
-    private GameObject[] toDisable;
+    [SerializeField] private GameObject[] earlyEnable;
+    [SerializeField] private GameObject[] toDisable;
     [SerializeField] private GameObject[] toEnable;
-    [SerializeField] private GameObject lateDisable;
+    [SerializeField] private GameObject[] lateDisable;
     [SerializeField] private GameObject bossElements;
     [SerializeField] private int frames;
     [SerializeField] private string bossName;
@@ -51,6 +52,11 @@ public class FightEnter : MonoBehaviour
             if (thing != null)
                 thing.SetActive(false);
         }
+        foreach (GameObject thing in earlyEnable)
+        {
+            if (thing != null)
+                thing.SetActive(true);
+        }
         brillo.color = new Color(brillo.color.r, brillo.color.g, brillo.color.b, 1);
         titulo.gameObject.SetActive(true);
         float dist = (Screen.height/1080f)*1500f/(float)frames;
@@ -75,7 +81,11 @@ public class FightEnter : MonoBehaviour
             if (thing != null)
                 thing.SetActive(true);
 
-        lateDisable.SetActive(false);
+        foreach (GameObject thing in lateDisable)
+        {
+            if (thing != null)
+                thing.SetActive(false);
+        }
         titulo.position = origen;
         titulo2.position = origen2;
         gameObject.SetActive(false);

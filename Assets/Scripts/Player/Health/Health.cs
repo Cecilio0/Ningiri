@@ -17,6 +17,8 @@ public class Health : MonoBehaviour
     [Header("Frames de invulneravilidad")]
     [SerializeField] private float iFrameDuration;
     [SerializeField] private int flashNumber;
+    [SerializeField] private int enemyLayer;
+    [SerializeField] private int playerLayer;
     private SpriteRenderer sprite;
 
     [Header("Knockback")]
@@ -30,8 +32,7 @@ public class Health : MonoBehaviour
 
     void Awake()
     {
-
-        Physics2D.IgnoreLayerCollision(6, 7, false);
+        Physics2D.IgnoreLayerCollision(playerLayer, enemyLayer, false);
         currentHealth = currentMaxHealth;
         maxHealthBar.fillAmount = currentMaxHealth/maxHealth;
         currentHealthBar.fillAmount = currentHealth/currentMaxHealth * maxHealthBar.fillAmount;
@@ -96,7 +97,7 @@ public class Health : MonoBehaviour
 
     private IEnumerator Invulneravility()
     {
-        Physics2D.IgnoreLayerCollision(6, 7, true);
+        Physics2D.IgnoreLayerCollision(playerLayer, enemyLayer, true);
         for (int i = 0; i < flashNumber; i++)
         {
             sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, 0.5f);
@@ -104,7 +105,7 @@ public class Health : MonoBehaviour
             sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, 1f);
             yield return new WaitForSeconds(iFrameDuration/(2*flashNumber));
         }
-        Physics2D.IgnoreLayerCollision(6, 7, false);
+        Physics2D.IgnoreLayerCollision(playerLayer, enemyLayer, false);
     }
 
     private IEnumerator Knockback(Vector2 enemyPos)

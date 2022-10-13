@@ -217,6 +217,8 @@ MonoBehaviour:
   maxHealthBar: {fileID: 0}
   iFrameDuration: 1
   flashNumber: 5
+  enemyLayer: 6
+  playerLayer: 7
   knockbackSpeed: 10
   knockbackDuration: 20
   respawnPoint: {x: 0, y: 0}
