@@ -12,6 +12,7 @@ public class Melee : MonoBehaviour
     [SerializeField] private float attackCooldown;
     [SerializeField] private LayerMask enemyLayer;
     private float cooldownTimer;
+    private Shoot shoot;
 
     [SerializeField] private Transform provisional;//elemento provisional
 
@@ -20,6 +21,7 @@ public class Melee : MonoBehaviour
     {
         inputs = GetComponent<PlayerInput>();
         cooldownTimer = attackCooldown;
+        shoot = GetComponent<Shoot>();
     }
 
     // Update is called once per frame
@@ -73,5 +75,10 @@ public class Melee : MonoBehaviour
             yield return new WaitForSeconds(fraccion);
         }
         provisional.rotation = origen;
+    }
+
+    public void DamageUp(float damageUp)
+    {
+        attackDamage += damageUp;
     }
 }

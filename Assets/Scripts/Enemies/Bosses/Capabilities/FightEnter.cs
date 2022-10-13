@@ -6,30 +6,45 @@ using TMPro;
 
 public class FightEnter : MonoBehaviour
 {
-    [SerializeField] private GameObject[] toDisable;
+    private GameObject[] toDisable;
     [SerializeField] private GameObject[] toEnable;
     [SerializeField] private GameObject lateDisable;
     [SerializeField] private GameObject bossElements;
     [SerializeField] private int frames;
     [SerializeField] private string bossName;
+    [SerializeField] private string bossSubtitle;
     private Resolution resolution;
     private Image brillo;
     private RectTransform titulo;
+    private RectTransform titulo2;
+
     
     private void Awake()
     {
         resolution = GetComponent<Resolution>();
         brillo = bossElements.GetComponent<Image>();
         titulo = bossElements.transform.GetChild(0).transform.GetChild(0).GetComponent<RectTransform>();
-        bossElements.transform.GetChild(1).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = bossName;
+        titulo2 = bossElements.transform.GetChild(0).transform.GetChild(1).GetComponent<RectTransform>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        StartCoroutine(Titulo());        
+        if (collision.tag == "Player")
+        {
+            toDisable = GameObject.FindGameObjectsWithTag("Enemy");
+            titulo.GetComponent<TextMeshProUGUI>().text = bossName;
+            bossElements.transform.GetChild(1).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = bossName;
+            titulo2.GetComponent<TextMeshProUGUI>().text = bossSubtitle;
+            bossElements.transform.GetChild(1).transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = bossSubtitle;
+            StartCoroutine(Titulo());
+        }
+                
     }
 
     private IEnumerator Titulo()
     {
+        Vector2 origen = titulo.position;
+        Vector2 origen2 = titulo2.position;
+
         bossElements.SetActive(true);
         foreach (GameObject thing in toDisable)
         {
@@ -42,7 +57,8 @@ public class FightEnter : MonoBehaviour
         for(int i = 0; i < frames/2; i++)
         {
             titulo.position = new Vector2(titulo.position.x + dist, titulo.position.y);
-            yield return new WaitForSecondsRealtime(Time.fixedUnscaledDeltaTime);
+            titulo2.position = new Vector2(titulo2.position.x + dist, titulo2.position.y);
+            yield return new WaitForSeconds(Time.fixedUnscaledDeltaTime);
         }
 
         yield return new WaitForSeconds(2);
@@ -50,13 +66,18 @@ public class FightEnter : MonoBehaviour
         for(int i = 0; i < frames/2; i++)
         {
             titulo.position = new Vector2(titulo.position.x + dist, titulo.position.y);
-            yield return new WaitForSecondsRealtime(Time.fixedUnscaledDeltaTime);
+            titulo2.position = new Vector2(titulo2.position.x + dist, titulo2.position.y);
+            yield return new WaitForSeconds(Time.fixedUnscaledDeltaTime);
         }
-        titulo.gameObject.GetComponentInParent<Transform>().gameObject.SetActive(false);
+
         brillo.color = new Color(brillo.color.r, brillo.color.g, brillo.color.b, 0);
         foreach (GameObject thing in toEnable)
             if (thing != null)
                 thing.SetActive(true);
+
         lateDisable.SetActive(false);
+        titulo.position = origen;
+        titulo2.position = origen2;
+        gameObject.SetActive(false);
     }
 }

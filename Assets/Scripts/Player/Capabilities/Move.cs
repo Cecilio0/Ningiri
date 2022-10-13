@@ -22,6 +22,7 @@ public class Move : MonoBehaviour
 
     private float maxSpeedChange;
     private float acceleration;
+    [HideInInspector] public bool isKnockedBack;
 
 
     // Start is called before the first frame update
@@ -30,17 +31,22 @@ public class Move : MonoBehaviour
         inputs = GetComponent<PlayerInput>();
         body = GetComponent<Rigidbody2D>();
         ground = GetComponent<Ground>();
+        isKnockedBack = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        direction.x = inputs.actions["Horizontal"].ReadValue<Vector2>().x;
-        if (direction.x < 0)
-            transform.localScale = new Vector2( Mathf.Abs(transform.localScale.x), transform.localScale.y);
-        else if (direction.x > 0)
-            transform.localScale = new Vector2( -Mathf.Abs(transform.localScale.x), transform.localScale.y);
-        desiredVelocity = new Vector2(direction.x, 0f) * Mathf.Max(maxSpeed - ground.Friction, 0f);
+        if (!isKnockedBack)
+        {
+            direction.x = inputs.actions["Horizontal"].ReadValue<Vector2>().x;
+            if (direction.x < 0)
+                transform.localScale = new Vector2( Mathf.Abs(transform.localScale.x), transform.localScale.y);
+            else if (direction.x > 0)
+                transform.localScale = new Vector2( -Mathf.Abs(transform.localScale.x), transform.localScale.y);
+            desiredVelocity = new Vector2(direction.x, 0f) * Mathf.Max(maxSpeed - ground.Friction, 0f);
+        }
+        
     }
 
     private void FixedUpdate()

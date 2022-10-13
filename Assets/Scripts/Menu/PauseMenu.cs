@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
+    [SerializeField] private Button first;
     GameObject [] panels;
     private bool on;
     private PlayerControls playerControls;
@@ -17,9 +18,15 @@ public class PauseMenu : MonoBehaviour
         {
             panels[i] = pauseMenu.transform.GetChild(i).gameObject;
         }
+        on = false;
     }
 
-        private void OnEnable()
+    private void Start()
+    {
+        Time.timeScale = 1;
+    }
+
+    private void OnEnable()
     {
         playerControls.Enable();
     }
@@ -36,21 +43,20 @@ public class PauseMenu : MonoBehaviour
         if (buttonDown)//cuando se presione una tecla vinculada a la accion pause 
         {
             on = !on;
+            if (on)
+            {
+                pauseMenu.SetActive(true);//abre el menu
+                panels[0].transform.gameObject.SetActive(true);
+                Cursor.lockState = CursorLockMode.None;//reactiva el cursor
+                Cursor.visible = true;
+                Time.timeScale = 0;//escencialmente detiene el tiempo
+                first.Select();
+            } 
+            else
+            {
+                closeMenu();
+            }
         }
-
-        if (on)
-        {
-            pauseMenu.SetActive(true);//abre el menu
-            panels[0].transform.gameObject.SetActive(true);
-            Cursor.lockState = CursorLockMode.None;//reactiva el cursor
-            Cursor.visible = true;
-            Time.timeScale = 0;//escencialmente detiene el tiempo
-        } 
-        else
-        {
-            closeMenu();
-        }
-        
     }
 
     public void ButtonContinue() 

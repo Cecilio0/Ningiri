@@ -9,7 +9,7 @@ public class HealthRestore : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.tag == "Player" && collision is BoxCollider2D)
         {
             collision.GetComponent<Health>().RestoreHealth(healthRestored);
             gameObject.SetActive(false);
