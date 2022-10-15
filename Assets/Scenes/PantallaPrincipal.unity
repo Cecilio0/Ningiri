@@ -2055,6 +2055,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2812052923118540269, guid: 8809d7b2b815ae14ca87a2ef9114f380, type: 3}
   m_PrefabInstance: {fileID: 1696512289}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &512926665 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6821912354681612817, guid: 8809d7b2b815ae14ca87a2ef9114f380, type: 3}
+  m_PrefabInstance: {fileID: 1696512289}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &543540394
 GameObject:
   m_ObjectHideFlags: 0
@@ -2489,6 +2500,10 @@ PrefabInstance:
     - target: {fileID: 2738940371325952889, guid: 07cd3e4343815bc4bbd0bf7634d04873, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2738940371325952890, guid: 07cd3e4343815bc4bbd0bf7634d04873, type: 3}
+      propertyPath: initializeDataIfNull
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7079386561987168909, guid: 07cd3e4343815bc4bbd0bf7634d04873, type: 3}
       propertyPath: m_Name
@@ -4491,6 +4506,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2812052923118540269, guid: 8809d7b2b815ae14ca87a2ef9114f380, type: 3}
   m_PrefabInstance: {fileID: 1696788585}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &921847663 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6821912354681612817, guid: 8809d7b2b815ae14ca87a2ef9114f380, type: 3}
+  m_PrefabInstance: {fileID: 1696788585}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &923148452
 GameObject:
   m_ObjectHideFlags: 0
@@ -4900,6 +4926,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 817c8d5f8ec24f34dbf331a427e5c539, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  newGameButton: {fileID: 512926665}
+  continueGameButton: {fileID: 921847663}
 --- !u!4 &989019001
 Transform:
   m_ObjectHideFlags: 0
