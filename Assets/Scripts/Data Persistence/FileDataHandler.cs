@@ -21,10 +21,10 @@ public class FileDataHandler
         this.useEncryption = useEncryption;
     }
 
-    public GameData Load()
+    public GameData Load(string profileId)
     {
         //Ruta completa del archivo que incluye su nombre y la ruta del directorio
-        string fullPath = Path.Combine(this.dataDirPath, this.dataFileName);
+        string fullPath = Path.Combine(this.dataDirPath, profileId, this.dataFileName);
         GameData loadedData = null;
         if(File.Exists(fullPath))
         {
@@ -56,10 +56,10 @@ public class FileDataHandler
         return loadedData;
     }
 
-    public void Save(GameData data)
+    public void Save(GameData data, string profileId)
     {
         //Ruta completa del archivo que incluye su nombre y la ruta del directorio
-        string fullPath = Path.Combine(this.dataDirPath, this.dataFileName);
+        string fullPath = Path.Combine(this.dataDirPath, profileId, this.dataFileName);
 
         try
         {
@@ -90,6 +90,42 @@ public class FileDataHandler
         }
     }
 
+    public Dictionary<string, GameData> LoadAllProfiles()
+    {
+        Dictionary<string, GameData> profileDictionary = new Dictionary<string, GameData>();
+
+        //Loop sobre todos los nombres de directorios en el directorio de datos
+        IEnumerable<DirectoryInfo> dirInfos = new DirectoryInfo(this.dataDirPath).EnumerateDirectories();
+        foreach(DirectoryInfo dirInfo in dirInfos)
+        {
+            string profileId = dirInfo.Name;
+
+            //Programacion preventiva: chequear si el data file existe
+            //si no existe, entonces el folder no es un profile y debe ser saltado
+            string fullPath = Path.Combine(this.dataDirPath, profileId, this.dataFileName);
+            if(!File.Exists(fullPath))
+            {
+                Debug.LogWarning("Saltando directorio cuando se estan cargando los profiles porque no contiene data: " + profileId);
+                continue;
+            }
+
+            //Cargar los datos del juego para este profile y agregarlos al diccionario
+            GameData profileData = Load(profileId);
+
+            //Programacion preventiva: asegurarse que los datos del profile no son nulos.
+            //Porque si lo son entonces algo va a fallar y deberiamos saberlo
+            if (profileData != null)
+            {
+                profileDictionary.Add(profileId, profileData);
+            }
+            else
+            {
+                Debug.LogError("Se trato de guardar el profile pero algo salio mal. Profile ID: " + profileId);
+            }
+        }
+
+        return profileDictionary;
+    }
     private string Encriptacion (string data)
     {
         string encriptedData = "";
