@@ -4,32 +4,39 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class MenuManager : MonoBehaviour
+public class MenuManager : Menu
 {
+    [Header("Menu Navigation")]
+    [SerializeField] private SaveSlotsMenu saveSlotsMenu;
     [Header("Menu Buttons")]
     [SerializeField] private Button newGameButton;
     [SerializeField] private Button continueGameButton;
+    [SerializeField] private Button loadGameButton;
     private void Start()
     {
         if(!DataPersistenceManager.instance.HasGameData())
         {
             continueGameButton.interactable = false;
+            loadGameButton.interactable = false;
         }
     }
     public void OnNewGameButtonPressed()
     {
-        DisableMenuButtons();
-        //Create a new game - which will initialize the game data
-        DataPersistenceManager.instance.NewGame();
-        //Load the gameplay scene - which will in turn save the game because of OnSceneUnloaded() in the DataPersistenceManager
-        SceneManager.LoadScene("ZonaPruebas");
+        saveSlotsMenu.ActivateMenu(false);
+        this.DeactivateMenu();
+    }
+
+    public void OnLoadGameButtonPressed()
+    {
+        saveSlotsMenu.ActivateMenu(true);
+        this.DeactivateMenu();
     }
     public void OnContinueButtonPressed()
     {
         DisableMenuButtons();
         Debug.Log("Continue Button Pressed");
         //Load the next scene - which will in turn Load the same because of OnSceneLoaded() in the DataPersistenceManager
-        SceneManager.LoadScene("ZonaPruebas");
+        SceneManager.LoadSceneAsync("ZonaPruebas");
     }
     
     //Cuando se presiona el boton Quit
@@ -47,5 +54,14 @@ public class MenuManager : MonoBehaviour
     {
         newGameButton.interactable = false;
         continueGameButton.interactable = false;
+    }
+
+    public void ActivateMenu()
+    {
+        this.gameObject.SetActive(true);
+    }
+    public void DeactivateMenu()
+    {
+        this.gameObject.SetActive(false);
     }
 }

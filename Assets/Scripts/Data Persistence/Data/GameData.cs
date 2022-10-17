@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class GameData
 {
+    public long lastUpdated;
     public float maxHealth;
     public float currentMaxHealth ;
     public float currentHealth;

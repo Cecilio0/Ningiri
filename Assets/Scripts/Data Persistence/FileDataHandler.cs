@@ -23,6 +23,11 @@ public class FileDataHandler
 
     public GameData Load(string profileId)
     {
+        //Caso base: El profileId es nulo, regresar null
+        if(profileId == null)
+        {
+            return null;
+        }
         //Ruta completa del archivo que incluye su nombre y la ruta del directorio
         string fullPath = Path.Combine(this.dataDirPath, profileId, this.dataFileName);
         GameData loadedData = null;
@@ -58,6 +63,11 @@ public class FileDataHandler
 
     public void Save(GameData data, string profileId)
     {
+        //Caso base: El profileId es nulo, regresar null
+        if(profileId == null)
+        {
+            return;
+        }
         //Ruta completa del archivo que incluye su nombre y la ruta del directorio
         string fullPath = Path.Combine(this.dataDirPath, profileId, this.dataFileName);
 
@@ -125,6 +135,41 @@ public class FileDataHandler
         }
 
         return profileDictionary;
+    }
+
+    public string GetMostRecentlyUpdatedProfileId()
+    {
+        string mostRecentProfileId = null;
+        Dictionary<string, GameData> profilesGameData = LoadAllProfiles();
+        foreach(KeyValuePair<string, GameData> pair in profilesGameData)
+        {
+            string profileId = pair.Key;
+            GameData gameData = pair.Value;
+
+            //Saltar esta entrada si el game data es nulo
+            if(gameData == null)
+            {
+                continue;
+            }
+
+            //Si esta es la primer data con la que nos encontramos que existe, entonces es la mas reciente por el momento
+            if(mostRecentProfileId == null)
+            {
+                mostRecentProfileId = profileId;
+            }
+            //Si no, comparar para ver cual fecha es la mas reciente
+            else
+            {
+                DateTime mostRecentDateTime = DateTime.FromBinary(profilesGameData[mostRecentProfileId].lastUpdated);
+                DateTime newDateTime = DateTime.FromBinary(gameData.lastUpdated);
+                //Si la nueva fecha es mas reciente que la mas reciente hasta ahora, entonces esta es la mas reciente hasta ahora
+                if(newDateTime > mostRecentDateTime)
+                {
+                    mostRecentProfileId = profileId;
+                }
+            }
+        }
+        return mostRecentProfileId;
     }
     private string Encriptacion (string data)
     {
