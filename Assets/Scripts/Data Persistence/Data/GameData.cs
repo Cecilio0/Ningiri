@@ -12,6 +12,7 @@ public class GameData
     public float currentHealth;
     public Vector3 playerPosition;
     public SerializableDictionary<string, bool> healthCoins;
+    public SerializableDictionary<string, bool> collectibles;
 
     public GameData()
     {
@@ -20,6 +21,7 @@ public class GameData
         this.currentHealth = 100f;
         this.playerPosition = Vector3.zero;
         this.healthCoins = new SerializableDictionary<string, bool>();
+        this.collectibles = new SerializableDictionary<string, bool>();
     }
 
     public int GetPercentageComplete()
