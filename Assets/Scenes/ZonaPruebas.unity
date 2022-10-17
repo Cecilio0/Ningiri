@@ -1475,7 +1475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d39d474925ddde46babd0e40ac13223, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectibleID: d150dfc4-4ddc-40a0-85e7-2d826551dff7
+  collectibleID: be14deb6-7886-43ca-8735-aea857634506
 --- !u!1 &1299673009
 GameObject:
   m_ObjectHideFlags: 0
@@ -1871,7 +1871,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d39d474925ddde46babd0e40ac13223, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectibleID: 7b9a8667-b702-4738-a34d-46195975a149
+  collectibleID: 24686972-01d6-4ce9-8ecf-6973576fc253
 --- !u!114 &1441318068 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9107014641629103627, guid: 62098e04929f3074c80011a77a1dfb61, type: 3}
@@ -2884,7 +2884,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d39d474925ddde46babd0e40ac13223, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectibleID: 01b0ca10-2e0c-480e-b4e6-502b90769ed7
+  collectibleID: f98ff249-3e20-4c19-b424-780dd44fb978
 --- !u!1001 &1360494140913064617
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3006,8 +3006,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2738940371325952890, guid: 07cd3e4343815bc4bbd0bf7634d04873, type: 3}
+      propertyPath: testSelectedProfileId
+      value: test2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2738940371325952890, guid: 07cd3e4343815bc4bbd0bf7634d04873, type: 3}
       propertyPath: disableDataPersistence
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2738940371325952890, guid: 07cd3e4343815bc4bbd0bf7634d04873, type: 3}
       propertyPath: overrideSelectedProfileId
