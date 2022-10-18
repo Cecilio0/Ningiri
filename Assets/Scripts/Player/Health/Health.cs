@@ -13,7 +13,6 @@ public class Health : MonoBehaviour , IDataPersistence
     private float currentHealth;
     [SerializeField] private Image currentHealthBar;
     [SerializeField] private Image maxHealthBar;
-    private float currentHealth;
 
     [Header("Frames de invulneravilidad")]
     [SerializeField] private float iFrameDuration;
@@ -28,7 +27,7 @@ public class Health : MonoBehaviour , IDataPersistence
     private Move move;
     private Jump jump;
     private Rigidbody2D rb;
-    
+
 
     [HideInInspector] public Vector2 respawnPoint;
     public void LoadData(GameData data)
