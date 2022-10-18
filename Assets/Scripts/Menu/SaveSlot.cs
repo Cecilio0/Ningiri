@@ -34,7 +34,7 @@ public class SaveSlot : MonoBehaviour
             noDataContent.SetActive(false);
             hasDataContent.SetActive(true);
             percentajeCompleteText.text = data.GetPercentageComplete() + "% COMPLETE";
-            currentHealthText.text = "CURRENT HEALTH: " + data.currentHealth;
+            currentHealthText.text = "MAX HEALTH: " + data.currentMaxHealth;
         }
     }
 

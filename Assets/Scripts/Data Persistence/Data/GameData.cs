@@ -8,18 +8,16 @@ public class GameData
 {
     public long lastUpdated;
     public float maxHealth;
-    public float currentMaxHealth ;
-    public float currentHealth;
-    public Vector3 playerPosition;
+    public float currentMaxHealth;
+    public Vector2 respawn;
     public SerializableDictionary<string, bool> healthCoins;
     public SerializableDictionary<string, bool> collectibles;
 
     public GameData()
     {
         this.maxHealth = 100f;
-        this.currentMaxHealth = 100f;
-        this.currentHealth = 100f;
-        this.playerPosition = Vector3.zero;
+        this.currentMaxHealth = 30f;
+        respawn = new Vector2(-95, -20);
         this.healthCoins = new SerializableDictionary<string, bool>();
         this.collectibles = new SerializableDictionary<string, bool>();
     }

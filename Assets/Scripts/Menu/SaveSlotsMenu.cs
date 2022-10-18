@@ -4,10 +4,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class SaveSlotsMenu : Menu
+public class SaveSlotsMenu : MonoBehaviour
 {
     [Header("Menu Navigation")]
     [SerializeField] private MenuManager menuManager;
+    
     [Header("Menu Buttons")]
     [SerializeField] private Button backButton; 
     private SaveSlot[] saveSlots;
@@ -70,9 +71,6 @@ public class SaveSlotsMenu : Menu
                 }
             }
         }
-
-        //Setear el primer boton seleccionado
-        StartCoroutine(this.SetFirstSelected(firstSelected));
     }
 
     public void DeactivateMenu()

@@ -7733,6 +7733,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 817c8d5f8ec24f34dbf331a427e5c539, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  firstSelected: {fileID: 0}
+  saveSlotsMenu: {fileID: 0}
+  newGameButton: {fileID: 0}
+  continueGameButton: {fileID: 0}
+  loadGameButton: {fileID: 0}
 --- !u!114 &6698635159780092545
 MonoBehaviour:
   m_ObjectHideFlags: 0

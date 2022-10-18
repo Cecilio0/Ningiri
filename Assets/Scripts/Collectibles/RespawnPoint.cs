@@ -18,6 +18,7 @@ public class RespawnPoint : MonoBehaviour
             ogColors[i] = sprites[i].color;
         }
     }
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player" && collision is BoxCollider2D)

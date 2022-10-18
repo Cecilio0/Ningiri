@@ -34,14 +34,14 @@ public class Health : MonoBehaviour , IDataPersistence
     {
         this.maxHealth = data.maxHealth;
         this.currentMaxHealth = data.currentMaxHealth;
-        this.currentHealth = data.currentHealth;
+        this.respawnPoint = data.respawn;
     }
 
     public void SaveData(ref GameData data)
     {
         data.maxHealth = this.maxHealth;
         data.currentMaxHealth = this.currentMaxHealth;
-        data.currentHealth = this.currentHealth;
+        data.respawn = this.respawnPoint;
     }
 
     void Awake()
@@ -51,7 +51,6 @@ public class Health : MonoBehaviour , IDataPersistence
         maxHealthBar.fillAmount = currentMaxHealth/maxHealth;
         currentHealthBar.fillAmount = currentHealth/currentMaxHealth * maxHealthBar.fillAmount;
         sprite = GetComponent<SpriteRenderer>();
-        respawnPoint = transform.position;
         move = GetComponent<Move>();
         jump = GetComponent<Jump>();
         rb = GetComponent<Rigidbody2D>();
@@ -59,7 +58,9 @@ public class Health : MonoBehaviour , IDataPersistence
 
     void Start()
     {
+        maxHealthBar.fillAmount = currentMaxHealth/maxHealth;
         currentHealthBar.fillAmount = currentHealth/currentMaxHealth * maxHealthBar.fillAmount;
+        transform.position = respawnPoint;
     }
 
 
