@@ -47,9 +47,7 @@ public class Health : MonoBehaviour , IDataPersistence
     void Awake()
     {
         Physics2D.IgnoreLayerCollision(playerLayer, enemyLayer, false);
-        currentHealth = currentMaxHealth;
-        maxHealthBar.fillAmount = currentMaxHealth/maxHealth;
-        currentHealthBar.fillAmount = currentHealth/currentMaxHealth * maxHealthBar.fillAmount;
+        
         sprite = GetComponent<SpriteRenderer>();
         move = GetComponent<Move>();
         jump = GetComponent<Jump>();
@@ -58,9 +56,11 @@ public class Health : MonoBehaviour , IDataPersistence
 
     void Start()
     {
+        currentHealth = currentMaxHealth;
         maxHealthBar.fillAmount = currentMaxHealth/maxHealth;
         currentHealthBar.fillAmount = currentHealth/currentMaxHealth * maxHealthBar.fillAmount;
-        transform.position = respawnPoint;
+        if (respawnPoint != null)
+            transform.position = respawnPoint;
     }
 
 
