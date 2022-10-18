@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Move : MonoBehaviour
+public class Move : MonoBehaviour, IDataPersistence
 {
 
     private PlayerInput inputs;
@@ -24,6 +24,15 @@ public class Move : MonoBehaviour
     private float acceleration;
     [HideInInspector] public bool isKnockedBack;
 
+    public void LoadData(GameData data)
+    {
+        this.transform.position = data.playerPosition;
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        data.playerPosition = this.transform.position;
+    }
 
     // Start is called before the first frame update
     void Awake()
