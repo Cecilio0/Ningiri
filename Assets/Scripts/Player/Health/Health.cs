@@ -4,15 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Health : MonoBehaviour
+public class Health : MonoBehaviour , IDataPersistence
 {
 
     [Header("Valores de vida y representacion grafica")]
     [SerializeField, Range(0f, 100f)] private float maxHealth;
     [SerializeField, Range(0f, 100f)] private float currentMaxHealth;
+    private float currentHealth;
     [SerializeField] private Image currentHealthBar;
     [SerializeField] private Image maxHealthBar;
-    private float currentHealth;
 
     [Header("Frames de invulneravilidad")]
     [SerializeField] private float iFrameDuration;
@@ -29,6 +29,20 @@ public class Health : MonoBehaviour
     private Rigidbody2D rb;
 
     [HideInInspector] public Vector2 respawnPoint;
+
+    public void LoadData(GameData data)
+    {
+        this.maxHealth = data.maxHealth;
+        this.currentMaxHealth = data.currentMaxHealth;
+        this.currentHealth = data.currentHealth;
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        data.maxHealth = this.maxHealth;
+        data.currentMaxHealth = this.currentMaxHealth;
+        data.currentHealth = this.currentHealth;
+    }
 
     void Awake()
     {
