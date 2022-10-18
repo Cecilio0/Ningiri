@@ -1273,20 +1273,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 1585109075}
   lines:
-  - "Mi nuevo restaurante tendr\xE1 los platos de la mejor calidad de todo Jap\xF3n,
-    todo debe de ser perfecto. "
-  - "El arroz ya tiene la consistencia ideal para los onigiris. Ahora, el paso m\xE1s
-    importante, el relleno."
-  - "A todos les gusta el relleno cl\xE1sico de at\xFAn, es b\xE1sico, pero es lo
-    que esperan que tenga un onigiri."
-  - "*Prepar\xE1ndolo*"
-  - "Est\xE1n impecablemente hermosos, \xA1Ahora s\xF3lo ser\xE1 probar su magn\xEDfico
-    sabor!"
-  - "\u2026 "
-  - 'No, no, no. '
-  - "No son lo suficientemente buenos, el sabor es muy b\xE1sico. \xBFPero qu\xE9
-    pas\xF3? si el arroz ten\xEDa consistencia perfecta, el at\xFAn estaba fresco
-    y ten\xEDa las proporciones ideales."
-  - "A nadie le gustar\xE1 esto tan b\xE1sico, ser\xE1 mejor no incluir al onigiri
-    en el men\xFA."
+  - "Pero, \xBFQu\xE9 pas\xF3?, \xBFQu\xE9 es este lugar? "
+  - "\xA1AHH! por qu\xE9 todos los onigiris est\xE1n destrozados, "
+  - "Espera\u2026 \xBFEstoy en un basurero? "
+  - "Acaso\u2026 \xBFMe desecharon? \xBFPero por qu\xE9? \xBFQu\xE9 tengo de malo?"
+  - "Al parecer no fui lo suficiente\u2026"
+  - "\xBFHola? oh, por fin encuentro a alguien del restaurante, qu\xE9 felicidad,
+    llevaba tiempo perdido y ac\xE1 son un poco ap\xE1ticos. Pero encontr\xE9 algo
+    genial, \xBFTe puedo mostrar?"
+  - "Ehh. \xBFQu\xE9 te pasa? te ves triste"
+  - " \xBFAcaso no lo ves? no cumplimos los requisitos necesarios para estar en el
+    men\xFA"
+  - "\xBFY qui\xE9n dice eso?"
+  - "El chef, dijo que tengo un sabor muy b\xE1sico."
+  - "Mmmm\u2026Mira, mientras rondaba perdido por ac\xE1 vi varias latas cerradas
+    de comida. \xBFPuedes utilizarlas para mejorar tu sabor! No te rindas tan r\xE1pido"
+  - "\xBFCrees que eso ser\xE1 suficiente para entrar al men\xFA?"
+  - "\xA1Claro! \xA1Ser\xE1s delicioso! Pero el chef\u2026 Su actitud es muy egoc\xE9ntrica,
+    deber\xE1s enfrentarlo primero y demostrarle tu valor como onigiri."
+  - "Tienes raz\xF3n. No todo est\xE1 perdido. \xA1Gracias Dango! Recuper\xE9 mi
+    determinaci\xF3n y valent\xEDa para mostrarle a todo jap\xF3n los mejores onigiris
+    que hayan probado."
   textSpeed: 0.1
