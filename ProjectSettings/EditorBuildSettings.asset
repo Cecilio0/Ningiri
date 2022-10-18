@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/PantallaPrincipal.unity
+    path: Assets/Scenes/PantallaPrincipalNavegable.unity
     guid: a3e24e02f87188941818226c8fadd6c8
   - enabled: 1
     path: Assets/Scenes/PalomaCosmica.unity
@@ -17,4 +17,6 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Main.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 0512e0d1ede431a41b7b124fdce6420b, type: 2}
+    com.unity.localization.settings: {fileID: 11400000, guid: 31b301232a8ef614dbd315fcf7be4832, type: 2}
