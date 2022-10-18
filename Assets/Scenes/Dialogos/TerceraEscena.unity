@@ -327,6 +327,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &307257213 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5559738332347725815, guid: e8de07d377f8cf84b89761aeb11e54d9, type: 3}
+  m_PrefabInstance: {fileID: 1508157026}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &386470895
 GameObject:
   m_ObjectHideFlags: 0
@@ -641,6 +646,7 @@ RectTransform:
   - {fileID: 1014159341}
   - {fileID: 230068388}
   - {fileID: 633612335}
+  - {fileID: 307257213}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1091,6 +1097,123 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1508157026
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 496825037}
+    m_Modifications:
+    - target: {fileID: 5559738332347725814, guid: e8de07d377f8cf84b89761aeb11e54d9, type: 3}
+      propertyPath: projectiles.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5559738332347725814, guid: e8de07d377f8cf84b89761aeb11e54d9, type: 3}
+      propertyPath: projectiles.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5559738332347725814, guid: e8de07d377f8cf84b89761aeb11e54d9, type: 3}
+      propertyPath: projectiles.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5559738332347725814, guid: e8de07d377f8cf84b89761aeb11e54d9, type: 3}
+      propertyPath: projectiles.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5559738332347725814, guid: e8de07d377f8cf84b89761aeb11e54d9, type: 3}
+      propertyPath: projectiles.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5559738332347725814, guid: e8de07d377f8cf84b89761aeb11e54d9, type: 3}
+      propertyPath: projectiles.Array.data[4]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5559738332347725814, guid: e8de07d377f8cf84b89761aeb11e54d9, type: 3}
+      propertyPath: projectiles.Array.data[5]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5559738332347725814, guid: e8de07d377f8cf84b89761aeb11e54d9, type: 3}
+      propertyPath: projectiles.Array.data[6]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5559738332347725814, guid: e8de07d377f8cf84b89761aeb11e54d9, type: 3}
+      propertyPath: projectiles.Array.data[7]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5559738332347725814, guid: e8de07d377f8cf84b89761aeb11e54d9, type: 3}
+      propertyPath: projectiles.Array.data[8]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5559738332347725814, guid: e8de07d377f8cf84b89761aeb11e54d9, type: 3}
+      propertyPath: projectiles.Array.data[9]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5559738332347725815, guid: e8de07d377f8cf84b89761aeb11e54d9, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5559738332347725815, guid: e8de07d377f8cf84b89761aeb11e54d9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5559738332347725815, guid: e8de07d377f8cf84b89761aeb11e54d9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5559738332347725815, guid: e8de07d377f8cf84b89761aeb11e54d9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5559738332347725815, guid: e8de07d377f8cf84b89761aeb11e54d9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -743.3256
+      objectReference: {fileID: 0}
+    - target: {fileID: 5559738332347725815, guid: e8de07d377f8cf84b89761aeb11e54d9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 205
+      objectReference: {fileID: 0}
+    - target: {fileID: 5559738332347725815, guid: e8de07d377f8cf84b89761aeb11e54d9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5559738332347725815, guid: e8de07d377f8cf84b89761aeb11e54d9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5559738332347725815, guid: e8de07d377f8cf84b89761aeb11e54d9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5559738332347725815, guid: e8de07d377f8cf84b89761aeb11e54d9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5559738332347725815, guid: e8de07d377f8cf84b89761aeb11e54d9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5559738332347725815, guid: e8de07d377f8cf84b89761aeb11e54d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5559738332347725815, guid: e8de07d377f8cf84b89761aeb11e54d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5559738332347725815, guid: e8de07d377f8cf84b89761aeb11e54d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5559738332347725816, guid: e8de07d377f8cf84b89761aeb11e54d9, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5559738332347725817, guid: e8de07d377f8cf84b89761aeb11e54d9, type: 3}
+      propertyPath: m_Name
+      value: Rey Mapache(Boss Element)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e8de07d377f8cf84b89761aeb11e54d9, type: 3}
 --- !u!1 &1585109073
 GameObject:
   m_ObjectHideFlags: 0
@@ -1272,26 +1395,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 1585109075}
-  lines:
-  - "Pero, \xBFQu\xE9 pas\xF3?, \xBFQu\xE9 es este lugar? "
-  - "\xA1AHH! por qu\xE9 todos los onigiris est\xE1n destrozados, "
-  - "Espera\u2026 \xBFEstoy en un basurero? "
-  - "Acaso\u2026 \xBFMe desecharon? \xBFPero por qu\xE9? \xBFQu\xE9 tengo de malo?"
-  - "Al parecer no fui lo suficiente\u2026"
-  - "\xBFHola? oh, por fin encuentro a alguien del restaurante, qu\xE9 felicidad,
-    llevaba tiempo perdido y ac\xE1 son un poco ap\xE1ticos. Pero encontr\xE9 algo
-    genial, \xBFTe puedo mostrar?"
-  - "Ehh. \xBFQu\xE9 te pasa? te ves triste"
-  - " \xBFAcaso no lo ves? no cumplimos los requisitos necesarios para estar en el
-    men\xFA"
-  - "\xBFY qui\xE9n dice eso?"
-  - "El chef, dijo que tengo un sabor muy b\xE1sico."
-  - "Mmmm\u2026Mira, mientras rondaba perdido por ac\xE1 vi varias latas cerradas
-    de comida. \xBFPuedes utilizarlas para mejorar tu sabor! No te rindas tan r\xE1pido"
-  - "\xBFCrees que eso ser\xE1 suficiente para entrar al men\xFA?"
-  - "\xA1Claro! \xA1Ser\xE1s delicioso! Pero el chef\u2026 Su actitud es muy egoc\xE9ntrica,
-    deber\xE1s enfrentarlo primero y demostrarle tu valor como onigiri."
-  - "Tienes raz\xF3n. No todo est\xE1 perdido. \xA1Gracias Dango! Recuper\xE9 mi
-    determinaci\xF3n y valent\xEDa para mostrarle a todo jap\xF3n los mejores onigiris
-    que hayan probado."
+  lines: []
   textSpeed: 0.1
