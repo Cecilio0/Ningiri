@@ -64,7 +64,7 @@ public class Shoot : MonoBehaviour
         }
 
         //quita vida
-        GetComponent<Health>().RestoreHealth(-1);
+        GetComponent<Health>().RestoreHealth(-0.5f);
     }
 
     private int FindProjectile()
@@ -77,5 +77,13 @@ public class Shoot : MonoBehaviour
             i++;
         }
         return 0;
+    }
+
+    public void DamageUp(float damageUp)
+    {
+        foreach (GameObject projectile in projectiles)
+        {
+            projectile.GetComponent<Projectile>().DamageUp(damageUp);
+        }
     }
 }

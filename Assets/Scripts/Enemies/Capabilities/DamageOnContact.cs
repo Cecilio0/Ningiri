@@ -11,7 +11,7 @@ public class DamageOnContact : MonoBehaviour
     {
         if (collision.tag == "Player" && collision is BoxCollider2D)
         {
-            collision.GetComponent<Health>().TakeDamage(damage);
+            collision.GetComponent<Health>().TakeDamage(damage, transform.position);
         }
     }
 }
