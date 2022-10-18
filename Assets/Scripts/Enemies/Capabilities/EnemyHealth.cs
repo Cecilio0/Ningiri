@@ -5,22 +5,25 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
 
-    [SerializeField] private float maxHealth;
-    private float currentHealth;
+    [Header("Generic health elements")]
+    [SerializeField] public float maxHealth;
+    [HideInInspector] public float currentHealth;
 
     [SerializeField] private float flashTime;
-    private SpriteRenderer sprite;
+    protected SpriteRenderer sprite;
+
+    [Header("On death")]
+
+    [SerializeField] protected GameObject[] toDrop;//Elementos que puede dropear 
+    [SerializeField, Range(0f, 100f)] protected float dropChance;//Probabilidad de dropear un elemento en porcentaje
+    
+
     // Start is called before the first frame update
     void Awake()
     {
         currentHealth = maxHealth;
         sprite = GetComponent<SpriteRenderer>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        dropChance = dropChance/100f;
     }
 
     public void TakeDamage(float damage)
@@ -33,10 +36,10 @@ public class EnemyHealth : MonoBehaviour
             //parte grafica
             StartCoroutine(Flash());
         }
-        else
+        else if(gameObject.tag != "Boss")
         {
             //dropear cosas
-
+            Drop();
             //matar al enemigo
             Destroy(this.gameObject);
         }
@@ -44,9 +47,17 @@ public class EnemyHealth : MonoBehaviour
 
     private IEnumerator Flash()
     {
+        Color originalColor = sprite.color;
         sprite.color = Color.red;
         yield return new WaitForSeconds(flashTime);
-        sprite.color = Color.white;
+        sprite.color = originalColor;
+    }
 
+    protected void Drop()
+    {
+        if (toDrop != null && Random.value < dropChance)
+        {
+            Instantiate(toDrop[Random.Range(0, toDrop.Length)], transform.position, Quaternion.identity);
+        }
     }
 }
