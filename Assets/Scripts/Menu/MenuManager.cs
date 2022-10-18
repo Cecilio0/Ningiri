@@ -36,7 +36,7 @@ public class MenuManager : Menu
         DisableMenuButtons();
         Debug.Log("Continue Button Pressed");
         //Load the next scene - which will in turn Load the same because of OnSceneLoaded() in the DataPersistenceManager
-        SceneManager.LoadSceneAsync("ZonaPruebas");
+        SceneManager.LoadSceneAsync(2);
     }
     
     //Cuando se presiona el boton Quit

@@ -33,7 +33,7 @@ public class SaveSlotsMenu : Menu
         }
 
         //Cargar la escena. Que va a activar el guardado (SaveGame) debido a OnSceneUnloaded en el DataPersistenceManager
-        SceneManager.LoadSceneAsync("ZonaPruebas");
+        SceneManager.LoadSceneAsync(2);
     }
     public void OnBackClicked()
     {
