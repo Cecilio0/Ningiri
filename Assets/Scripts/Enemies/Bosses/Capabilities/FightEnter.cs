@@ -59,7 +59,7 @@ public class FightEnter : MonoBehaviour
         }
         brillo.color = new Color(brillo.color.r, brillo.color.g, brillo.color.b, 1);
         titulo.gameObject.SetActive(true);
-        float dist = (Screen.height/1080f)*1500f/(float)frames;
+        float dist = 2*(Screen.height/1080f)*1500f/(float)frames;
         for(int i = 0; i < frames/2; i++)
         {
             titulo.position = new Vector2(titulo.position.x + dist, titulo.position.y);
