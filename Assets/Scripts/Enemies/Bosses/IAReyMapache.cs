@@ -144,7 +144,7 @@ public class IAReyMapache : MonoBehaviour
     {
         if (enemy == 0)//spawnea rata
         {
-            Instantiate(rata, new Vector2(spawnTierra.position.x, spawnTierra.position.y-0.7f), Quaternion.identity);
+            Instantiate(rata, new Vector2(spawnTierra.position.x, spawnTierra.position.y), Quaternion.identity);
         }
         else if (enemy == 1)//spawnea mapache
         {
