@@ -361,7 +361,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.3900146, y: 5.3929443}
+  m_AnchoredPosition: {x: -5.66, y: 5.542944}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &386470897
@@ -386,8 +386,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Onigiri
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 16dafd4734e18a541b703b9fc1d30559, type: 2}
+  m_sharedMaterial: {fileID: -1482256910533037906, guid: 16dafd4734e18a541b703b9fc1d30559, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -411,8 +411,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 65
+  m_fontSizeBase: 65
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -447,7 +447,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -24.821892, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -480,13 +480,27 @@ MonoBehaviour:
   - Onigiri
   - Onigiri
   - Onigiri
+  - Onigiri
+  - Onigiri
+  - Onigiri
+  - Onigiri
+  - Onigiri
+  - Dango
+  - Dango
+  - Dango
   - Dango
   - Dango
   - Onigiri
-  - Dango
   - Onigiri
   - Dango
+  - Dango
   - Onigiri
+  - Onigiri
+  - Dango
+  - Dango
+  - Onigiri
+  - Onigiri
+  - Dango
   - Dango
   - Onigiri
   textSpeed: 0
@@ -814,7 +828,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 633612334}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1582.4841, y: 399.53687, z: 0}
+  m_LocalPosition: {x: 1542.484, y: 399.53687, z: 0}
   m_LocalScale: {x: 202.10526, y: 202.10526, z: 1.0105263}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1216,8 +1230,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0915a0a07aaf247a68eb225f942368c6, type: 2}
+  m_sharedMaterial: {fileID: -1390429837254722162, guid: 0915a0a07aaf247a68eb225f942368c6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1241,12 +1255,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 25
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 15
+  m_fontSizeMax: 25
   m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
@@ -1344,8 +1358,8 @@ MonoBehaviour:
   - "Espera\u2026 \xBFEstoy en un basurero? "
   - "Acaso\u2026 \xBFMe desecharon? \xBFPero por qu\xE9? \xBFQu\xE9 tengo de malo?"
   - "Al parecer no fui lo suficiente\u2026"
-  - "\xBFHola? oh, por fin encuentro a alguien del restaurante, qu\xE9 felicidad,
-    llevaba tiempo perdido y ac\xE1 son un poco ap\xE1ticos. Pero encontr\xE9 algo
+  - "\xBFHola? oh, por fin encuentro a alguien del restaurante, qu\xE9 felicidad."
+  - "Llevaba tiempo perdido y ac\xE1 son un poco ap\xE1ticos. Pero encontr\xE9 algo
     genial, \xBFTe puedo mostrar?"
   - "Ehh. \xBFQu\xE9 te pasa? te ves triste"
   - " \xBFAcaso no lo ves? no cumplimos los requisitos necesarios para estar en el
@@ -1416,7 +1430,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1886270537}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 329.43158, y: 478.3579, z: 0}
+  m_LocalPosition: {x: 379.4316, y: 528.3579, z: 0}
   m_LocalScale: {x: 181.89473, y: 181.89473, z: 1.0105263}
   m_ConstrainProportionsScale: 0
   m_Children: []
