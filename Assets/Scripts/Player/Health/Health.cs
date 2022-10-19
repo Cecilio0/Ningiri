@@ -9,8 +9,8 @@ public class Health : MonoBehaviour , IDataPersistence
 
     [Header("Valores de vida y representacion grafica")]
     [SerializeField, Range(0f, 100f)] private float maxHealth;
-    [SerializeField, Range(0f, 100f)] private float currentMaxHealth;
-    private float currentHealth;
+    [SerializeField, Range(0f, 100f)] public float currentMaxHealth;
+    [HideInInspector] public float currentHealth;
     [SerializeField] private Image currentHealthBar;
     [SerializeField] private Image maxHealthBar;
 
