@@ -13,7 +13,6 @@ public class BossHealth : EnemyHealth
     void Awake()
     {
         currentHealth = maxHealth;
-        sprite = GetComponent<SpriteRenderer>();
         currentHealthBar.fillAmount = 1;
     }
 

@@ -108,6 +108,9 @@ MonoBehaviour:
   maxHealth: 40
   currentHealth: 0
   flashTime: 0.15
+  sprites:
+  - {fileID: 3284446156048095721}
+  - {fileID: 7280769431873677681}
   toDrop:
   - {fileID: 2260493299735602745, guid: 206e2e17fe57ead4e958e90eb80dfeec, type: 3}
   dropChance: 10

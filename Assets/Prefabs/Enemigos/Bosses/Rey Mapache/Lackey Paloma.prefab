@@ -104,6 +104,8 @@ MonoBehaviour:
   maxHealth: 10
   currentHealth: 0
   flashTime: 0.25
+  sprites:
+  - {fileID: 6114134215515125488}
   toDrop:
   - {fileID: 2260493299735602745, guid: 206e2e17fe57ead4e958e90eb80dfeec, type: 3}
   dropChance: 10
@@ -174,6 +176,9 @@ MonoBehaviour:
   patrolRange: 15
   enemyCollider: {fileID: 6114134215515125490}
   rb: {fileID: 6114134215515125452}
+  wallLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &716290726072795175
 MonoBehaviour:
   m_ObjectHideFlags: 0
