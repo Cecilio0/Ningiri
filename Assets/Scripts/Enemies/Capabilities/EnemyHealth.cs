@@ -10,7 +10,7 @@ public class EnemyHealth : MonoBehaviour
     [HideInInspector] public float currentHealth;
 
     [SerializeField] private float flashTime;
-    protected SpriteRenderer sprite;
+    [SerializeField] protected SpriteRenderer[] sprites;
 
     [Header("On death")]
 
@@ -22,7 +22,6 @@ public class EnemyHealth : MonoBehaviour
     void Awake()
     {
         currentHealth = maxHealth;
-        sprite = GetComponent<SpriteRenderer>();
         dropChance = dropChance/100f;
     }
 
@@ -47,10 +46,18 @@ public class EnemyHealth : MonoBehaviour
 
     private IEnumerator Flash()
     {
-        Color originalColor = sprite.color;
-        sprite.color = Color.red;
+        Color[] originalColors = new Color[sprites.Length];
+        for (int i = 0; i < sprites.Length; i++)
+        {
+            originalColors[i] = sprites[i].color;
+            sprites[i].color = Color.red;
+        }
+        
         yield return new WaitForSeconds(flashTime);
-        sprite.color = originalColor;
+        for (int i = 0; i < sprites.Length; i++)
+        {
+            sprites[i].color = originalColors[i];
+        }
     }
 
     protected void Drop()

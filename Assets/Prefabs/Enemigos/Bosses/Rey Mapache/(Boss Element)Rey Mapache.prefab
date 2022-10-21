@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5559738330981097961}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3, y: -1, z: 0}
+  m_LocalPosition: {x: -3, y: -2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -143,7 +143,7 @@ SpriteRenderer:
   m_SortingLayerID: 1304136183
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b4142af9ccdfcea4b9a7062c42638ab2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5d2bc69b53cacc94f84d37d4f2e83eac, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -169,6 +169,8 @@ MonoBehaviour:
   maxHealth: 600
   currentHealth: 0
   flashTime: 0.15
+  sprites:
+  - {fileID: 5559738332347725816}
   toDrop:
   - {fileID: 4481014226282277812, guid: 5798793506601a849993074bc40250c9, type: 3}
   dropChance: 100
@@ -209,18 +211,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.25}
+  m_Offset: {x: -0.1, y: -0.25}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.08, y: 6.11}
+    oldSize: {x: 8.359183, y: 8.359183}
     newSize: {x: 4.08, y: 6.11}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.5, y: 5}
+  m_Size: {x: 2.9, y: 5}
   m_EdgeRadius: 0
 --- !u!68 &5559738332347725813
 EdgeCollider2D:
@@ -271,10 +273,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyCollider: {fileID: 5559738332347725812}
   routineTimer: 6
-  rata: {fileID: 6563493514109035324, guid: 3d7fb645faa03b945badc464378b7b0d, type: 3}
-  mapache: {fileID: 3284446156048095713, guid: 7e94cde04ade4d547ba9e946229b65a3, type: 3}
+  rata: {fileID: 6563493514109035324, guid: 945ce06f43b9bd745899c0b8c2d58d3c, type: 3}
+  mapache: {fileID: 3284446156048095713, guid: af50bc1a2f0927d4091099d36e7c0dd3, type: 3}
   spawnTierra: {fileID: 5559738330981097960}
-  paloma: {fileID: 6114134215515125495, guid: 80a9bde13200c354b84578c71cd185f2, type: 3}
+  paloma: {fileID: 6114134215515125495, guid: a9368336d5694fe4cbd7d61e29787fa3, type: 3}
   spawnAire: {fileID: 5559738331538406384}
   projectiles:
   - {fileID: 0}

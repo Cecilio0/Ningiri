@@ -24,7 +24,6 @@ public class Move : MonoBehaviour
     private float acceleration;
     [HideInInspector] public bool isKnockedBack;
 
-
     // Start is called before the first frame update
     void Awake()
     {

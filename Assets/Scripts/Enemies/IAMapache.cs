@@ -95,7 +95,7 @@ public class IAMapache : MonoBehaviour
         //animacion provisional de ataque
         Vector3 inicio = pivoteBrazo.localEulerAngles;
         attackHitBox.enabled = true;
-        int fraccion = 120/attackLength;
+        int fraccion = 40/attackLength;
         Vector3 rotacion = new Vector3(0f, 0f, fraccion);
         for (int i = 0; i < attackLength; i++)
         {

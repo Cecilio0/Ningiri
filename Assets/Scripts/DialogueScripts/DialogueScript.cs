@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.InputSystem;
 
 
 public class DialogueScript : MonoBehaviour
@@ -10,16 +11,18 @@ public class DialogueScript : MonoBehaviour
     public string[] lines;
     public float textSpeed = 0.1f;
     private int index;
+    private PlayerInput controles;
 
     void Start()
     {
+        controles = GetComponent<PlayerInput>();
         dialogueText.text = string.Empty;
         StartDialogue();
     }
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (controles.actions["Attack"].WasPressedThisFrame())
         {
             if (dialogueText.text == lines[index])
             {

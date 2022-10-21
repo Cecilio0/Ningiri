@@ -4,15 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Health : MonoBehaviour
+public class Health : MonoBehaviour , IDataPersistence
 {
 
     [Header("Valores de vida y representacion grafica")]
     [SerializeField, Range(0f, 100f)] private float maxHealth;
-    [SerializeField, Range(0f, 100f)] private float currentMaxHealth;
+    [SerializeField, Range(0f, 100f)] public float currentMaxHealth;
+    [HideInInspector] public float currentHealth;
     [SerializeField] private Image currentHealthBar;
     [SerializeField] private Image maxHealthBar;
-    private float currentHealth;
 
     [Header("Frames de invulneravilidad")]
     [SerializeField] private float iFrameDuration;
@@ -30,14 +30,25 @@ public class Health : MonoBehaviour
 
     [HideInInspector] public Vector2 respawnPoint;
 
+    public void LoadData(GameData data)
+    {
+        this.maxHealth = data.maxHealth;
+        this.currentMaxHealth = data.currentMaxHealth;
+        this.respawnPoint = data.respawn;
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        data.maxHealth = this.maxHealth;
+        data.currentMaxHealth = this.currentMaxHealth;
+        data.respawn = this.respawnPoint;
+    }
+
     void Awake()
     {
         Physics2D.IgnoreLayerCollision(playerLayer, enemyLayer, false);
-        currentHealth = currentMaxHealth;
-        maxHealthBar.fillAmount = currentMaxHealth/maxHealth;
-        currentHealthBar.fillAmount = currentHealth/currentMaxHealth * maxHealthBar.fillAmount;
+        
         sprite = GetComponent<SpriteRenderer>();
-        respawnPoint = transform.position;
         move = GetComponent<Move>();
         jump = GetComponent<Jump>();
         rb = GetComponent<Rigidbody2D>();
@@ -45,7 +56,11 @@ public class Health : MonoBehaviour
 
     void Start()
     {
+        currentHealth = currentMaxHealth;
+        maxHealthBar.fillAmount = currentMaxHealth/maxHealth;
         currentHealthBar.fillAmount = currentHealth/currentMaxHealth * maxHealthBar.fillAmount;
+        if (respawnPoint != null)
+            transform.position = respawnPoint;
     }
 
 
