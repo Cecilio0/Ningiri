@@ -10,6 +10,7 @@ public class BossHealth : EnemyHealth
     [SerializeField] private GameObject[] toDisable;
     [SerializeField] private Image currentHealthBar;
     [SerializeField] private Image maxHealthBar;
+    [SerializeField] private SceneChange sceneChange;
     private GameObject player;
 
     void Awake()
@@ -26,9 +27,9 @@ public class BossHealth : EnemyHealth
         if (currentHealth == 0)
         {
             Health playerHealth = player.GetComponent<Health>();
-            if (playerHealth.currentHealth == playerHealth.currentMaxHealth)
+            if (sceneChange != null && playerHealth.currentHealth == playerHealth.currentMaxHealth)
             {
-                SceneManager.LoadScene(1);
+                sceneChange.escena = 1;
             }
             foreach (GameObject thing in toDisable)
             {
