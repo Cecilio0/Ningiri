@@ -216,6 +216,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 230068388}
+  - component: {fileID: 230068389}
   m_Layer: 0
   m_Name: DialogueUI
   m_TagString: Untagged
@@ -240,6 +241,59 @@ Transform:
   m_Father: {fileID: 496825037}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &230068389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230068387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74fb956b5673644c7a24eb96b8c0ddfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueText: {fileID: 1585109075}
+  lines:
+  - "Pero, \xBFQu\xE9 pas\xF3?, \xBFQu\xE9 es este lugar?"
+  - "\xA1AHH! por qu\xE9 todos los onigiris est\xE1n destrozados"
+  - "Espera\u2026 \xBFEstoy en un basurero?"
+  - "Acaso\u2026 \xBFMe desecharon? \xBFPero por qu\xE9? \xBFQu\xE9 tengo de malo?"
+  - "Al parecer no fui lo suficiente\u2026"
+  - "\xBFHola? oh, por fin encuentro a alguien del restaurante, qu\xE9 felicidad"
+  - "Llevaba tiempo perdido y ac\xE1 son un poco ap\xE1ticos. Pero encontr\xE9 algo
+    genial, \xBFTe puedo mostrar? "
+  - "Ehh. \xBFQu\xE9 te pasa? te ves triste"
+  - " \xBFAcaso no lo ves? no cumplimos los requisitos necesarios para estar en el
+    men\xFA"
+  - "\xBFY qui\xE9n dice eso?"
+  - "El chef, dijo que tengo un sabor muy b\xE1sico."
+  - "Mmmm\u2026Mira, mientras rondaba perdido por ac\xE1 vi varias latas cerradas
+    de comida. \xBFPuedes utilizarlas para mejorar tu sabor! No te rindas tan r\xE1pido"
+  - "\xBFCrees que eso ser\xE1 suficiente para entrar al men\xFA?"
+  - "\xA1Claro! \xA1Ser\xE1s delicioso! Pero el chef\u2026 Su actitud es muy egoc\xE9ntrica,
+    deber\xE1s enfrentarlo primero y demostrarle tu valor como onigiri.  "
+  - "Tienes raz\xF3n. No todo est\xE1 perdido. \xA1Gracias Dango! Recuper\xE9 mi
+    determinaci\xF3n y valent\xEDa para mostrarle a todo jap\xF3n los mejores onigiris
+    que hayan probado."
+  dialogueName: {fileID: 386470897}
+  names:
+  - Onigiri
+  - Onigiri
+  - Onigiri
+  - Onigiri
+  - Onigiri
+  - 'Dango '
+  - 'Dango '
+  - 'Dango '
+  - Onigiri
+  - Dango
+  - Onigiri
+  - 'Dango '
+  - Onigiri
+  - Dango
+  - Onigiri
+  textSpeed: 0.1
 --- !u!1 &290182950
 GameObject:
   m_ObjectHideFlags: 0
@@ -1314,7 +1368,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1643516218}
-  - component: {fileID: 1643516219}
   - component: {fileID: 1643516220}
   m_Layer: 0
   m_Name: DialoguePanel
@@ -1339,42 +1392,6 @@ Transform:
   m_Father: {fileID: 230068388}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1643516219
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1643516217}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 552934bfc1b39427fa341b94d4ca4a2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueText: {fileID: 1585109075}
-  lines:
-  - "Pero, \xBFQu\xE9 pas\xF3?, \xBFQu\xE9 es este lugar? "
-  - "\xA1AHH! por qu\xE9 todos los onigiris est\xE1n destrozados, "
-  - "Espera\u2026 \xBFEstoy en un basurero? "
-  - "Acaso\u2026 \xBFMe desecharon? \xBFPero por qu\xE9? \xBFQu\xE9 tengo de malo?"
-  - "Al parecer no fui lo suficiente\u2026"
-  - "\xBFHola? oh, por fin encuentro a alguien del restaurante, qu\xE9 felicidad."
-  - "Llevaba tiempo perdido y ac\xE1 son un poco ap\xE1ticos. Pero encontr\xE9 algo
-    genial, \xBFTe puedo mostrar?"
-  - "Ehh. \xBFQu\xE9 te pasa? te ves triste"
-  - " \xBFAcaso no lo ves? no cumplimos los requisitos necesarios para estar en el
-    men\xFA"
-  - "\xBFY qui\xE9n dice eso?"
-  - "El chef, dijo que tengo un sabor muy b\xE1sico."
-  - "Mmmm\u2026Mira, mientras rondaba perdido por ac\xE1 vi varias latas cerradas
-    de comida. \xBFPuedes utilizarlas para mejorar tu sabor! No te rindas tan r\xE1pido"
-  - "\xBFCrees que eso ser\xE1 suficiente para entrar al men\xFA?"
-  - "\xA1Claro! \xA1Ser\xE1s delicioso! Pero el chef\u2026 Su actitud es muy egoc\xE9ntrica,
-    deber\xE1s enfrentarlo primero y demostrarle tu valor como onigiri."
-  - "Tienes raz\xF3n. No todo est\xE1 perdido. \xA1Gracias Dango! Recuper\xE9 mi
-    determinaci\xF3n y valent\xEDa para mostrarle a todo jap\xF3n los mejores onigiris
-    que hayan probado."
-  textSpeed: 0.1
 --- !u!114 &1643516220
 MonoBehaviour:
   m_ObjectHideFlags: 0
