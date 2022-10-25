@@ -1683,6 +1683,7 @@ MonoBehaviour:
   - {fileID: 823317498}
   currentHealthBar: {fileID: 1445657382}
   maxHealthBar: {fileID: 528356956}
+  sceneChange: {fileID: 0}
 --- !u!212 &547134841
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7009,7 +7010,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.7771429, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -9600,6 +9601,10 @@ PrefabInstance:
       propertyPath: m_text
       value: Sorprendente, te pasaste al jefe con la vida completa, pero ahora si
         se viene lo bueno
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698635158560266878, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: PantallaPrincipalNavegable 1
       objectReference: {fileID: 0}
     - target: {fileID: 6698635159385200516, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
       propertyPath: m_Pivot.x
