@@ -29749,7 +29749,7 @@ MonoBehaviour:
   - {fileID: 91887069}
   bossElements: {fileID: 332648897}
   frames: 150
-  bossName: King racoon
+  bossName: Rey Mapache
   bossSubtitle: 
 --- !u!61 &1499512940
 BoxCollider2D:
@@ -43243,13 +43243,187 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6698635158434567772, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698635158434567772, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698635158434567775, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+      propertyPath: m_text
+      value: PANTALLA COMPLETA
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698635158436787982, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+      propertyPath: m_text
+      value: VOLVER
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698635158474385033, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698635158517372294, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+      propertyPath: m_text
+      value: SI
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698635158525541977, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+      propertyPath: m_text
+      value: SI
+      objectReference: {fileID: 0}
     - target: {fileID: 6698635158560266878, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: PantallaPrincipalNavegable 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6698635158635829093, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698635158635829093, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698635158819150208, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+      propertyPath: m_text
+      value: RESOLUCION
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698635158935522582, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+      propertyPath: m_text
+      value: CALIDAD DE IMAGEN
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698635158935522583, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698635158935522583, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -138
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698635159008522521, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+      propertyPath: m_text
+      value: SALIR DEL JUEGO
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698635159117221231, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+      propertyPath: m_text
+      value: "\xBFESTAS SEGURO?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698635159125733338, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698635159178579478, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698635159178579478, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698635159178579478, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698635159215877213, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+      propertyPath: m_text
+      value: "\xBFESTAS SEGURO?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698635159239648223, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698635159239648223, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698635159239648223, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -95
+      objectReference: {fileID: 0}
     - target: {fileID: 6698635159385200516, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698635159413049190, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+      propertyPath: m_text
+      value: BRILLO
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698635159458926384, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698635159458926384, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698635159458926384, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -170
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698635159502503210, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+      propertyPath: m_text
+      value: VOLVER
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698635159584714255, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698635159701848943, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698635159701848943, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698635159701848943, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698635159812262830, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698635159903794439, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+      propertyPath: m_text
+      value: 'OPCIONES
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698635159957296751, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+      propertyPath: m_text
+      value: VOLVER
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698635159976817227, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3185723481297356720}
+    - target: {fileID: 6698635159976817227, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698635159994174277, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698635159994174277, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698635159994174277, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698635160013440050, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+      propertyPath: m_text
+      value: MUSICA
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698635160090973565, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+      propertyPath: m_text
+      value: CONTINUAR
+      objectReference: {fileID: 0}
+    - target: {fileID: 6698635160093027641, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+      propertyPath: m_text
+      value: MENU PRINCIPAL
       objectReference: {fileID: 0}
     - target: {fileID: 7380934836114459510, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -43261,6 +43435,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+--- !u!1 &3185723481297356720 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6698635159780092551, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+  m_PrefabInstance: {fileID: 3185723481297356719}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6114134215089319404
 PrefabInstance:
   m_ObjectHideFlags: 0
