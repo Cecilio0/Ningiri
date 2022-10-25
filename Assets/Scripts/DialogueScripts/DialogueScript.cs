@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.InputSystem;
-
+using UnityEngine.SceneManagement;
 
 public class DialogueScript : MonoBehaviour
 {
     public TextMeshProUGUI dialogueText;
     public string[] lines;
     public float textSpeed = 0.1f;
+    public int escena;
     private int index;
     private PlayerInput controles;
 
@@ -62,6 +63,7 @@ public class DialogueScript : MonoBehaviour
         }
         else
         {
+            SceneManager.LoadScene(escena);
             gameObject.SetActive(false);
         }
     }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 
 public class DialogueScript1 : MonoBehaviour
@@ -12,6 +13,7 @@ public class DialogueScript1 : MonoBehaviour
     public TextMeshProUGUI dialogueName;
     public string[] names;
     public float textSpeed = 0.1f;
+    public int escena;
     private int index;
     private PlayerInput controles;
 
@@ -50,16 +52,17 @@ public class DialogueScript1 : MonoBehaviour
 
     IEnumerator WriteLine()
     {
-        foreach (char letter in lines[index].ToCharArray())
-        {
-            dialogueText.text += letter;
-            yield return new WaitForSeconds(textSpeed);
-        }
         foreach (char letter in names[index].ToCharArray())
         {
             dialogueName.text += letter;
             yield return new WaitForSeconds(textSpeed);
         }
+        foreach (char letter in lines[index].ToCharArray())
+        {
+            dialogueText.text += letter;
+            yield return new WaitForSeconds(textSpeed);
+        }
+        
     }
 
     public void NextLine()
@@ -73,6 +76,7 @@ public class DialogueScript1 : MonoBehaviour
         }
         else
         {
+            SceneManager.LoadScene(escena);
             gameObject.SetActive(false);
         }
     }

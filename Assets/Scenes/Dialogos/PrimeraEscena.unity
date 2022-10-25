@@ -221,6 +221,7 @@ MonoBehaviour:
   - "A nadie le gustar\xE1 esto tan b\xE1sico, ser\xE1 mejor no incluir al onigiri
     en el men\xFA."
   textSpeed: 0.1
+  escena: 4
 --- !u!114 &347463349
 MonoBehaviour:
   m_ObjectHideFlags: 0
