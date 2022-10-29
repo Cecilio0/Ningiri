@@ -14,10 +14,13 @@ public class FightEnter : MonoBehaviour
     [SerializeField] private int frames;
     [SerializeField] private string bossName;
     [SerializeField] private string bossSubtitle;
+    [SerializeField] private AudioClip bossMusic;
+    [SerializeField] private AudioSource audioEscena;
     private Resolution resolution;
     private Image brillo;
     private RectTransform titulo;
     private RectTransform titulo2;
+    
 
     
     private void Awake()
@@ -43,8 +46,11 @@ public class FightEnter : MonoBehaviour
 
     private IEnumerator Titulo()
     {
+        float ogVol = audioEscena.volume;
+        float musicFade = ogVol/((float)frames/2f);
         Vector2 origen = titulo.position;
         Vector2 origen2 = titulo2.position;
+        
 
         bossElements.SetActive(true);
         foreach (GameObject thing in toDisable)
@@ -64,16 +70,21 @@ public class FightEnter : MonoBehaviour
         {
             titulo.position = new Vector2(titulo.position.x + dist, titulo.position.y);
             titulo2.position = new Vector2(titulo2.position.x + dist, titulo2.position.y);
-            yield return new WaitForSeconds(Time.fixedUnscaledDeltaTime);
+            audioEscena.volume = audioEscena.volume - musicFade; 
+            yield return new WaitForSeconds(Time.fixedDeltaTime);
         }
 
+        audioEscena.clip = bossMusic;
+        audioEscena.Play();
+        
         yield return new WaitForSeconds(2);
             
         for(int i = 0; i < frames/2; i++)
         {
             titulo.position = new Vector2(titulo.position.x + dist, titulo.position.y);
             titulo2.position = new Vector2(titulo2.position.x + dist, titulo2.position.y);
-            yield return new WaitForSeconds(Time.fixedUnscaledDeltaTime);
+            audioEscena.volume = audioEscena.volume + musicFade; 
+            yield return new WaitForSeconds(Time.fixedDeltaTime);
         }
 
         brillo.color = new Color(brillo.color.r, brillo.color.g, brillo.color.b, 0);
@@ -88,6 +99,7 @@ public class FightEnter : MonoBehaviour
         }
         titulo.position = origen;
         titulo2.position = origen2;
+        
         gameObject.SetActive(false);
     }
 }
