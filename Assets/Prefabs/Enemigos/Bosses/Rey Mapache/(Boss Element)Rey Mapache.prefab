@@ -177,6 +177,9 @@ MonoBehaviour:
   toDisable: []
   currentHealthBar: {fileID: 0}
   maxHealthBar: {fileID: 0}
+  sceneChange: {fileID: 0}
+  deathSound: {fileID: 8300000, guid: 40126e71deeefd94891334bf4692d7fd, type: 3}
+  source: {fileID: 0}
 --- !u!50 &5559738332347725811
 Rigidbody2D:
   serializedVersion: 4

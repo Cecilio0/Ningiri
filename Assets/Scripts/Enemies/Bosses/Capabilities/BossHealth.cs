@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class BossHealth : EnemyHealth
 {
@@ -11,7 +10,11 @@ public class BossHealth : EnemyHealth
     [SerializeField] private Image currentHealthBar;
     [SerializeField] private Image maxHealthBar;
     [SerializeField] private SceneChange sceneChange;
+    [SerializeField] private AudioClip deathSound;
+    [SerializeField] private AudioClip levelMusic;
+    [SerializeField] private AudioSource source;
     private GameObject player;
+    
 
     void Awake()
     {
@@ -37,9 +40,12 @@ public class BossHealth : EnemyHealth
             }
             //muerte del jefe
             base.Drop();
+            source.clip = levelMusic;
+            source.Play();
             Destroy(this.gameObject);
         }
     }
+
 
 
 }
