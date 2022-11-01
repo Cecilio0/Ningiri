@@ -216,6 +216,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 230068388}
+  - component: {fileID: 230068389}
+  - component: {fileID: 230068390}
   m_Layer: 0
   m_Name: DialogueUI
   m_TagString: Untagged
@@ -232,7 +234,7 @@ Transform:
   m_GameObject: {fileID: 230068387}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -189, y: -399, z: 0.24911919}
-  m_LocalScale: {x: 40, y: 50, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 386470896}
@@ -240,6 +242,90 @@ Transform:
   m_Father: {fileID: 496825037}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &230068389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230068387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74fb956b5673644c7a24eb96b8c0ddfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueText: {fileID: 1585109075}
+  lines:
+  - "Pero, \xBFQu\xE9 pas\xF3?, \xBFQu\xE9 es este lugar?"
+  - "\xA1AHH! por qu\xE9 todos los onigiris est\xE1n destrozados"
+  - "Espera\u2026 \xBFEstoy en un basurero?"
+  - "Acaso\u2026 \xBFMe desecharon? \xBFPero por qu\xE9? \xBFQu\xE9 tengo de malo?"
+  - "Al parecer no fui lo suficiente\u2026"
+  - "\xBFHola? oh, por fin encuentro a alguien del restaurante, qu\xE9 felicidad"
+  - "Llevaba tiempo perdido y ac\xE1 son un poco ap\xE1ticos. Pero encontr\xE9 algo
+    genial, \xBFTe puedo mostrar? "
+  - "Ehh. \xBFQu\xE9 te pasa? te ves triste"
+  - " \xBFAcaso no lo ves? no cumplimos los requisitos necesarios para estar en el
+    men\xFA"
+  - "\xBFY qui\xE9n dice eso?"
+  - "El chef, dijo que tengo un sabor muy b\xE1sico."
+  - "Mmmm\u2026Mira, mientras rondaba perdido por ac\xE1 vi varias latas cerradas
+    de comida. \xBFPuedes utilizarlas para mejorar tu sabor! No te rindas tan r\xE1pido"
+  - "\xBFCrees que eso ser\xE1 suficiente para entrar al men\xFA?"
+  - "\xA1Claro! \xA1Ser\xE1s delicioso! Pero el chef\u2026 Su actitud es muy egoc\xE9ntrica,
+    deber\xE1s enfrentarlo primero y demostrarle tu valor como onigiri.  "
+  - "Tienes raz\xF3n. No todo est\xE1 perdido. \xA1Gracias Dango! Recuper\xE9 mi
+    determinaci\xF3n y valent\xEDa para mostrarle a todo jap\xF3n los mejores onigiris
+    que hayan probado."
+  dialogueName: {fileID: 386470897}
+  names:
+  - Onigiri
+  - Onigiri
+  - Onigiri
+  - Onigiri
+  - Onigiri
+  - 'Dango '
+  - 'Dango '
+  - 'Dango '
+  - Onigiri
+  - Dango
+  - Onigiri
+  - 'Dango '
+  - Onigiri
+  - Dango
+  - Onigiri
+  textSpeed: 0.1
+  escena: 2
+--- !u!114 &230068390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230068387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 5667befb25565764b811f80e25bba66b, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Land
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &290182950
 GameObject:
   m_ObjectHideFlags: 0
@@ -335,7 +421,6 @@ GameObject:
   - component: {fileID: 386470896}
   - component: {fileID: 386470898}
   - component: {fileID: 386470897}
-  - component: {fileID: 386470899}
   - component: {fileID: 386470900}
   m_Layer: 5
   m_Name: Nombre
@@ -353,7 +438,7 @@ RectTransform:
   m_GameObject: {fileID: 386470895}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.24911919}
-  m_LocalScale: {x: 0.03, y: 0.03, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 230068388}
@@ -361,7 +446,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5.66, y: 5.542944}
+  m_AnchoredPosition: {x: -235, y: 280}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &386470897
@@ -411,8 +496,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 65
-  m_fontSizeBase: 65
+  m_fontSize: 80
+  m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -447,7 +532,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -24.821892, w: 0}
+  m_margin: {x: -30.862381, y: 0, z: -53.11242, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -461,49 +546,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 386470895}
   m_CullTransparentMesh: 1
---- !u!114 &386470899
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 386470895}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 552934bfc1b39427fa341b94d4ca4a2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueText: {fileID: 386470897}
-  lines:
-  - Onigiri
-  - Onigiri
-  - Onigiri
-  - Onigiri
-  - Onigiri
-  - Onigiri
-  - Onigiri
-  - Onigiri
-  - Onigiri
-  - Onigiri
-  - Dango
-  - Dango
-  - Dango
-  - Dango
-  - Dango
-  - Onigiri
-  - Onigiri
-  - Dango
-  - Dango
-  - Onigiri
-  - Onigiri
-  - Dango
-  - Dango
-  - Onigiri
-  - Onigiri
-  - Dango
-  - Dango
-  - Onigiri
-  textSpeed: 0
 --- !u!114 &386470900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -730,6 +772,8 @@ GameObject:
   - component: {fileID: 558779967}
   - component: {fileID: 558779966}
   - component: {fileID: 558779965}
+  - component: {fileID: 558779969}
+  - component: {fileID: 558779968}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -803,6 +847,115 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &558779968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 558779964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ba1352918f88004c823c4330cde07aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  music: {fileID: 8300000, guid: d42e65cccd7eccf4a9aabad6a428d072, type: 3}
+--- !u!82 &558779969
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 558779964}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &633612334
 GameObject:
   m_ObjectHideFlags: 0
@@ -829,7 +982,7 @@ Transform:
   m_GameObject: {fileID: 633612334}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1542.484, y: 399.53687, z: 0}
-  m_LocalScale: {x: 202.10526, y: 202.10526, z: 1.0105263}
+  m_LocalScale: {x: 202.1053, y: 202.1053, z: 1.0105263}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1197,7 +1350,7 @@ RectTransform:
   m_GameObject: {fileID: 1585109073}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.06, y: 0.06, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1643516218}
@@ -1205,7 +1358,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.83, y: 2.55}
+  m_AnchoredPosition: {x: -114, y: 176}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1585109075
@@ -1255,10 +1408,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 36
+  m_fontSize: 55
+  m_fontSizeBase: 55
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 15
   m_fontSizeMax: 25
   m_fontStyle: 0
@@ -1291,7 +1444,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -109.50753, y: 0, z: -109.50754, w: -11.44109}
+  m_margin: {x: -109.50753, y: 0, z: -721.5585, w: -141.21182}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1314,7 +1467,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1643516218}
-  - component: {fileID: 1643516219}
   - component: {fileID: 1643516220}
   m_Layer: 0
   m_Name: DialoguePanel
@@ -1339,42 +1491,6 @@ Transform:
   m_Father: {fileID: 230068388}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1643516219
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1643516217}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 552934bfc1b39427fa341b94d4ca4a2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueText: {fileID: 1585109075}
-  lines:
-  - "Pero, \xBFQu\xE9 pas\xF3?, \xBFQu\xE9 es este lugar? "
-  - "\xA1AHH! por qu\xE9 todos los onigiris est\xE1n destrozados, "
-  - "Espera\u2026 \xBFEstoy en un basurero? "
-  - "Acaso\u2026 \xBFMe desecharon? \xBFPero por qu\xE9? \xBFQu\xE9 tengo de malo?"
-  - "Al parecer no fui lo suficiente\u2026"
-  - "\xBFHola? oh, por fin encuentro a alguien del restaurante, qu\xE9 felicidad."
-  - "Llevaba tiempo perdido y ac\xE1 son un poco ap\xE1ticos. Pero encontr\xE9 algo
-    genial, \xBFTe puedo mostrar?"
-  - "Ehh. \xBFQu\xE9 te pasa? te ves triste"
-  - " \xBFAcaso no lo ves? no cumplimos los requisitos necesarios para estar en el
-    men\xFA"
-  - "\xBFY qui\xE9n dice eso?"
-  - "El chef, dijo que tengo un sabor muy b\xE1sico."
-  - "Mmmm\u2026Mira, mientras rondaba perdido por ac\xE1 vi varias latas cerradas
-    de comida. \xBFPuedes utilizarlas para mejorar tu sabor! No te rindas tan r\xE1pido"
-  - "\xBFCrees que eso ser\xE1 suficiente para entrar al men\xFA?"
-  - "\xA1Claro! \xA1Ser\xE1s delicioso! Pero el chef\u2026 Su actitud es muy egoc\xE9ntrica,
-    deber\xE1s enfrentarlo primero y demostrarle tu valor como onigiri."
-  - "Tienes raz\xF3n. No todo est\xE1 perdido. \xA1Gracias Dango! Recuper\xE9 mi
-    determinaci\xF3n y valent\xEDa para mostrarle a todo jap\xF3n los mejores onigiris
-    que hayan probado."
-  textSpeed: 0.1
 --- !u!114 &1643516220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1429,7 +1545,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1886270537}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 379.4316, y: 528.3579, z: 0}
   m_LocalScale: {x: 181.89473, y: 181.89473, z: 1.0105263}
   m_ConstrainProportionsScale: 0

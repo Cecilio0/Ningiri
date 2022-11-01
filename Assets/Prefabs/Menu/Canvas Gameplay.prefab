@@ -439,6 +439,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 772677da0369b584baa6a5162f14ff47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  texto: 
+  textSpeed: 0
+  campoTexto: {fileID: 0}
 --- !u!1 &5134939212738718985
 GameObject:
   m_ObjectHideFlags: 0
@@ -8913,7 +8916,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: NINGIRI
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 83664542dfecaad4dab8737b7a6b4004, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 25afd4d41d8049e49bc34a4df041b495, type: 2}
   m_sharedMaterial: {fileID: 8369313583297999963, guid: 83664542dfecaad4dab8737b7a6b4004, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -8977,7 +8980,7 @@ MonoBehaviour:
   m_margin: {x: -64.10927, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &6698635159970674724
