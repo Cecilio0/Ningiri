@@ -46555,7 +46555,7 @@ PrefabInstance:
     - target: {fileID: 5089249714837703003, guid: 1c8425e8ae2bd7c47b08c95ee0385bf7, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 31bce8b431251d74ca769deff0d0de26, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 5783288359076073210, guid: 1c8425e8ae2bd7c47b08c95ee0385bf7, type: 3}
       propertyPath: projectiles.Array.size
       value: 16
