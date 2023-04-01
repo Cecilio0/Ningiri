@@ -46,13 +46,13 @@ public class IAGuaiquica : MonoBehaviour
 
             Vector2 distance = new Vector2(target.position.x-transform.position.x, target.position.y-transform.position.y);
             if(distance.sqrMagnitude < patrolRange*patrolRange && Mathf.Abs(distance.y) < 2){//si esta en rango de buscar al jugador
-                if(distance.x < attackRange && distance.y < attackRange){//si esta en rango de atacarlo
+                if(Mathf.Abs(distance.x) < attackRange && Mathf.Abs(distance.y) < attackRange){//si esta en rango de atacarlo
                     StartCoroutine(Attack(distance.x));
-                } else if(Mathf.Sign(distance.x) == Mathf.Sign(transform.localScale.x)){//si esta andando en direccion al jugador
+                } else if(Mathf.Sign(distance.x) != Mathf.Sign(transform.localScale.x)){//si esta andando en direccion al jugador
                     Flip();
                 }
                 rb.velocity = new Vector2(patrolSpeed, rb.velocity.y);//continua andando en direccion al jugador
-                
+
             } else if (mustPatrol){
                 mustFlip = !Physics2D.OverlapCircle(platformCheck.position, 0.1f, groundLayer);
                 Patrol();
@@ -80,7 +80,7 @@ public class IAGuaiquica : MonoBehaviour
 
     private IEnumerator Attack(float distance){
 
-        if(Mathf.Sign(distance) == Mathf.Sign(transform.localScale.x)){//si esta andando en direccion al jugador
+        if(Mathf.Sign(distance) != Mathf.Sign(transform.localScale.x)){//si esta andando en direccion al jugador
             Flip();
         }
 
@@ -94,7 +94,7 @@ public class IAGuaiquica : MonoBehaviour
         //iniciar el salto
         float vx = distance/(raiz2*(float)attackLengthFrames/50f);
         float vy = 5f*((float)attackLengthFrames/50f);
-        rb.velocity = new Vector2(vx*Mathf.Sign(transform.localScale.x), vy);
+        rb.velocity = new Vector2(vx, vy);
 
         //esperar a que se complete el salto
         for (int i = 0; i < attackLengthFrames; i++)
