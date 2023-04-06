@@ -78,6 +78,8 @@ public class IAGuaiquica : MonoBehaviour
         rb.velocity = new Vector2(patrolSpeed, rb.velocity.y); 
     }
 
+
+    //Corrutina de salto
     private IEnumerator Attack(float distance){
 
         if(Mathf.Sign(distance) != Mathf.Sign(transform.localScale.x)){//si esta andando en direccion al jugador
