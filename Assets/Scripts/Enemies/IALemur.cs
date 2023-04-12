@@ -90,7 +90,7 @@ public class IALemur : MonoBehaviour
             }
             int projectile = FindProjectile();
             projectiles[projectile].transform.position = transform.position;
-            projectiles[projectile].GetComponent<EnemyProjectile>().Cast(-Mathf.Sign(transform.localScale.x), new Vector2(shotSpeed, 0));
+            projectiles[projectile].GetComponent<EnemyProjectile>().Cast(1, new Vector2(Mathf.Sign(distance)*shotSpeed, 0));
             
         }
 
