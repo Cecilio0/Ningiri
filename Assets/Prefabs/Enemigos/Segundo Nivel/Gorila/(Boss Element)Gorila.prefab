@@ -214,8 +214,11 @@ MonoBehaviour:
   timeBetweenAttacksSeconds: 5
   jumpAttackTimeSeconds: 1.5
   lianas: []
-  jumpLianaTimeSeconds: 0
+  jumpLianaTimeSeconds: 2
   projectiles: []
+  banana: {fileID: 46037740582046105, guid: 034b08d109b77c647922646b2c71ced6, type: 3}
+  deltaBananas: 2.5
   shotsPerRoutine: 4
+  bananaShotsPerRoutine: 5
   timeBetweenShotsFrames: 15
   projectileAirTimeSeconds: 1.5
