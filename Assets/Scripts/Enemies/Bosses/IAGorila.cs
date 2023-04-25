@@ -72,6 +72,7 @@ public class IAGorila : MonoBehaviour
         //subirse a la liana
         Vector2 delta = new Vector2(target.position.x - transform.position.x, target.position.y - transform.position.y);//vector desde el gorila hasta el jugador
         rb.velocity = new Vector2(delta.x/jumpAttackTimeSeconds, (delta.y + 1.5f)/jumpAttackTimeSeconds + G2*jumpAttackTimeSeconds);//vector de velocidad necesaria para llegar al jugador
+        transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x)*Mathf.Sign(rb.velocity.x), transform.localScale.y);//mira al jugador
         yield return new WaitForSeconds(jumpAttackTimeSeconds);
         rb.velocity = Vector2.zero;
         isAttacking = false;
