@@ -211,14 +211,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17fdd486de4571142be84c56bfd6d3ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenAttacksSeconds: 5
+  timeBetweenAttacksSeconds: 4
   jumpAttackTimeSeconds: 1.5
   lianas: []
   jumpLianaTimeSeconds: 2
   projectiles: []
   banana: {fileID: 46037740582046105, guid: 034b08d109b77c647922646b2c71ced6, type: 3}
   deltaBananas: 2.5
-  shotsPerRoutine: 4
+  shotsPerRoutine: 5
   bananaShotsPerRoutine: 5
   timeBetweenShotsFrames: 15
   projectileAirTimeSeconds: 1.5
