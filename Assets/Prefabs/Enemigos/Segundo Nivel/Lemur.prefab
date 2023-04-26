@@ -287,7 +287,7 @@ MonoBehaviour:
   - {fileID: 9053530579569118206}
   - {fileID: 3619448966923368575}
   shotSpeed: 10
-  patrolSpeed: 7
+  patrolSpeed: 5
   framesBetweenFlips: 25
   stickLength: 10
 --- !u!1001 &1149444511714235679
