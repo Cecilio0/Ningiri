@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Dialogos/SegundaEscena 1.unity
     guid: c38b870dee6f84fbd9b0d5a847c81833
+  - enabled: 1
+    path: Assets/Scenes/Niveles/Segundo Nivel.unity
+    guid: 8887d6c3031540e43b9863438da83e2d
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 0512e0d1ede431a41b7b124fdce6420b, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: 31b301232a8ef614dbd315fcf7be4832, type: 2}

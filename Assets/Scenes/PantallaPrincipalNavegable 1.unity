@@ -705,10 +705,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 1776179062}
     m_Modifications:
     - target: {fileID: 30527428479876241, guid: 0eafef4d2f324fe40a9324b884a6e15c, type: 3}
-      propertyPath: m_fontSize
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 30527428479876241, guid: 0eafef4d2f324fe40a9324b884a6e15c, type: 3}
       propertyPath: m_fontSizeBase
       value: 20
       objectReference: {fileID: 0}
@@ -5341,10 +5337,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1776179062}
     m_Modifications:
-    - target: {fileID: 30527428479876241, guid: 0eafef4d2f324fe40a9324b884a6e15c, type: 3}
-      propertyPath: m_fontSize
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 30527428479876241, guid: 0eafef4d2f324fe40a9324b884a6e15c, type: 3}
       propertyPath: m_fontSizeBase
       value: 20
@@ -11197,10 +11189,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1776179062}
     m_Modifications:
-    - target: {fileID: 30527428479876241, guid: 0eafef4d2f324fe40a9324b884a6e15c, type: 3}
-      propertyPath: m_fontSize
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 30527428479876241, guid: 0eafef4d2f324fe40a9324b884a6e15c, type: 3}
       propertyPath: m_fontSizeBase
       value: 20

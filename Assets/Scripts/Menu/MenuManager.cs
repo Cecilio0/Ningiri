@@ -36,7 +36,7 @@ public class MenuManager : MonoBehaviour
         DisableMenuButtons();
         Debug.Log("Continue Button Pressed");
         //Load the next scene - which will in turn Load the same because of OnSceneLoaded() in the DataPersistenceManager
-        SceneManager.LoadSceneAsync(2);
+        SceneManager.LoadSceneAsync(DataPersistenceManager.instance.gameData.currentLevel);
     }
     
     //Cuando se presiona el boton Quit

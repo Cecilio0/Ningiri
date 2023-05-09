@@ -208,8 +208,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1270017739
-  m_SortingLayer: 2
+  m_SortingLayerID: 1304136183
+  m_SortingLayer: 3
   m_SortingOrder: 1
   m_Sprite: {fileID: -2413806693520163455, guid: b192ca8baa984ed4dacc54fbc5e8da0e, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
@@ -292,9 +292,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1270017739
-  m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingLayerID: 1304136183
+  m_SortingLayer: 3
+  m_SortingOrder: 1
   m_Sprite: {fileID: -2413806693520163455, guid: b192ca8baa984ed4dacc54fbc5e8da0e, type: 3}
   m_Color: {r: 1, g: 0.9830491, b: 0, a: 1}
   m_FlipX: 0
@@ -412,9 +412,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1270017739
-  m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingLayerID: 1304136183
+  m_SortingLayer: 3
+  m_SortingOrder: 1
   m_Sprite: {fileID: -2413806693520163455, guid: b192ca8baa984ed4dacc54fbc5e8da0e, type: 3}
   m_Color: {r: 1, g: 0.9830491, b: 0, a: 1}
   m_FlipX: 0
@@ -496,9 +496,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1270017739
-  m_SortingLayer: 2
-  m_SortingOrder: -1
+  m_SortingLayerID: 1304136183
+  m_SortingLayer: 3
+  m_SortingOrder: 1
   m_Sprite: {fileID: -2413806693520163455, guid: b192ca8baa984ed4dacc54fbc5e8da0e, type: 3}
   m_Color: {r: 0.5826905, g: 0.8207547, b: 0.17421682, a: 1}
   m_FlipX: 0
@@ -580,9 +580,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1270017739
-  m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingLayerID: 1304136183
+  m_SortingLayer: 3
+  m_SortingOrder: 1
   m_Sprite: {fileID: -2413806693520163455, guid: b192ca8baa984ed4dacc54fbc5e8da0e, type: 3}
   m_Color: {r: 1, g: 0.9744439, b: 0.25943398, a: 1}
   m_FlipX: 0

@@ -1684,6 +1684,9 @@ MonoBehaviour:
   currentHealthBar: {fileID: 1445657382}
   maxHealthBar: {fileID: 528356956}
   sceneChange: {fileID: 0}
+  deathSound: {fileID: 0}
+  levelMusic: {fileID: 0}
+  source: {fileID: 0}
 --- !u!212 &547134841
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2297,37 +2300,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1232330941834909412, guid: 1c8425e8ae2bd7c47b08c95ee0385bf7, type: 3}
   m_PrefabInstance: {fileID: 6258793963228640480}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &727469684
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 727469685}
-  m_Layer: 0
-  m_Name: Marcador
-  m_TagString: Untagged
-  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &727469685
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 727469684}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 273.3, y: -14, z: -0.3176956}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &727985785 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8194872991718735973, guid: 1c8425e8ae2bd7c47b08c95ee0385bf7, type: 3}
@@ -6022,6 +5994,8 @@ MonoBehaviour:
   frames: 150
   bossName: REY MAPACHE
   bossSubtitle: CUARTO LIDER DEL CLAN TOJO
+  bossMusic: {fileID: 0}
+  audioEscena: {fileID: 0}
 --- !u!61 &1499512940
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7010,7 +6984,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7771429, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -7668,6 +7642,8 @@ MonoBehaviour:
   frames: 150
   bossName: "PALOMA, ENTE C\xD3SMICO"
   bossSubtitle: 
+  bossMusic: {fileID: 0}
+  audioEscena: {fileID: 0}
 --- !u!61 &1962988620
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9597,6 +9573,10 @@ PrefabInstance:
       propertyPath: campoTexto
       value: 
       objectReference: {fileID: 850965734}
+    - target: {fileID: 5061098414792493112, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6075716244268067998, guid: 0bae662c92c3ac7439150482d3763e8d, type: 3}
       propertyPath: m_text
       value: Sorprendente, te pasaste al jefe con la vida completa, pero ahora si

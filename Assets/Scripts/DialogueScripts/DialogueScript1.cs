@@ -76,6 +76,7 @@ public class DialogueScript1 : MonoBehaviour
         }
         else
         {
+            DataPersistenceManager.instance.gameData.currentLevel = escena;
             SceneManager.LoadScene(escena);
             gameObject.SetActive(false);
         }

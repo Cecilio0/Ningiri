@@ -113,7 +113,7 @@ public class IAGorila : MonoBehaviour
                     for (int j = 0; j < timeBetweenShotsFrames; j++)
                         yield return new WaitForFixedUpdate();
 
-                    delta = new Vector2(i*direction*6 + Random.value*deltaBananas, target.position.y - transform.position.y);//vector desde el gorila hasta el jugador
+                    delta = new Vector2(i*direction*5 + Random.value*deltaBananas, target.position.y - transform.position.y);//vector desde el gorila hasta el jugador
                     transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x)*Mathf.Sign(delta.x), transform.localScale.y);//mira al jugador
                     ShootB(delta);
                 }

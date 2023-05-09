@@ -6,7 +6,9 @@ using UnityEngine;
 
 public class GameData
 {
+
     public long lastUpdated;
+    public int currentLevel;
     public float maxHealth;
     public float currentMaxHealth;
     public Vector2 respawn;
@@ -15,6 +17,7 @@ public class GameData
 
     public GameData()
     {
+        this.currentLevel = 3;
         this.maxHealth = 100f;
         this.currentMaxHealth = 30f;
         respawn = new Vector2(-95, -20);
@@ -41,5 +44,17 @@ public class GameData
             percentageCompleted = (totalCollected * 100 / healthCoins.Count);
         }
         return percentageCompleted;
+    }
+
+    public string GetLevel()
+    {
+        //Ver cuantas monedas de vida se han recolectado
+        switch (currentLevel){
+            case 2:
+                return "BASURERO"; 
+            case 5: 
+                return "BOSQUE BAMBU";
+        }
+        return "DIALOGOS";
     }
 }

@@ -29854,7 +29854,7 @@ GameObject:
   - component: {fileID: 1422299477}
   - component: {fileID: 1422299476}
   m_Layer: 3
-  m_Name: DemoEnd
+  m_Name: LevelEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29887,7 +29887,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df572c315eeed01488312d03931c179d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  escena: 0
+  escena: 5
+  respawn: {x: -17, y: -2}
 --- !u!61 &1422299477
 BoxCollider2D:
   m_ObjectHideFlags: 0

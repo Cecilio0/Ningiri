@@ -33,8 +33,8 @@ public class SaveSlot : MonoBehaviour
         {
             noDataContent.SetActive(false);
             hasDataContent.SetActive(true);
-            percentajeCompleteText.text = data.GetPercentageComplete() + "% COMPLETADO";
-            currentHealthText.text = "VIDA MAXIMA: " + data.currentMaxHealth;
+            percentajeCompleteText.text = "NIVEL ACTUAL: \n" + data.GetLevel();
+            currentHealthText.text = "COLECCIONABLES CONSEGUIDOS: " + data.GetPercentageComplete() + "%";
         }
     }
 

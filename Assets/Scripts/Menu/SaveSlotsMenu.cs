@@ -31,12 +31,8 @@ public class SaveSlotsMenu : MonoBehaviour
         {
             //Crear un nuevo juego que va a inicializar los datos en un slot vacio
             DataPersistenceManager.instance.NewGame();
-            SceneManager.LoadSceneAsync(3);
         }
-        else
-        {
-            SceneManager.LoadSceneAsync(2);
-        }
+        SceneManager.LoadSceneAsync(DataPersistenceManager.instance.gameData.currentLevel);
 
         //Cargar la escena. Que va a activar el guardado (SaveGame) debido a OnSceneUnloaded en el DataPersistenceManager
         
