@@ -36706,12 +36706,16 @@ PrefabInstance:
       objectReference: {fileID: 145429153}
     - target: {fileID: 883165763169806470, guid: 523b951ea887aaf44a2f6376fa328dff, type: 3}
       propertyPath: toDisable.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 883165763169806470, guid: 523b951ea887aaf44a2f6376fa328dff, type: 3}
       propertyPath: toDisable.Array.data[0]
       value: 
       objectReference: {fileID: 708101467}
+    - target: {fileID: 883165763169806470, guid: 523b951ea887aaf44a2f6376fa328dff, type: 3}
+      propertyPath: toDisable.Array.data[1]
+      value: 
+      objectReference: {fileID: 6698635158887534111}
     - target: {fileID: 1586451230865368077, guid: 523b951ea887aaf44a2f6376fa328dff, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -40231,7 +40235,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
